@@ -288,7 +288,7 @@ const swiper = new Swiper('.swiper', {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
-    initialSlide: 4,
+    initialSlide: 5,
     speed: 600,
     preventClicks: true,
     slidesPerView: "auto",
@@ -308,3 +308,17 @@ const swiper = new Swiper('.swiper', {
         el: ".swiper-pagination",
     },
 });
+
+
+// FUNCIONALIDADE SETA PARA SUBIR
+setInterval(setaSubir, 4500)
+
+let setaCima = document.querySelector('.seta-subir')
+
+function setaSubir() {
+    setaCima.classList.add('esconder')
+}
+
+window.onscroll = () => {
+    setaCima.classList.remove('esconder')
+}

@@ -34,6 +34,20 @@ header {
     transform: translateY(0); }
   100% {
     transform: translateY(-15px); } }
+.seta-subir {
+  color: #fff;
+  font-size: 4rem;
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  bottom: 0;
+  margin: 0 5rem 5rem 0;
+  cursor: pointer;
+  border-radius: 50%; }
+
+.seta-subir.esconder {
+  display: none; }
+
 .apresentacao {
   background-color: var(--cor-fundo);
   height: 100vh;

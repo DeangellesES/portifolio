@@ -15,7 +15,7 @@
 
 </head>
 
-<body>
+<body id="topo">
 
     <header id="cabecalho">
         <a href="#cabecalho" data-i18n="item">Início</a>
@@ -26,6 +26,9 @@
     </header>
 
     <main>
+        <!-- inicio seta -->
+        <a href="#topo" class="seta-subir"><i class="fa-regular fa-circle-up"></i></a>
+        <!-- fim seta -->
 
         <section class="apresentacao">
             <div class="apresentacao-topo">
@@ -36,7 +39,6 @@
                         <!-- Elemento de áudio -->
                         <audio id="musica" src="musica.mp4"></audio>
                     </div>
-
 
                     <div class="altera-cor" id="toggleBtn">
                         <i class="fa-solid fa-sun" id="toggleIcon" onclick="trocarTema()"></i>
@@ -49,9 +51,7 @@
                         <option value="es">Espanhol</option>
                     </select>
 
-
                 </div>
-
 
                 <h1 id="text" data-i18n="intro1"></h1>
 
@@ -503,6 +503,20 @@
                         <img src="./assets/img/site-para-restaurante.png" alt="">
                         <div class="title">
                             <span>Site para Restaurente</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./assets/img/ecommerce.png" alt="">
+                        <div class="title">
+                            <span>Site para um ecommerce</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./assets/img/restaurante.png" alt="">
+                        <div class="title">
+                            <span>Site para restaurante</span>
                         </div>
                     </div>
 
