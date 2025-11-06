@@ -42,8 +42,7 @@ toggleBtn.addEventListener('click', () => {
     toggleIcon.classList.toggle('fa-moon');
 });
 
-// traduzir textos
-// inicio animação de escrever texto
+// funcionalidade traduzir textos
 const translations = {
     pt: {
         heroText: [
@@ -60,6 +59,7 @@ const translations = {
         vamosConversar: "Vamos conversar",
         aboutMe: "Sobre Mim",
         apresentacaoPessoal: "Apresentação Pessoal",
+        apresentacaoTexto: "Meu nome é Felipe Deangelles, sou natural de Minas Gerais. Sou desenvolvedor de Software e estou graduando em Engenharia de Software.Tenho 29 anos e sou um programador Full-Stack apaixonado por tecnologia. Desde muito cedo desenvolvi um amor pela forma como a tecnologia influencia o mundo ao nosso redor, desde de sempre fui encantado e tive muito interesse e curisosidade por tecnologia e o universo da computação. Foi na programação que encontrei meu verdadeiro propósito. Sou apaixonado por criar soluções tecnológicas que resolvem problemas reais e que agregam valor aos usuários. Estou sempre em busca de conhecimento e me mantenho atualizado com as últimas tendências e tecnologias do mundo da programação. Quero poder desenvolver todo o tipo de software independente da tecnologia. Tenho experiência em projetos acadêmicos e pessoais.",
         profissaoFromacao: "Formação",
         profissaoCurso: "Engenharia de Software",
         profissaoStatus: "Em andamento",
@@ -69,6 +69,7 @@ const translations = {
         ferramentasDigitais: "Ferramentas Digitais",
         minhasHabilidades: "Minhas Habilidades",
         tecnologiasFerramentas: "Tecnologias e ferramentas que domino para criar experiências incríveis",
+        projetosTitulo: "Projetos",
         vamosConversar1: "Vamos conversar?",
         entreEmContato: "Entre em Contato",
         estouSempre: "Estou sempre aberto a novas oportunidades e projetos interessantes. Vamos criar algo incrível juntos!",
@@ -94,6 +95,7 @@ const translations = {
         vamosConversar: "Let's talk",
         aboutMe: "About Me",
         apresentacaoPessoal: "Personal Presentation",
+        apresentacaoTexto: "My name is Felipe Deangelles, I'm from Minas Gerais, Brazil. I'm a Software Developer and I'm graduating in Software Engineering. I'm 29 years old and a Full-Stack programmer passionate about technology. From a very young age, I developed a love for how technology influences the world around us; I've always been fascinated and had a great interest and curiosity in technology and the world of computing. It was in programming that I found my true purpose. I'm passionate about creating technological solutions that solve real problems and add value to users. I'm always seeking knowledge and keeping up-to-date with the latest trends and technologies in the world of programming. I want to be able to develop all types of software, regardless of technology. I have experience in academic and personal projects.",
         profissaoFromacao: "Training",
         profissaoCurso: "Software Engineering",
         profissaoStatus: "In progress",
@@ -103,6 +105,7 @@ const translations = {
         ferramentasDigitais: "Digital Tools",
         minhasHabilidades: "My Skills",
         tecnologiasFerramentas: "Technologies and tools I master to create incredible experiences",
+        projetosTitulo: "Projects",
         vamosConversar1: "Let's talk?",
         entreEmContato: "Get in touch",
         estouSempre: "I'm always open to new opportunities and interesting projects. Let's create something amazing together! Get in touch and let's talk!",
@@ -128,6 +131,7 @@ const translations = {
         vamosConversar: "hablemos",
         aboutMe: "Acerca de mí",
         apresentacaoPessoal: "Presentación Personal",
+        apresentacaoTexto: "Me llamo Felipe Deangelles y soy de Minas Gerais, Brasil. Soy desarrollador de software y me estoy graduando en Ingeniería de Software. Tengo 29 años y soy programador full-stack, apasionado por la tecnología. Desde muy pequeño, me ha fascinado cómo la tecnología influye en el mundo que nos rodea; siempre he sentido una gran curiosidad e interés por la tecnología y el mundo de la informática. Fue en la programación donde encontré mi verdadera vocación. Me apasiona crear soluciones tecnológicas que resuelvan problemas reales y aporten valor a los usuarios. Siempre estoy buscando aprender y manteniéndome al día con las últimas tendencias y tecnologías en el mundo de la programación. Quiero ser capaz de desarrollar todo tipo de software, independientemente de la tecnología. Tengo experiencia en proyectos académicos y personales.",
         profissaoFromacao: "Capacitación",
         profissaoCurso: "Ingeniería de software",
         profissaoStatus: "En curso",
@@ -137,6 +141,7 @@ const translations = {
         ferramentasDigitais: "Herramientas digitales",
         minhasHabilidades: "Mis habilidades",
         tecnologiasFerramentas: "Tecnologías y herramientas que he dominado para crear experiencias increíbles.",
+        projetosTitulo: "Proyectos",
         vamosConversar1: "¿Hablamos?",
         entreEmContato: "Ponte en contacto",
         estouSempre: "Siempre estoy abierta a nuevas oportunidades y proyectos interesantes. ¡Creemos algo increíble juntos! ¡Contáctanos y hablemos!",
@@ -161,6 +166,7 @@ langSwitcher.addEventListener("change", () => {
     });
 });
 
+// inicio animação de escrever texto
 let arrayText = translations.pt.heroText
 
 // const arrayText = [
@@ -213,7 +219,7 @@ langSwitcher.addEventListener("change", () => {
 
 writeText()
 
-// FUNCIONALIDADE SWIPER
+// FUNCIONALIDADE SWIPER HABILIDADES
 const swiper1 = new Swiper('.swiperHabilidades', {
     slidesPerView: 'auto',
     loop: false,

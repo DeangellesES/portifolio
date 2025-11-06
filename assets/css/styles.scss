@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 // GERAL
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Lato", sans-serif;
 }
 
 // VARIÁVEIS SCSS
@@ -190,7 +193,7 @@ header {
             }
 
             .fa-linkedin {
-
+                
                 &:hover {
                     color: #1c3070;
                 }
@@ -202,6 +205,15 @@ header {
                 color: #fff;
                 background-color: var(--cor-texto);
                 margin-left: 1rem;
+            }
+
+            .apresentacao-sociais_listra__dois {
+                width: 2px;
+                height: 60px;
+                color: #fff;
+                background-color: var(--cor-texto);
+                margin-left: 1rem;
+                margin-top: -.2rem;
             }
         }
     }
@@ -415,10 +427,10 @@ header {
 
     }
 }
-
 // FIM SEÇÃO HABILIDADES
 
 // INICIO SEÇÃO PROJETOS
+
 .projetos {
     display: flex;
     justify-content: center;
@@ -430,10 +442,12 @@ header {
     display: flex;
     flex-direction: column;
     box-shadow: $efeito-box-shadow;
+    
 
     h1 {
         font-size: 3.5rem;
         margin-bottom: 2rem;
+        margin-top: -6rem;
         color: var(--cor-texto);
     }
 }
@@ -485,17 +499,18 @@ header {
 
 .swiper-slide-active .title {
     bottom: -10px;
-    box-shadow: 0 20px 30px 2px rgba(25, 43, 206, 0.6);
+    // box-shadow: 0 20px 30px 2px rgba(25, 43, 206, 0.6);
+    box-shadow: 0 20px 30px 2px var(--cor-texto);
 }
 
 .swiper-pagination {
-    --swiper-pagination-bottom: -40px;
+    --swiper-pagination-bottom: -50px;
 }
 
 .swiper-pagination-bullet {
     width: 14px;
     height: 14px;
-    background-color: #fff;
+    background-color: var(--cor-texto);
     border-radius: 50%;
     transition: all 0.3s ease-in-out;
 }

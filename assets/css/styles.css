@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif; }
 
 :root {
   --cor-fundo: black;
@@ -119,6 +121,13 @@ header {
         color: #fff;
         background-color: var(--cor-texto);
         margin-left: 1rem; }
+      .apresentacao .apresentacao-topo .apresentacao-sociais .apresentacao-sociais_listra__dois {
+        width: 2px;
+        height: 60px;
+        color: #fff;
+        background-color: var(--cor-texto);
+        margin-left: 1rem;
+        margin-top: -.2rem; }
   .apresentacao .apresentacao-curriculo {
     margin: -7rem auto 0;
     display: flex;
@@ -262,6 +271,7 @@ header {
   .projetos h1 {
     font-size: 3.5rem;
     margin-bottom: 2rem;
+    margin-top: -6rem;
     color: var(--cor-texto); }
 
 .swiper {
@@ -306,15 +316,15 @@ header {
 
 .swiper-slide-active .title {
   bottom: -10px;
-  box-shadow: 0 20px 30px 2px rgba(25, 43, 206, 0.6); }
+  box-shadow: 0 20px 30px 2px var(--cor-texto); }
 
 .swiper-pagination {
-  --swiper-pagination-bottom: -40px; }
+  --swiper-pagination-bottom: -50px; }
 
 .swiper-pagination-bullet {
   width: 14px;
   height: 14px;
-  background-color: #fff;
+  background-color: var(--cor-texto);
   border-radius: 50%;
   transition: all 0.3s ease-in-out; }
 
