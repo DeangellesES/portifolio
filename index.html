@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portifólio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+</head>
+
+<body>
+
+    <header id="cabecalho">
+        <a href="#cabecalho" data-i18n="item">Início</a>
+        <a href="#sobre" data-i18n="item1">Sobre Mim</a>
+        <a href="#habilidades" data-i18n="item2">Habilidades</a>
+        <a href="#projetos" data-i18n="item3">Projetos</a>
+        <a href="#contato" data-i18n="item4">Contato</a>
+    </header>
+
+    <main>
+
+        <section class="apresentacao">
+            <div class="apresentacao-topo">
+                <div>
+                    <div class="apresentacao-musica">
+                        <div id="playButton"><i class="fa-solid fa-play"></i> <i class="fa-solid fa-music"></i></div>
+
+                        <!-- Elemento de áudio -->
+                        <audio id="musica" src="musica.mp4"></audio>
+                    </div>
+
+
+                    <div class="altera-cor" id="toggleBtn">
+                        <i class="fa-solid fa-sun" id="toggleIcon" onclick="trocarTema()"></i>
+                        <!-- <i class="fa-solid fa-moon" id="toggleIcon"></i> -->
+                    </div>
+
+                    <select id="lang-switcher">
+                        <option value="pt">Português</option>
+                        <option value="en">Inglês</option>
+                        <option value="es">Espanhol</option>
+                    </select>
+
+
+                </div>
+
+
+                <h1 id="text" data-i18n="intro1"></h1>
+
+                <div class="apresentacao-sociais">
+                    <div class="apresentacao-sociais_listra"></div>
+                    <a href="https://github.com/DeangellesES" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/felipe-deangelles-da-silva-lopes/" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <div class="apresentacao-sociais_listra"></div>
+                </div>
+            </div>
+
+            <div class="apresentacao-curriculo">
+                <a class="apresentacao-curriculo_linkUm" href="curriculoportifolio.pdf" target="_blank"><i
+                        class="fa-solid fa-download"></i> Download CV</a>
+
+                <a class="apresentacao-curriculo_linkDois" href="#contato"><i class="fa-solid fa-message"></i> <span
+                        data-i18n="vamosConversar">vamos
+                        conversar</span> </a>
+            </div>
+        </section>
+
+        <section class="sobre" id="sobre">
+            <div>
+                <h1 data-i18n="aboutMe">Sobre Mim</h1>
+                <p data-i18n="apresentacaoPessoal">Apresentação pessoal</p>
+                <p>Meu nome é Felipe Deangelles, sou natural de Minas Gerais. Sou desenvolvedor de Software e estou graduando em Engenharia de Software.
+                    Tenho 29 anos e sou um programador Full-Stack apaixonado por tecnologia. Desde muito cedo desenvolvi um amor pela forma como a tecnologia influencia o mundo ao nosso redor, desde de sempre fui encantado e tive muito interesse e curisosidade por tecnologia e o universo da computação. 
+                    Foi na programação que encontrei meu verdadeiro propósito.
+                    Sou apaixonado por criar soluções tecnológicas que resolvem problemas reais e que agregam valor aos usuários.
+                    Estou sempre em busca de conhecimento e me mantenho atualizado com as últimas tendências e tecnologias do mundo da programação. Quero poder desenvolver todo o tipo de software independente da tecnologia.
+                    Tenho experiência em projetos acadêmicos e pessoais.
+                
+                </p>
+
+
+                <div>
+                    <div class="sobre-profissao">
+                        <h2 data-i18n="profissaoFromacao">Formação</h2>
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <h3 data-i18n="profissaoCurso">Engenharia de Software</h3>
+                        <p data-i18n="profissaoStatus">Em andamento</p>
+                    </div>
+
+                    <!-- <div class="sobre-profissao">
+                        <h2>Experiência</h2>
+                        <i class="fa-solid fa-laptop-code"></i>
+
+                    </div> -->
+                </div>
+
+            </div>
+
+            <div class="especialidades">
+                <h1 data-i18n="minhasEspecialidades">Minhas Especialidades</h1>
+                <div class="especialidades-container">
+                    <div class="especialidades-container_caixa">
+                        <i class="fa-solid fa-code"></i>
+                        <h4>WebSites</h4>
+                    </div>
+                    <div class="especialidades-container_caixa">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <h4 data-i18n="lojasOnline">Lojas Online</h4>
+                    </div>
+                    <div class="especialidades-container_caixa">
+                        <i class="fa-solid fa-blog"></i>
+                        <h4>Blogs</h4>
+                    </div>
+                    <div class="especialidades-container_caixa">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <h4 data-i18n="aplicativosMobile">Aplicativos Mobile</h4>
+                    </div>
+                    <div class="especialidades-container_caixa">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        <h4 data-i18n="ferramentasDigitais">Ferramentas Digitais</h4>
+                    </div>
+                </div>
+
+        </section>
+
+        <section class="habilidades" id="habilidades">
+            <h1 data-i18n="minhasHabilidades">Minhas Habilidades</h1>
+            <p data-i18n="tecnologiasFerramentas">Tecnologias e ferramentas que domino para criar experiências incríveis
+            </p>
+
+            <div class="swiperHabilidades">
+                <div class="habilidades-container swiper-wrapper">
+                    <div class="habilidades-container-caixa swiper-slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                        <span>HTML5</span>
+                        <div>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="habilidades-container-caixa swiper-slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
+                        <span>CSS</span>
+                        <div>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="habilidades-container-caixa swiper-slide">
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+                        <span>JavaScript</span>
+                        <div>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="habilidades-container-caixa swiper-slide">
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" />
+                        <span>Bootstrap</span>
+                        <div>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="habilidades-container-caixa swiper-slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" />
+                        <span>Sass</span>
+                        <div>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="habilidades-container-caixa swiper-slide">
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
+                        <span>Tailwind</span>
+                        <div>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="habilidades-container-caixa swiper-slide">
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg" />
+                        <span>jQuery</span>
+                        <div>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="habilidades-container-caixa swiper-slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+                        <span>React</span>
+                        <div>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="habilidades-container-caixa swiper-slide">
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/styledcomponents/styledcomponents-original.svg" />
+                        <span>Styled Components</span>
+                        <div>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="habilidades-container-caixa swiper-slide">
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
+                        <span>TypeScript</span>
+                        <div>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="habilidades-container-caixa swiper-slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" />
+                        <span>PHP</span>
+                        <div>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="habilidades-container-caixa swiper-slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" />
+                        <span>Vue</span>
+                        <div>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="habilidades-container-caixa swiper-slide">
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg" />
+                        <span>Node</span>
+                        <div>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="habilidades-container-caixa swiper-slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original.svg" />
+                        <span>npm</span>
+                        <div>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="habilidades-container-caixa swiper-slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
+                        <span>git</span>
+                        <div>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="habilidades-container-caixa swiper-slide">
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
+                        <span>GitHub</span>
+                        <div>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="habilidades-container-caixa swiper-slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" />
+                        <span>MySQL</span>
+                        <div>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="habilidades-container-caixa swiper-slide">
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" />
+                        <span>MongoDB</span>
+                        <div>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="habilidades-container-caixa swiper-slide">
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/reactnative/reactnative-original.svg" />
+                        <span>React Native</span>
+                        <div>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="habilidades-container-caixa swiper-slide">
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" />
+                        <span>Flutter</span>
+                        <div>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="habilidades-container-caixa swiper-slide">
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" />
+                        <span>Visual Studio Code</span>
+                        <div>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="habilidades-container-caixa swiper-slide">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" />
+                        <span>Linux</span>
+                        <div>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="habilidades-container-caixa swiper-slide">
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" />
+                        <span>Postman</span>
+                        <div>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="habilidades-container-caixa swiper-slide">
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" />
+                        <span>Android Studio</span>
+                        <div>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="habilidades-container-caixa swiper-slide">
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" />
+                        <span>Vite</span>
+                        <div>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="projetos" id="projetos">
+            <h1>Projetos</h1>
+
+            <div class="swiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <img src="./assets/img/pizzaria.png" alt="">
+                        <div class="title">
+                            <span>Pizzaria</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./assets/img/site-odontologia.png" alt="">
+                        <div class="title">
+                            <span>Clínica Odontológica</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./assets/img/site-advogados.png" alt="">
+                        <div class="title">
+                            <span>Site para advogados</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./assets/img/clinica-medica.png" alt="">
+                        <div class="title">
+                            <span>Clínica Médica</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./assets/img/site-academia.png" alt="">
+                        <div class="title">
+                            <span>Site pra Academia</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./assets/img/cafeteria.png" alt="">
+                        <div class="title">
+                            <span>Site para cafeteria</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./assets/img/site-psicologa.png" alt="">
+                        <div class="title">
+                            <span>Site para Psicólogo</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./assets/img/site_hamburgueria.png" alt="">
+                        <div class="title">
+                            <span>Site para Hamburgueria</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./assets/img/site-para-restaurante.png" alt="">
+                        <div class="title">
+                            <span>Site para Restaurente</span>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section class="contato" id="contato">
+            <h1 data-i18n="vamosConversar1">Vamos Conversar?</h1>
+            <div class="contato-divisao">
+                <div class="contato-divisao_geral">
+                    <h2 data-i18n="entreEmContato">Entre em Contato</h2>
+                    <p class="contato-divisao_geral__frase" data-i18n="estouSempre">Estou sempre aberto a novas
+                        oportunidades e projetos
+                        interessantes. Vamos criar algo incrível juntos! Entre em contato e vamos conversar!</p>
+                    <div class="contato-divisao_geral__caixa">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <h2>Email</h2>
+                            <p>FelipeDeangelles@hotmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contato-divisao_geral__caixa">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <a href="">
+                                <h2 data-i18n="telefone">Telefone</h2>
+                                <p>+55 (35) 99763-1949</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contato-divisao_geral__caixa">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h2 data-i18n="localizacao">Localização</h2>
+                            <p>Ouro Fino - Minas Gerais - Brasil</p>
+                        </div>
+                    </div>
+                    <div class="contato-divisao_geral__caixa">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/felipe-deangelles-da-silva-lopes/" target="_blank">Linkedin
+                            &#8594;</a>
+                    </div>
+                    <div class="contato-divisao_geral__caixa">
+                        <i class="fa-brands fa-github"></i>
+                        <a href="https://github.com/DeangellesES" target="_blank">GitHub &#8594;</a>
+                    </div>
+                </div>
+
+                <div class="formulario">
+                    <form action="" method="post" id="contact_form">
+                        <label for="name" data-i18n="nome">Nome</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="subject">Assunto</label>
+                        <input type="text" id="subject" name="subject" required>
+
+                        <label for="menssage" data-i18n="mensagem">Mensagem</label>
+                        <textarea name="message" id="message" rows="10" required></textarea>
+
+                        <!-- <a href=""><span data-i18n="enviar">Enviar </span> <i class="fa-solid fa-paper-plane"></i></a> -->
+                        <button type="submit" id="submit_button"><span data-i18n="enviar">Enviar Mensagem</span> <i
+                                class="fa-solid fa-paper-plane"></i></button>
+
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p data-i18n="direitos">© 2025 Felipe Deangelles. Todos os direitos reservados.</p>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>
