@@ -8,43 +8,61 @@
     font-family: "Lato", sans-serif;
 }
 
-// VARIÁVEIS SCSS
-$cor-texto-geral: #b9b4b4;
-$cor-azul-geral: #1c3070;
-$cor-fundo: #000;
-$efeito-box-shadow: 0 0 10px 0px var(--cor-texto);
-
+// variaveis para trocar a cor da tela
 :root {
     --cor-fundo: black;
-    --cor-texto: white;
+    --cor-texto: #fff3f3;
+}
+
+// VARIÁVEIS SCSS
+$cor-texto-geral: #b9b4b4;
+$efeito-box-shadow: 0 0 10px 0px var(--cor-texto);
+
+// redutor dos titulos
+%base-h1 {
+    font-size: 3rem;
+    color: var(--cor-texto);
+    text-align: center;
+}
+
+// redutor dos fundos
+%base-fundo {
+    background-color: var(--cor-fundo);
+    box-shadow: $efeito-box-shadow;
+}
+
+@mixin formulario($border: 1px solid var(--cor-texto), $radius: 5px, $width: 90%) {
+    border: $border;
+    border-radius: $radius;
+    width: $width;
 }
 
 // INÍCIO CABEÇALHO
 header {
-    background-color: var(--cor-fundo);
-    padding: 2rem;
     display: flex;
     justify-content: center;
+    @extend %base-fundo;
     gap: .2rem;
-    box-shadow: $efeito-box-shadow;
+    padding: 2rem;
 
     a {
-        color: var(--cor-texto);
-        text-decoration: none;
-        font-size: 1.3rem;
-        padding: .7rem;
         border-radius: 30px;
+        color: var(--cor-texto);
+        font-size: 1.3rem;
+        text-decoration: none;
         font-weight: 600;
+        padding: .7rem;
 
         &:hover {
-            color: var(--cor-texto);
-            font-size: 1.8rem;
-            display: inline-block;
             animation: subir 1s ease-in-out forwards;
+            color: var(--cor-texto);
+            // display: inline-block;
+            font-size: 1.8rem;
         }
     }
 }
 
+// ANIMAÇÃO DE SUBIR TEXTO NA NAVEGAÇÃO TOPO
 @keyframes subir {
     0% {
         transform: translateY(0);
@@ -58,17 +76,16 @@ header {
 // FIM CABEÇALHO
 
 // INICIO SETA PARA SUBIR
- .seta-subir {
-    color: #fff;
+.seta-subir {
+    border-radius: 50%;
+    bottom: 0;
+    color: var(--cor-texto);
+    cursor: pointer;
     font-size: 4rem;
+    right: 0;
+    margin: 0 5rem 5rem 0;
     position: fixed;
     z-index: 10;
-    right: 0;
-    bottom: 0;
-    margin: 0 5rem 5rem 0;
-    cursor: pointer;
-    // box-shadow: 0px 10px 18px white;
-    border-radius: 50%;
 }
 
 .seta-subir.esconder {
@@ -79,12 +96,9 @@ header {
 
 // INICIO CONTEUDO PRINCIPAL
 .apresentacao {
-    background-color: var(--cor-fundo);
-    height: 100vh;
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    box-shadow: $efeito-box-shadow;
-    align-items: center;
+    @extend %base-fundo;
+    height: 100vh;
 
     .apresentacao-topo {
         display: grid;
@@ -92,8 +106,7 @@ header {
         align-items: center;
 
         div {
-            margin-left: .9rem;
-            margin-top: 1.6rem;
+            margin: 0 0 0 .9rem;
 
             .apresentacao-musica {
 
@@ -101,32 +114,28 @@ header {
                     display: flex;
                     gap: .5rem;
 
-
-
                     &:hover i {
                         color: purple;
-
                     }
 
                     i {
                         color: var(--cor-texto);
                         font-size: 1.5rem;
-
-
                     }
                 }
             }
 
             .altera-cor {
-                width: fit-content;
                 color: var(--cor-texto);
-                font-size: 1.7rem;
-                margin: 3rem 0 1rem 2.3rem;
-
                 cursor: pointer;
+                margin: 3rem 0 1rem 2.3rem;
+                width: fit-content;
+
+                i {
+                    font-size: 1.7rem;
+                }
 
                 .fa-sun {
-
 
                     &:hover {
                         color: yellow;
@@ -136,28 +145,25 @@ header {
             }
 
             select {
-                width: fit-content;
-                font-size: 1rem;
-                padding: .5rem;
-                outline: none;
-                font-weight: 600;
-                cursor: pointer;
-                border-radius: 20px;
                 border: 1px solid var(--cor-texto);
+                border-radius: 20px;
+                cursor: pointer;
+                font-size: 1rem;
+                font-weight: 600;
                 margin-top: 1.5rem;
+                outline: none;
+                padding: .5rem;
+                width: fit-content;
 
                 &:hover {
                     box-shadow: 0 0 20px 0 var(--cor-texto);
                 }
 
                 option {
-                    padding: 1rem;
-                    font-size: 1rem;
                     background-color: #000;
                     color: #fff;
-
-
-
+                    font-size: 1rem;
+                    padding: 1rem;
                 }
             }
         }
@@ -170,9 +176,9 @@ header {
 
         // animação escrevendo em loop
         #text {
-            height: 20px;
-            font-size: 4rem;
             color: var(--cor-texto);
+            font-size: 4rem;
+            height: 20px;
             text-shadow: 1px 1px 5px var(--cor-texto);
         }
 
@@ -195,10 +201,10 @@ header {
 
         .apresentacao-sociais {
             display: flex;
-            flex-direction: column;
             justify-content: center;
+            flex-direction: column;
             gap: 1.5rem;
-            margin-top: 5.5rem;
+            margin-top: 1.5rem;
 
             i {
                 font-size: 2.4rem;
@@ -213,65 +219,66 @@ header {
             }
 
             .fa-linkedin {
-                
+
                 &:hover {
                     color: #1c3070;
                 }
             }
 
             .apresentacao-sociais_listra {
+                background-color: var(--cor-texto);
+                color: #fff;
                 width: 2px;
                 height: 60px;
-                color: #fff;
-                background-color: var(--cor-texto);
                 margin-left: 1rem;
             }
 
             .apresentacao-sociais_listra__dois {
-                width: 2px;
-                height: 60px;
-                color: #fff;
                 background-color: var(--cor-texto);
-                margin-left: 1rem;
-                margin-top: -.2rem;
+                color: #fff;
+                height: 60px;
+                margin: -.2rem 0 0 1rem;
+                width: 2px;
             }
         }
     }
 
     .apresentacao-curriculo {
-        margin: -7rem auto 0;
         display: flex;
         gap: 1rem;
+        margin: 0 auto;
 
         a {
-            width: fit-content;
+            border-radius: 10px;
+            font-size: 1.3rem;
+            font-weight: 600;
             height: fit-content;
             padding: 1rem;
-            font-size: 1.3rem;
             text-decoration: none;
             text-transform: capitalize;
-            font-weight: 600;
-            border-radius: 10px;
+            width: fit-content;
         }
 
         .apresentacao-curriculo_linkUm {
-            border: 1px solid var(--cor-texto);
             color: var(--cor-texto);
+            border: 1px solid var(--cor-texto);
+            transition: all .5s ease;
 
             .fa-download {
                 margin-right: .5rem;
             }
 
             &:hover {
-                background-color: var(--cor-texto);
                 color: var(--cor-fundo);
+                background-color: var(--cor-texto);
             }
         }
 
         .apresentacao-curriculo_linkDois {
             background-color: #a7a4a470;
-            color: #000;
             border: 1px solid var(--cor-texto);
+            color: #000;
+            transition: all .5s ease;
 
             .fa-message {
                 margin-right: .5rem;
@@ -279,7 +286,6 @@ header {
 
             &:hover {
                 background-color: #d6d1d1ab;
-                color: #000;
             }
         }
     }
@@ -287,13 +293,12 @@ header {
 
 // INICIO SEÇÃO SOBRE
 .sobre {
-    background-color: var(--cor-fundo);
-    box-shadow: $efeito-box-shadow;
-    padding: 6rem;
-    color: var(--cor-texto);
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
+    @extend %base-fundo;
+    color: var(--cor-texto);
+    padding: 6rem;
 
     div {
         h1 {
@@ -305,28 +310,23 @@ header {
             font-size: 1.2rem;
         }
 
-
         .sobre-profissao {
-            width: fit-content;
-            text-align: center;
             border: 1px solid var(--cor-texto);
-            padding: 1.5rem;
-            margin-top: 2rem;
             border-radius: 20px;
+            padding: 1.5rem;
+            text-align: center;
+            margin-top: 2rem;
+            width: fit-content;
 
             &:hover i {
                 box-shadow: 0 0 15px 0 var(--cor-texto);
             }
 
             i {
-                margin: 1rem 0;
-                font-size: 1.5rem;
-                width: 20%;
-                padding: .5rem;
-
                 border-radius: 5px;
-
-
+                font-size: 1.5rem;
+                padding: .5rem;
+                margin: 1rem 0;
             }
 
             h3 {
@@ -336,22 +336,21 @@ header {
 
     }
 
-
     .especialidades {
 
         .especialidades-container {
             display: flex;
+            justify-content: center;
             flex-wrap: wrap;
             gap: 2.5rem;
             margin-top: 2rem;
-            justify-content: center;
 
             .especialidades-container_caixa {
-                text-align: center;
-                width: 28%;
                 border: 1px solid $cor-texto-geral;
                 padding: 2rem;
-                transition: background .5s ease;
+                text-align: center;
+                transition: all .5s ease;
+                width: 28%;
 
                 &:hover {
                     background: var(--cor-texto);
@@ -363,8 +362,6 @@ header {
                     font-size: 2.5rem;
                     margin-bottom: 1rem;
                 }
-
-
             }
         }
     }
@@ -374,19 +371,17 @@ header {
 
 // INICIO SEÇÃO HABILIDADES
 .habilidades {
-    background-color: var(--cor-fundo);
-    box-shadow: $efeito-box-shadow;
-    text-align: center;
+    @extend %base-fundo;
     padding: 3rem;
+    text-align: center;
 
     h1 {
-        font-size: 3rem;
-        color: var(--cor-texto);
+        @extend %base-h1;
     }
 
     p {
-        font-size: 1.3rem;
         color: var(--cor-texto);
+        font-size: 1.3rem;
     }
 
     .swiperHabilidades {
@@ -405,77 +400,65 @@ header {
                 height: 150px;
             }
         }
-    }
 
-    .habilidades-container {
-        display: flex;
-        gap: 1rem;
+        .habilidades-container {
+            display: flex;
+            gap: 1rem;
 
-
-
-        .habilidades-container-caixa {
-            background-color: #2c2b2b;
-            display: grid;
-            justify-content: center;
-            padding: 1rem 1rem;
-            border-radius: 20px;
-            width: 15% !important;
-            height: 90% !important;
-            transition: transform .5s;
-            cursor: grab;
-
-            &:hover {
-                transform: scale(1.1);
-            }
-
-            img {
-                width: 50%;
-                margin: 0 auto;
-            }
-
-            span {
+            .habilidades-container-caixa {
+                display: grid;
+                justify-content: center;
+                border-radius: 20px;
+                background-color: #2c2b2b;
                 color: $cor-texto-geral;
-                font-weight: 600;
-                margin: .5rem 0;
-            }
+                cursor: grab;
+                height: 80% !important;
+                padding: 1rem;
+                transition: transform .5s;
+                width: 15% !important;
 
-            div {
-                color: $cor-texto-geral;
+                &:hover {
+                    transform: scale(1.1);
+                }
 
+                img {
+                    width: 50%;
+                    margin: 0 auto;
+                }
+
+                span {
+                    font-weight: 600;
+                    margin: .5rem 0;
+                }
             }
         }
-
     }
 }
+
 // FIM SEÇÃO HABILIDADES
 
 // INICIO SEÇÃO PROJETOS
-
 .projetos {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 120vh;
-    background-color: var(--cor-fundo);
+    flex-direction: column;
+    @extend %base-fundo;
     color: #fff;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    box-shadow: $efeito-box-shadow;
-    
+    height: 120vh;
 
     h1 {
-        font-size: 3.5rem;
+        @extend %base-h1;
         margin-bottom: 2rem;
         margin-top: -6rem;
-        color: var(--cor-texto);
     }
 }
 
 .swiper {
-  width: 80vw;              
-  height: 430px;
-  overflow: visible;      
+    width: 80vw;
+    height: 430px;
+    overflow: visible;
 }
 
 .swiper-slide {
@@ -540,19 +523,17 @@ header {
     background-color: var(--cor-texto);
     border-radius: 14px;
 }
+
 // FIM SEÇÃO PORJETOS
 
 // INCIO SEÇÃO CONTATO
 .contato {
-    background-color: var(--cor-fundo);
-    box-shadow: $efeito-box-shadow;
+    @extend %base-fundo;
     color: var(--cor-texto);
     padding: 3rem 5.5rem;
 
     h1 {
-        font-size: 3rem;
-        color: var(--cor-texto);
-        text-align: center;
+        @extend %base-h1;
         margin-bottom: 2.5rem;
     }
 
@@ -574,19 +555,18 @@ header {
 
             .contato-divisao_geral__caixa {
                 display: flex;
-                gap: .7rem;
                 align-items: center;
+                gap: .7rem;
                 margin: 1rem 0;
 
                 i {
                     border-radius: 50%;
-                    border: 1px solid $cor-texto-geral;
-                    width: 3rem;
-                    height: 3rem;
-                    text-align: center;
-                    padding: .7rem;
+                    border: 1px solid var(--cor-texto);
                     font-size: 1.5rem;
-
+                    height: 3rem;
+                    padding: .7rem;
+                    text-align: center;
+                    width: 3rem;
                 }
 
                 p {
@@ -595,16 +575,20 @@ header {
 
                 a {
                     color: var(--cor-texto);
-                    text-decoration: none;
                     font-size: 1.7rem;
                     font-weight: 600;
+                    text-decoration: none;
+
+                    .fa-arrow-right {
+                        border: none;
+                    }
                 }
             }
         }
 
         .formulario {
-            display: grid;
-            align-items: center;
+            // display: grid;
+            // align-items: center;
 
             form {
                 display: flex;
@@ -616,37 +600,40 @@ header {
                 }
 
                 input {
+                    @include formulario($border: 1px solid var(--cor-texto), $radius: 5px, $width: 90%);
+                    // border: $borda-formulario;
+                    // border-radius: $borda-arredondada-formulario;
+                    // width: $largura-formulario;
                     padding: .9rem;
-                    width: 90%;
                     margin-top: .5rem;
-                    border-radius: 5px;
-                    border: 1px solid var(--cor-texto);
                 }
 
                 textarea {
-                    width: 90%;
-                    border-radius: 5px;
+                    @include formulario();
+                    // border: $borda-formulario;
+                    // border-radius: $borda-arredondada-formulario;
+                    // width: $largura-formulario;
                     margin: .7rem 0 1.5rem 0;
-                    border: 1px solid var(--cor-texto);
                 }
 
                 button {
+                    @include formulario($border: 1px solid var(--cor-texto), $radius: 5px, $width: 90%);
                     background-color: var(--cor-texto);
+                    // border: $borda-formulario;
+                    // border-radius: $borda-arredondada-formulario;
+                    // width: $largura-formulario;
                     color: var(--cor-fundo);
-                    width: 90%;
-                    padding: .7rem;
-                    text-decoration: none;
+                    cursor: pointer;
                     font-size: 1.5rem;
                     font-weight: 600;
-                    border-radius: 5px;
+                    padding: .7rem;
                     text-align: center;
-                    border: 1px solid var(--cor-texto);
-                    cursor: pointer;
+                    text-decoration: none;
 
                     &:hover {
                         background-color: var(--cor-fundo);
-                        color: var(--cor-texto);
                         box-shadow: 0 0 20px 0 var(--cor-texto);
+                        color: var(--cor-texto);
                     }
                 }
             }
@@ -660,11 +647,10 @@ header {
 
 // INICIO RODAPE
 footer {
-    text-align: center;
-    background-color: var(--cor-fundo);
+    @extend %base-fundo;
     color: var(--cor-texto);
-    box-shadow: $efeito-box-shadow;
     padding: 2rem 0;
+    text-align: center;
 
     p {
         font-size: 1.5rem;

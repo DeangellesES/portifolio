@@ -4,12 +4,12 @@ let escuro = true;
 function trocarTema() {
     if (escuro) {
         // muda para tema claro
-        document.documentElement.style.setProperty('--cor-fundo', 'white');
+        document.documentElement.style.setProperty('--cor-fundo', '#fff3f3');
         document.documentElement.style.setProperty('--cor-texto', 'black');
     } else {
         // volta para tema escuro
         document.documentElement.style.setProperty('--cor-fundo', 'black');
-        document.documentElement.style.setProperty('--cor-texto', 'white');
+        document.documentElement.style.setProperty('--cor-texto', '#fff3f3');
     }
 
     escuro = !escuro;
@@ -72,12 +72,12 @@ const translations = {
         projetosTitulo: "Projetos",
         vamosConversar1: "Vamos conversar?",
         entreEmContato: "Entre em Contato",
-        estouSempre: "Estou sempre aberto a novas oportunidades e projetos interessantes. Vamos criar algo incrível juntos!",
+        estouSempre: "Estou sempre aberto a novas oportunidades e projetos interessantes. Vamos criar algo incrível juntos! Entre em contato e vamos conversar!",
         telefone: "Telefone",
         localizacao: "Localização",
         nome: "Nome",
         mensagem: "Mensagem",
-        enviar: "Enviar",
+        enviar: "Enviar Mensagem",
         direitos: "© 2025 Felipe Deangelles. Todos os direitos reservados.",
     },
     en: {
@@ -118,10 +118,10 @@ const translations = {
     },
     es: {
         heroText: [
-            "Hola, mi nombre es Felipe Deangelles",
-            "Soy desarrollador de software",
+            "Hola, mi Nombre es Felipe Deangelles",
+            "Soy Desarrollador de Software",
             "Me graduaré con un título en Ingeniería de Software",
-            "¡Bienvenidos a mi portafolio!"
+            "¡Bienvenidos a mi Portafolio!"
         ],
         item: "Comenzar",
         item1: "Acerca de mí",
@@ -266,6 +266,8 @@ document.getElementById("contact_form").addEventListener("submit", function (eve
                     color: "#f4f4f4"
                 }
             }).showToast();
+
+            document.getElementById("contact_form").reset()
         })
         .catch((error) => {
             Toastify({
@@ -295,7 +297,7 @@ const swiper = new Swiper('.swiper', {
     coverflowEffect: {
         rotate: 0,
         stretch: 0,
-        depth: 350,
+        depth: 350, 
         modifier: 1,
         slideShadows: true,
     },

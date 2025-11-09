@@ -7,27 +7,33 @@
 
 :root {
   --cor-fundo: black;
-  --cor-texto: white; }
+  --cor-texto: #fff3f3; }
+
+.habilidades h1, .projetos h1, .contato h1 {
+  font-size: 3rem;
+  color: var(--cor-texto);
+  text-align: center; }
+
+header, .apresentacao, .sobre, .habilidades, .projetos, .contato, footer {
+  background-color: var(--cor-fundo);
+  box-shadow: 0 0 10px 0px var(--cor-texto); }
 
 header {
-  background-color: var(--cor-fundo);
-  padding: 2rem;
   display: flex;
   justify-content: center;
   gap: .2rem;
-  box-shadow: 0 0 10px 0px var(--cor-texto); }
+  padding: 2rem; }
   header a {
-    color: var(--cor-texto);
-    text-decoration: none;
-    font-size: 1.3rem;
-    padding: .7rem;
     border-radius: 30px;
-    font-weight: 600; }
+    color: var(--cor-texto);
+    font-size: 1.3rem;
+    text-decoration: none;
+    font-weight: 600;
+    padding: .7rem; }
     header a:hover {
+      animation: subir 1s ease-in-out forwards;
       color: var(--cor-texto);
-      font-size: 1.8rem;
-      display: inline-block;
-      animation: subir 1s ease-in-out forwards; }
+      font-size: 1.8rem; }
 
 @keyframes subir {
   0% {
@@ -35,33 +41,28 @@ header {
   100% {
     transform: translateY(-15px); } }
 .seta-subir {
-  color: #fff;
-  font-size: 4rem;
-  position: fixed;
-  z-index: 10;
-  right: 0;
+  border-radius: 50%;
   bottom: 0;
-  margin: 0 5rem 5rem 0;
+  color: var(--cor-texto);
   cursor: pointer;
-  border-radius: 50%; }
+  font-size: 4rem;
+  right: 0;
+  margin: 0 5rem 5rem 0;
+  position: fixed;
+  z-index: 10; }
 
 .seta-subir.esconder {
   display: none; }
 
 .apresentacao {
-  background-color: var(--cor-fundo);
-  height: 100vh;
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  box-shadow: 0 0 10px 0px var(--cor-texto);
-  align-items: center; }
+  height: 100vh; }
   .apresentacao .apresentacao-topo {
     display: grid;
     grid-template-columns: 5% 90% 5%;
     align-items: center; }
     .apresentacao .apresentacao-topo div {
-      margin-left: .9rem;
-      margin-top: 1.6rem; }
+      margin: 0 0 0 .9rem; }
       .apresentacao .apresentacao-topo div .apresentacao-musica div {
         display: flex;
         gap: .5rem; }
@@ -71,38 +72,39 @@ header {
           color: var(--cor-texto);
           font-size: 1.5rem; }
       .apresentacao .apresentacao-topo div .altera-cor {
-        width: fit-content;
         color: var(--cor-texto);
-        font-size: 1.7rem;
+        cursor: pointer;
         margin: 3rem 0 1rem 2.3rem;
-        cursor: pointer; }
+        width: fit-content; }
+        .apresentacao .apresentacao-topo div .altera-cor i {
+          font-size: 1.7rem; }
         .apresentacao .apresentacao-topo div .altera-cor .fa-sun:hover {
           color: yellow; }
       .apresentacao .apresentacao-topo div select {
-        width: fit-content;
-        font-size: 1rem;
-        padding: .5rem;
-        outline: none;
-        font-weight: 600;
-        cursor: pointer;
-        border-radius: 20px;
         border: 1px solid var(--cor-texto);
-        margin-top: 1.5rem; }
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-top: 1.5rem;
+        outline: none;
+        padding: .5rem;
+        width: fit-content; }
         .apresentacao .apresentacao-topo div select:hover {
           box-shadow: 0 0 20px 0 var(--cor-texto); }
         .apresentacao .apresentacao-topo div select option {
-          padding: 1rem;
-          font-size: 1rem;
           background-color: #000;
-          color: #fff; }
+          color: #fff;
+          font-size: 1rem;
+          padding: 1rem; }
     .apresentacao .apresentacao-topo h1 {
       margin: -5rem auto 0;
       width: 60%;
       text-align: center; }
     .apresentacao .apresentacao-topo #text {
-      height: 20px;
-      font-size: 4rem;
       color: var(--cor-texto);
+      font-size: 4rem;
+      height: 20px;
       text-shadow: 1px 1px 5px var(--cor-texto); }
     .apresentacao .apresentacao-topo #text::after {
       content: "";
@@ -118,10 +120,10 @@ header {
     opacity: 1; } }
     .apresentacao .apresentacao-topo .apresentacao-sociais {
       display: flex;
-      flex-direction: column;
       justify-content: center;
+      flex-direction: column;
       gap: 1.5rem;
-      margin-top: 5.5rem; }
+      margin-top: 1.5rem; }
       .apresentacao .apresentacao-topo .apresentacao-sociais i {
         font-size: 2.4rem;
         color: var(--cor-texto); }
@@ -130,91 +132,88 @@ header {
       .apresentacao .apresentacao-topo .apresentacao-sociais .fa-linkedin:hover {
         color: #1c3070; }
       .apresentacao .apresentacao-topo .apresentacao-sociais .apresentacao-sociais_listra {
+        background-color: var(--cor-texto);
+        color: #fff;
         width: 2px;
         height: 60px;
-        color: #fff;
-        background-color: var(--cor-texto);
         margin-left: 1rem; }
       .apresentacao .apresentacao-topo .apresentacao-sociais .apresentacao-sociais_listra__dois {
-        width: 2px;
-        height: 60px;
-        color: #fff;
         background-color: var(--cor-texto);
-        margin-left: 1rem;
-        margin-top: -.2rem; }
+        color: #fff;
+        height: 60px;
+        margin: -.2rem 0 0 1rem;
+        width: 2px; }
   .apresentacao .apresentacao-curriculo {
-    margin: -7rem auto 0;
     display: flex;
-    gap: 1rem; }
+    gap: 1rem;
+    margin: 0 auto; }
     .apresentacao .apresentacao-curriculo a {
-      width: fit-content;
+      border-radius: 10px;
+      font-size: 1.3rem;
+      font-weight: 600;
       height: fit-content;
       padding: 1rem;
-      font-size: 1.3rem;
       text-decoration: none;
       text-transform: capitalize;
-      font-weight: 600;
-      border-radius: 10px; }
+      width: fit-content; }
     .apresentacao .apresentacao-curriculo .apresentacao-curriculo_linkUm {
+      color: var(--cor-texto);
       border: 1px solid var(--cor-texto);
-      color: var(--cor-texto); }
+      transition: all .5s ease; }
       .apresentacao .apresentacao-curriculo .apresentacao-curriculo_linkUm .fa-download {
         margin-right: .5rem; }
       .apresentacao .apresentacao-curriculo .apresentacao-curriculo_linkUm:hover {
-        background-color: var(--cor-texto);
-        color: var(--cor-fundo); }
+        color: var(--cor-fundo);
+        background-color: var(--cor-texto); }
     .apresentacao .apresentacao-curriculo .apresentacao-curriculo_linkDois {
       background-color: #a7a4a470;
+      border: 1px solid var(--cor-texto);
       color: #000;
-      border: 1px solid var(--cor-texto); }
+      transition: all .5s ease; }
       .apresentacao .apresentacao-curriculo .apresentacao-curriculo_linkDois .fa-message {
         margin-right: .5rem; }
       .apresentacao .apresentacao-curriculo .apresentacao-curriculo_linkDois:hover {
-        background-color: #d6d1d1ab;
-        color: #000; }
+        background-color: #d6d1d1ab; }
 
 .sobre {
-  background-color: var(--cor-fundo);
-  box-shadow: 0 0 10px 0px var(--cor-texto);
-  padding: 6rem;
-  color: var(--cor-texto);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5rem; }
+  gap: 5rem;
+  color: var(--cor-texto);
+  padding: 6rem; }
   .sobre div h1 {
     font-size: 3rem; }
   .sobre div p {
     padding-top: 1rem;
     font-size: 1.2rem; }
   .sobre div .sobre-profissao {
-    width: fit-content;
-    text-align: center;
     border: 1px solid var(--cor-texto);
+    border-radius: 20px;
     padding: 1.5rem;
+    text-align: center;
     margin-top: 2rem;
-    border-radius: 20px; }
+    width: fit-content; }
     .sobre div .sobre-profissao:hover i {
       box-shadow: 0 0 15px 0 var(--cor-texto); }
     .sobre div .sobre-profissao i {
-      margin: 1rem 0;
+      border-radius: 5px;
       font-size: 1.5rem;
-      width: 20%;
       padding: .5rem;
-      border-radius: 5px; }
+      margin: 1rem 0; }
     .sobre div .sobre-profissao h3 {
       font-size: 1.5rem; }
   .sobre .especialidades .especialidades-container {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 2.5rem;
-    margin-top: 2rem;
-    justify-content: center; }
+    margin-top: 2rem; }
     .sobre .especialidades .especialidades-container .especialidades-container_caixa {
-      text-align: center;
-      width: 28%;
       border: 1px solid #b9b4b4;
       padding: 2rem;
-      transition: background .5s ease; }
+      text-align: center;
+      transition: all .5s ease;
+      width: 28%; }
       .sobre .especialidades .especialidades-container .especialidades-container_caixa:hover {
         background: var(--cor-texto);
         color: var(--cor-fundo);
@@ -224,16 +223,11 @@ header {
         margin-bottom: 1rem; }
 
 .habilidades {
-  background-color: var(--cor-fundo);
-  box-shadow: 0 0 10px 0px var(--cor-texto);
-  text-align: center;
-  padding: 3rem; }
-  .habilidades h1 {
-    font-size: 3rem;
-    color: var(--cor-texto); }
+  padding: 3rem;
+  text-align: center; }
   .habilidades p {
-    font-size: 1.3rem;
-    color: var(--cor-texto); }
+    color: var(--cor-texto);
+    font-size: 1.3rem; }
   .habilidades .swiperHabilidades {
     width: 100%;
     margin-top: 2rem;
@@ -246,47 +240,40 @@ header {
         width: auto;
         flex-shrink: 0;
         height: 150px; }
-  .habilidades .habilidades-container {
-    display: flex;
-    gap: 1rem; }
-    .habilidades .habilidades-container .habilidades-container-caixa {
-      background-color: #2c2b2b;
-      display: grid;
-      justify-content: center;
-      padding: 1rem 1rem;
-      border-radius: 20px;
-      width: 15% !important;
-      height: 90% !important;
-      transition: transform .5s;
-      cursor: grab; }
-      .habilidades .habilidades-container .habilidades-container-caixa:hover {
-        transform: scale(1.1); }
-      .habilidades .habilidades-container .habilidades-container-caixa img {
-        width: 50%;
-        margin: 0 auto; }
-      .habilidades .habilidades-container .habilidades-container-caixa span {
+    .habilidades .swiperHabilidades .habilidades-container {
+      display: flex;
+      gap: 1rem; }
+      .habilidades .swiperHabilidades .habilidades-container .habilidades-container-caixa {
+        display: grid;
+        justify-content: center;
+        border-radius: 20px;
+        background-color: #2c2b2b;
         color: #b9b4b4;
-        font-weight: 600;
-        margin: .5rem 0; }
-      .habilidades .habilidades-container .habilidades-container-caixa div {
-        color: #b9b4b4; }
+        cursor: grab;
+        height: 80% !important;
+        padding: 1rem;
+        transition: transform .5s;
+        width: 15% !important; }
+        .habilidades .swiperHabilidades .habilidades-container .habilidades-container-caixa:hover {
+          transform: scale(1.1); }
+        .habilidades .swiperHabilidades .habilidades-container .habilidades-container-caixa img {
+          width: 50%;
+          margin: 0 auto; }
+        .habilidades .swiperHabilidades .habilidades-container .habilidades-container-caixa span {
+          font-weight: 600;
+          margin: .5rem 0; }
 
 .projetos {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 120vh;
-  background-color: var(--cor-fundo);
+  flex-direction: column;
   color: #fff;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 0 10px 0px var(--cor-texto); }
+  height: 120vh; }
   .projetos h1 {
-    font-size: 3.5rem;
     margin-bottom: 2rem;
-    margin-top: -6rem;
-    color: var(--cor-texto); }
+    margin-top: -6rem; }
 
 .swiper {
   width: 80vw;
@@ -348,14 +335,9 @@ header {
   border-radius: 14px; }
 
 .contato {
-  background-color: var(--cor-fundo);
-  box-shadow: 0 0 10px 0px var(--cor-texto);
   color: var(--cor-texto);
   padding: 3rem 5.5rem; }
   .contato h1 {
-    font-size: 3rem;
-    color: var(--cor-texto);
-    text-align: center;
     margin-bottom: 2.5rem; }
   .contato .contato-divisao {
     display: grid;
@@ -368,67 +350,64 @@ header {
       margin: 1rem 0; }
     .contato .contato-divisao .contato-divisao_geral .contato-divisao_geral__caixa {
       display: flex;
-      gap: .7rem;
       align-items: center;
+      gap: .7rem;
       margin: 1rem 0; }
       .contato .contato-divisao .contato-divisao_geral .contato-divisao_geral__caixa i {
         border-radius: 50%;
-        border: 1px solid #b9b4b4;
-        width: 3rem;
+        border: 1px solid var(--cor-texto);
+        font-size: 1.5rem;
         height: 3rem;
-        text-align: center;
         padding: .7rem;
-        font-size: 1.5rem; }
+        text-align: center;
+        width: 3rem; }
       .contato .contato-divisao .contato-divisao_geral .contato-divisao_geral__caixa p {
         font-size: 1.2rem; }
       .contato .contato-divisao .contato-divisao_geral .contato-divisao_geral__caixa a {
         color: var(--cor-texto);
-        text-decoration: none;
         font-size: 1.7rem;
-        font-weight: 600; }
-    .contato .contato-divisao .formulario {
-      display: grid;
-      align-items: center; }
-      .contato .contato-divisao .formulario form {
-        display: flex;
-        flex-direction: column; }
-        .contato .contato-divisao .formulario form label {
-          font-size: 1.4rem;
-          margin-top: .7rem; }
-        .contato .contato-divisao .formulario form input {
-          padding: .9rem;
-          width: 90%;
-          margin-top: .5rem;
-          border-radius: 5px;
-          border: 1px solid var(--cor-texto); }
-        .contato .contato-divisao .formulario form textarea {
-          width: 90%;
-          border-radius: 5px;
-          margin: .7rem 0 1.5rem 0;
-          border: 1px solid var(--cor-texto); }
-        .contato .contato-divisao .formulario form button {
-          background-color: var(--cor-texto);
-          color: var(--cor-fundo);
-          width: 90%;
-          padding: .7rem;
-          text-decoration: none;
-          font-size: 1.5rem;
-          font-weight: 600;
-          border-radius: 5px;
-          text-align: center;
-          border: 1px solid var(--cor-texto);
-          cursor: pointer; }
-          .contato .contato-divisao .formulario form button:hover {
-            background-color: var(--cor-fundo);
-            color: var(--cor-texto);
-            box-shadow: 0 0 20px 0 var(--cor-texto); }
+        font-weight: 600;
+        text-decoration: none; }
+        .contato .contato-divisao .contato-divisao_geral .contato-divisao_geral__caixa a .fa-arrow-right {
+          border: none; }
+    .contato .contato-divisao .formulario form {
+      display: flex;
+      flex-direction: column; }
+      .contato .contato-divisao .formulario form label {
+        font-size: 1.4rem;
+        margin-top: .7rem; }
+      .contato .contato-divisao .formulario form input {
+        border: 1px solid var(--cor-texto);
+        border-radius: 5px;
+        width: 90%;
+        padding: .9rem;
+        margin-top: .5rem; }
+      .contato .contato-divisao .formulario form textarea {
+        border: 1px solid var(--cor-texto);
+        border-radius: 5px;
+        width: 90%;
+        margin: .7rem 0 1.5rem 0; }
+      .contato .contato-divisao .formulario form button {
+        border: 1px solid var(--cor-texto);
+        border-radius: 5px;
+        width: 90%;
+        background-color: var(--cor-texto);
+        color: var(--cor-fundo);
+        cursor: pointer;
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding: .7rem;
+        text-align: center;
+        text-decoration: none; }
+        .contato .contato-divisao .formulario form button:hover {
+          background-color: var(--cor-fundo);
+          box-shadow: 0 0 20px 0 var(--cor-texto);
+          color: var(--cor-texto); }
 
 footer {
-  text-align: center;
-  background-color: var(--cor-fundo);
   color: var(--cor-texto);
-  box-shadow: 0 0 10px 0px var(--cor-texto);
-  padding: 2rem 0; }
+  padding: 2rem 0;
+  text-align: center; }
   footer p {
     font-size: 1.5rem; }
 
