@@ -15,6 +15,19 @@ function trocarTema() {
     escuro = !escuro;
 }
 
+function menuClick() {
+    const menuClick = document.querySelector('header .esconder-bars')
+    const nav = document.querySelector('header .menu')
+
+    menuClick.addEventListener('click', clicou)
+
+    function clicou() {
+        nav.classList.toggle("ativo")
+    }
+}
+
+menuClick()
+
 // colocar musica para tocar
 const botao = document.getElementById("playButton");
 const musica = document.getElementById("musica");
@@ -272,7 +285,7 @@ document.getElementById("contact_form").addEventListener("submit", function (eve
         .catch((error) => {
             Toastify({
                 text: "Erro ao enviar o e-mail!",
-                
+
                 style: {
                     background: "#dc3545",
                     color: "#f4f4f4"
@@ -297,7 +310,7 @@ const swiper = new Swiper('.swiper', {
     coverflowEffect: {
         rotate: 0,
         stretch: 0,
-        depth: 350, 
+        depth: 350,
         modifier: 1,
         slideShadows: true,
     },

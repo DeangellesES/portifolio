@@ -22,7 +22,20 @@ header {
   display: flex;
   justify-content: center;
   gap: .2rem;
-  padding: 2rem; }
+  padding: 2rem;
+  position: relative; }
+  header .players {
+    display: none; }
+  header .topo-sociais {
+    display: none; }
+  header .esconder-bars {
+    display: none; }
+  header .fa-bars {
+    color: var(--cor-texto);
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 2.4rem 1rem 2rem 0 !important; }
   header a {
     border-radius: 30px;
     color: var(--cor-texto);
@@ -210,7 +223,7 @@ header {
     margin-top: 2rem; }
     .sobre .especialidades .especialidades-container .especialidades-container_caixa {
       border: 1px solid #b9b4b4;
-      padding: 2rem;
+      padding: 1.3rem 2rem;
       text-align: center;
       transition: all .5s ease;
       width: 28%; }
@@ -379,18 +392,18 @@ header {
       .contato .contato-divisao .formulario form input {
         border: 1px solid var(--cor-texto);
         border-radius: 5px;
-        width: 90%;
+        width: 95%;
         padding: .9rem;
         margin-top: .5rem; }
       .contato .contato-divisao .formulario form textarea {
         border: 1px solid var(--cor-texto);
         border-radius: 5px;
-        width: 90%;
+        width: 95%;
         margin: .7rem 0 1.5rem 0; }
       .contato .contato-divisao .formulario form button {
         border: 1px solid var(--cor-texto);
         border-radius: 5px;
-        width: 90%;
+        width: 95%;
         background-color: var(--cor-texto);
         color: var(--cor-fundo);
         cursor: pointer;
@@ -398,7 +411,8 @@ header {
         font-weight: 600;
         padding: .7rem;
         text-align: center;
-        text-decoration: none; }
+        text-decoration: none;
+        transition: all .5s ease; }
         .contato .contato-divisao .formulario form button:hover {
           background-color: var(--cor-fundo);
           box-shadow: 0 0 20px 0 var(--cor-texto);
@@ -410,5 +424,113 @@ footer {
   text-align: center; }
   footer p {
     font-size: 1.5rem; }
+
+/* Celulares */
+/* Tablets */
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+
+  header .esconder-bars {
+    cursor: pointer;
+    display: block;
+    font-size: 2.5rem; }
+
+  header .menu {
+    display: none !important; }
+
+  header .menu.ativo {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    right: 0px;
+    margin: 20rem 2rem 0 2rem;
+    padding: 15px;
+    animation: menuDescer .5s forwards;
+    background-color: var(--cor-fundo);
+    width: 90% !important;
+    border: 2px solid var(--cor-texto);
+    text-align: center;
+    z-index: 10; }
+
+  @keyframes menuDescer {
+    from {
+      transform: translate3d(0, -60px, 0); }
+    to {
+      transform: translate3d(0, 0, 0); } }
+  .players {
+    display: flex !important;
+    justify-content: start !important;
+    color: #fff !important;
+    gap: 2rem; }
+    .players i {
+      font-size: 1.5rem; }
+
+  .topo-sociais {
+    display: flex !important; }
+    .topo-sociais i {
+      font-size: 2rem; }
+
+  .apresentacao-topo #text {
+    margin: 0 auto !important;
+    margin-left: 5.4rem !important;
+    width: 600px !important; }
+  .apresentacao-topo .apresentacao-topo_players {
+    display: none; }
+  .apresentacao-topo .apresentacao-sociais {
+    display: none !important; }
+
+  .apresentacao-curriculo {
+    margin-top: 11rem !important; }
+
+  .sobre {
+    display: flex;
+    flex-direction: column; }
+    .sobre .sobre-pessoal {
+      padding-right: 4rem; }
+    .sobre .sobre-profissao {
+      margin: 0 auto; }
+    .sobre .especialidades {
+      margin-top: 2rem; }
+      .sobre .especialidades .especialidades-container {
+        padding-right: 3rem; } }
+/* Notebooks */
+@media (max-width: 1024px) {
+  .apresentacao {
+    height: 90vh; }
+    .apresentacao .apresentacao-topo {
+      display: grid;
+      grid-template-columns: 5% 88% 5% !important; }
+    .apresentacao .apresentacao-curriculo {
+      margin-top: 1.5rem; }
+
+  .sobre {
+    gap: 1rem;
+    padding: 3rem 0 3rem 3rem; }
+    .sobre .especialidades h1 {
+      text-align: center; }
+    .sobre .especialidades .especialidades-container_caixa {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-width: 20%;
+      min-height: 130px;
+      padding: 0 !important; }
+
+  .habilidades-container-caixa {
+    min-height: 150px !important; }
+    .habilidades-container-caixa span {
+      margin: 0 !important; }
+
+  .projetos {
+    padding-top: 1.7rem; }
+
+  .contato {
+    padding: 1rem 2.3rem 2.3rem 2.3rem; }
+    .contato .contato-divisao_geral__frase {
+      width: 90% !important; } }
 
 /*# sourceMappingURL=styles.css.map */

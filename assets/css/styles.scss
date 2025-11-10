@@ -31,6 +31,7 @@ $efeito-box-shadow: 0 0 10px 0px var(--cor-texto);
     box-shadow: $efeito-box-shadow;
 }
 
+// mixin para configurações no formulario
 @mixin formulario($border: 1px solid var(--cor-texto), $radius: 5px, $width: 90%) {
     border: $border;
     border-radius: $radius;
@@ -44,6 +45,27 @@ header {
     @extend %base-fundo;
     gap: .2rem;
     padding: 2rem;
+    position: relative;
+
+    .players {
+        display: none;
+    }
+
+    .topo-sociais {
+        display: none;
+    }
+
+    .esconder-bars {
+        display: none;
+    }
+
+    .fa-bars {
+        color: var(--cor-texto);
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 2.4rem 1rem 2rem 0 !important;
+    }
 
     a {
         border-radius: 30px;
@@ -347,7 +369,7 @@ header {
 
             .especialidades-container_caixa {
                 border: 1px solid $cor-texto-geral;
-                padding: 2rem;
+                padding: 1.3rem 2rem;
                 text-align: center;
                 transition: all .5s ease;
                 width: 28%;
@@ -600,7 +622,7 @@ header {
                 }
 
                 input {
-                    @include formulario($border: 1px solid var(--cor-texto), $radius: 5px, $width: 90%);
+                    @include formulario($border: 1px solid var(--cor-texto), $radius: 5px, $width: 95%);
                     // border: $borda-formulario;
                     // border-radius: $borda-arredondada-formulario;
                     // width: $largura-formulario;
@@ -609,7 +631,7 @@ header {
                 }
 
                 textarea {
-                    @include formulario();
+                    @include formulario($border: 1px solid var(--cor-texto), $radius: 5px, $width: 95%);
                     // border: $borda-formulario;
                     // border-radius: $borda-arredondada-formulario;
                     // width: $largura-formulario;
@@ -617,7 +639,7 @@ header {
                 }
 
                 button {
-                    @include formulario($border: 1px solid var(--cor-texto), $radius: 5px, $width: 90%);
+                    @include formulario($border: 1px solid var(--cor-texto), $radius: 5px, $width: 95%);
                     background-color: var(--cor-texto);
                     // border: $borda-formulario;
                     // border-radius: $borda-arredondada-formulario;
@@ -629,6 +651,7 @@ header {
                     padding: .7rem;
                     text-align: center;
                     text-decoration: none;
+                    transition: all .5s ease;
 
                     &:hover {
                         background-color: var(--cor-fundo);
@@ -655,4 +678,182 @@ footer {
     p {
         font-size: 1.5rem;
     }
+}
+
+// INICIO RESPONSIVIDADE
+/* Celulares */
+@media (max-width: 480px) {}
+
+/* Tablets */
+@media (max-width: 768px) {
+    // INICIO SECAO CABECALHO
+    header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    header .esconder-bars {
+        cursor: pointer;
+        display: block;
+        font-size: 2.5rem;
+    }
+
+    header .menu {
+        display: none !important;
+    }
+
+    header .menu.ativo {
+        display: flex !important;
+        flex-direction: column;
+        position: absolute;
+        right: 0px;
+        margin: 20rem 2rem 0 2rem;
+        padding: 15px;
+        // /* chama a o keyframe criado, animação lista surgindo de cima pra baixo de forma mais lenta*/
+        animation: menuDescer .5s forwards;
+        background-color: var(--cor-fundo);
+        width: 90% !important;
+        border: 2px solid var(--cor-texto);
+        text-align: center;
+        z-index: 10;
+    }
+
+    @keyframes menuDescer {
+        from {
+            transform: translate3d(0, -60px, 0);
+        }
+
+        to {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .players {
+        display: flex !important;
+        justify-content: start !important;
+        color: #fff !important;
+        gap: 2rem;
+
+        i {
+            font-size: 1.5rem
+        }
+    }
+
+    .topo-sociais {
+        display: flex !important;
+
+        i {
+            font-size: 2rem
+        }
+    }
+    // INICIO SECAO CABECALHO
+
+    // INICIO SECAO APRESENTACAO
+    .apresentacao-topo {
+
+        #text {
+            margin: 0 auto !important;
+            margin-left: 5.4rem !important;
+            width: 600px !important;
+        }
+
+        .apresentacao-topo_players {
+            display: none;
+        }
+
+        .apresentacao-sociais {
+            display: none !important;
+        }
+    }
+
+    .apresentacao-curriculo {
+        margin-top: 11rem !important;
+    }
+    // FIM SECAO APRESENTACAO
+
+    // INICIO SECAO SOBRE
+    .sobre {
+        display: flex;
+        flex-direction: column;
+
+        .sobre-pessoal {
+            padding-right: 4rem;
+        }
+
+        .sobre-profissao {
+            margin: 0 auto;
+        }
+
+        .especialidades {
+            margin-top: 2rem;
+
+            .especialidades-container {
+                
+                padding-right: 3rem;
+            }
+        }
+    }
+    // FIM SECAO SOBRE
+
+    // INICIO SECAO HABILIDADES
+}
+
+/* Notebooks */
+@media (max-width: 1024px) {
+    .apresentacao {
+        height: 90vh;
+
+        .apresentacao-topo {
+            display: grid;
+            grid-template-columns: 5% 88% 5% !important;
+        }
+
+        .apresentacao-curriculo {
+            margin-top: 1.5rem;
+        }
+    }
+
+    .sobre {
+        gap: 1rem;
+        padding: 3rem 0 3rem 3rem;
+
+        .especialidades {
+
+            h1 {
+                text-align: center;
+            }
+
+            .especialidades-container_caixa {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-width: 20%;
+                min-height: 130px;
+                padding: 0 !important;
+            }
+        }
+    }
+
+    .habilidades-container-caixa {
+        min-height: 150px !important;
+
+        span {
+            margin: 0 !important;
+        }
+    }
+
+    .projetos {
+        padding-top: 1.7rem;
+    }
+
+    .contato {
+        padding: 1rem 2.3rem 2.3rem 2.3rem;
+
+        .contato-divisao_geral__frase {
+            width: 90% !important;
+        }
+    }
+
 }

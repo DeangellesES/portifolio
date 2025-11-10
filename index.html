@@ -12,27 +12,60 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-
+    <link rel="icon" type="image/x-icon" href="assets/img/taghtml.png">
 </head>
 
 <body id="topo">
-
+    <!-- INICIO CABECALHO -->
     <header id="cabecalho">
-        <a href="#cabecalho" data-i18n="item">Início</a>
-        <a href="#sobre" data-i18n="item1">Sobre Mim</a>
-        <a href="#habilidades" data-i18n="item2">Habilidades</a>
-        <a href="#projetos" data-i18n="item3">Projetos</a>
-        <a href="#contato" data-i18n="item4">Contato</a>
+
+        <div class="players">
+            <div class="apresentacao-musica">
+                <div id="playButton"><i class="fa-solid fa-play"></i> <i class="fa-solid fa-music"></i></div>
+
+                <!-- Elemento de áudio -->
+                <audio id="musica" src="musica.mp4"></audio>
+            </div>
+
+            <div class="altera-cor" id="toggleBtn">
+                <i class="fa-solid fa-sun" id="toggleIcon" onclick="trocarTema()"></i>
+                <!-- <i class="fa-solid fa-moon" id="toggleIcon"></i> -->
+            </div>
+
+            <select id="lang-switcher">
+                <option value="pt">Português</option>
+                <option value="en">Inglês</option>
+                <option value="es">Espanhol</option>
+            </select>
+        </div>
+
+        <div class="topo-sociais">
+            <a href="https://github.com/DeangellesES" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/felipe-deangelles-da-silva-lopes/" target="_blank"><i
+                    class="fa-brands fa-linkedin"></i></a>
+        </div>
+
+        <i class="fa-solid fa-bars esconder-bars"></i>
+
+        <div class="menu">
+            <a href="#cabecalho" data-i18n="item">Início</a>
+            <a href="#sobre" data-i18n="item1">Sobre Mim</a>
+            <a href="#habilidades" data-i18n="item2">Habilidades</a>
+            <a href="#projetos" data-i18n="item3">Projetos</a>
+            <a href="#contato" data-i18n="item4">Contato</a>
+        </div>
     </header>
+    <!-- FIM CABECALHO -->
 
     <main>
         <!-- inicio seta -->
         <a href="#topo" class="seta-subir"><i class="fa-regular fa-circle-up"></i></a>
         <!-- fim seta -->
 
+        <!-- INICIO SECAO APRESENTACAO -->
         <section class="apresentacao">
             <div class="apresentacao-topo">
-                <div>
+                <div class="apresentacao-topo_players">
                     <div class="apresentacao-musica">
                         <div id="playButton"><i class="fa-solid fa-play"></i> <i class="fa-solid fa-music"></i></div>
 
@@ -73,9 +106,10 @@
                         conversar</span> </a>
             </div>
         </section>
+        <!-- FIM SECAO APRESENTACAO -->
 
         <section class="sobre" id="sobre">
-            <div>
+            <div class="sobre-pessoal">
                 <h1 data-i18n="aboutMe">Sobre Mim</h1>
                 <p data-i18n="apresentacaoPessoal">Apresentação pessoal</p>
                 <p data-i18n="apresentacaoTexto">Meu nome é Felipe Deangelles, sou natural de Minas Gerais. Sou
