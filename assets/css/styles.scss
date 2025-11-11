@@ -44,14 +44,16 @@ header {
     justify-content: center;
     @extend %base-fundo;
     gap: .2rem;
-    padding: 2rem;
+    padding: 1rem;
     position: relative;
+    height: 100px;
+    align-items: center;
 
-    .players {
+    .cabecalho-players {
         display: none;
     }
 
-    .topo-sociais {
+    .cabecalho-topo-sociais {
         display: none;
     }
 
@@ -64,35 +66,40 @@ header {
         position: absolute;
         right: 0;
         top: 0;
-        margin: 2.4rem 1rem 2rem 0 !important;
+        margin: 1.8rem 1rem 2rem 0 !important;
     }
 
-    a {
-        border-radius: 30px;
-        color: var(--cor-texto);
-        font-size: 1.3rem;
-        text-decoration: none;
-        font-weight: 600;
-        padding: .7rem;
+    .menu {
 
-        &:hover {
-            animation: subir 1s ease-in-out forwards;
+        a {
+            border-radius: 30px;
             color: var(--cor-texto);
-            // display: inline-block;
-            font-size: 1.8rem;
+            font-size: 1.3rem;
+            text-decoration: none;
+            font-weight: 600;
+            padding: .7rem;
+
+            &:hover {
+                animation: subir 1s ease-in-out forwards;
+                color: var(--cor-texto);
+                display: inline-block;
+                font-size: 1.8rem;
+            }
+        }
+
+        // ANIMAÇÃO DE SUBIR TEXTO NA NAVEGAÇÃO TOPO
+        @keyframes subir {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-15px);
+            }
         }
     }
-}
 
-// ANIMAÇÃO DE SUBIR TEXTO NA NAVEGAÇÃO TOPO
-@keyframes subir {
-    0% {
-        transform: translateY(0);
-    }
 
-    100% {
-        transform: translateY(-15px);
-    }
 }
 
 // FIM CABEÇALHO
@@ -138,6 +145,7 @@ header {
 
                     &:hover i {
                         color: purple;
+                        cursor: pointer;
                     }
 
                     i {
@@ -682,10 +690,85 @@ footer {
 
 // INICIO RESPONSIVIDADE
 /* Celulares */
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+    .apresentacao {
+
+        .apresentacao-topo {
+            width: 100px;
+
+            #text {
+                margin: 1.5rem 0 0 2.1rem !important;
+                width: 390px !important;
+                font-size: 3rem;
+            }
+        }
+
+        .apresentacao-curriculo {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+    }
+
+    .especialidades {
+
+        h1 {
+            text-align: center;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        .especialidades-container_caixa {
+            min-width: 150px !important;
+        }
+    }
+
+    .habilidades-container-caixa {
+
+        min-height: 10px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: #00000000 !important;
+        border: none !important;
+
+        img {
+            width: 100% !important;
+        }
+
+        span {
+            display: none;
+        }
+
+        div {
+            display: none;
+        }
+    }
+
+    form {
+
+        input {
+            width: 100% !important;
+        }
+
+        textarea {
+            width: 100% !important;
+        }
+
+        button {
+            width: 100% !important;
+        }
+    }
+
+    footer {
+        padding: 2rem 1rem;
+    }
+}
 
 /* Tablets */
 @media (max-width: 768px) {
+
     // INICIO SECAO CABECALHO
     header {
         display: flex;
@@ -729,7 +812,7 @@ footer {
         }
     }
 
-    .players {
+    .cabecalho-players {
         display: flex !important;
         justify-content: start !important;
         color: #fff !important;
@@ -738,24 +821,78 @@ footer {
         i {
             font-size: 1.5rem
         }
+
+        .cabecalho-apresentacao-musica {
+
+            div {
+                display: flex;
+                gap: .5rem;
+
+                &:hover i {
+                    color: purple;
+                    cursor: pointer;
+                }
+
+                i {
+                    color: var(--cor-texto);
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .cabecalho-altera-cor {
+            color: var(--cor-texto);
+            cursor: pointer;
+
+            i {
+                font-size: 1.7rem;
+            }
+
+            .fa-sun {
+
+                &:hover {
+                    color: yellow;
+
+                }
+            }
+        }
+
+        select {
+            display: none;
+        }
     }
 
-    .topo-sociais {
+    .cabecalho-topo-sociais {
         display: flex !important;
 
         i {
-            font-size: 2rem
+            font-size: 2rem;
+            color: var(--cor-texto);
+            margin-right: 1rem;
+        }
+
+        .fa-github {
+
+            &:hover {
+                box-shadow: 0 0 10px 0 var(--cor-texto);
+            }
+        }
+
+        .fa-linkedin {
+
+            &:hover {
+                color: #1c3070;
+            }
         }
     }
-    // INICIO SECAO CABECALHO
 
     // INICIO SECAO APRESENTACAO
     .apresentacao-topo {
 
         #text {
             margin: 0 auto !important;
-            margin-left: 5.4rem !important;
-            width: 600px !important;
+            margin-left: 1rem !important;
+            width: 500px !important;
         }
 
         .apresentacao-topo_players {
@@ -768,8 +905,9 @@ footer {
     }
 
     .apresentacao-curriculo {
-        margin-top: 11rem !important;
+        margin-top: 13rem !important;
     }
+
     // FIM SECAO APRESENTACAO
 
     // INICIO SECAO SOBRE
@@ -788,15 +926,50 @@ footer {
         .especialidades {
             margin-top: 2rem;
 
+            h1 {
+                width: 80% !important;
+                // margin-right: .5rem !important;
+                margin-left: 1.5rem;
+            }
+
             .especialidades-container {
-                
+
                 padding-right: 3rem;
             }
         }
     }
     // FIM SECAO SOBRE
 
-    // INICIO SECAO HABILIDADES
+    // INICIO HABILIDADES
+    .habilidades-container-caixa {
+
+        min-height: 10px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: #00000000 !important;
+        border: none !important;
+
+        img {
+            width: 100% !important;
+        }
+
+        div {
+            display: none;
+        }
+    }
+    // FIM HABILIDADES
+
+    // INICIO SECAO CONTATO
+    .contato-divisao {
+        display: flex !important;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    // FIM SECAO CONTATO
+
+    footer {
+        padding: 2rem 1rem;
+    }
 }
 
 /* Notebooks */

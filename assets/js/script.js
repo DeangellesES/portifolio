@@ -15,6 +15,15 @@ function trocarTema() {
     escuro = !escuro;
 }
 
+// troca icone de sol pra lua e vice versa
+const toggleBtn = document.getElementById('toggleBtn');
+const toggleIcon = document.getElementById('toggleIcon');
+
+toggleBtn.addEventListener('click', () => {
+    toggleIcon.classList.toggle('fa-sun');
+    toggleIcon.classList.toggle('fa-moon');
+});
+
 function menuClick() {
     const menuClick = document.querySelector('header .esconder-bars')
     const nav = document.querySelector('header .menu')
@@ -46,13 +55,22 @@ botao.addEventListener("click", () => {
     }
 });
 
-// troca icone de sol pra lua e vice versa
-const toggleBtn = document.getElementById('toggleBtn');
-const toggleIcon = document.getElementById('toggleIcon');
+// colocar musica para tocar responsivo
+const botaoResponsivo = document.getElementById("cabecalho-playButton");
+const musicaResponsivo = document.getElementById("cabecalho-musica");
 
-toggleBtn.addEventListener('click', () => {
-    toggleIcon.classList.toggle('fa-sun');
-    toggleIcon.classList.toggle('fa-moon');
+let tocandoResponsivo = false;
+
+botaoResponsivo.addEventListener("click", () => {
+    if (!tocandoResponsivo) {
+        musicaResponsivo.play();
+        tocandoResponsivo = true;
+        botaoResponsivo.innerHTML = '<i class="fa-solid fa-pause"></i> <i class="fa-solid fa-music"></i>';
+    } else {
+        musicaResponsivo.pause();
+        tocandoResponsivo = false;
+        botaoResponsivo.innerHTML = '<i class="fa-solid fa-play"></i> <i class="fa-solid fa-music"></i>';
+    }
 });
 
 // funcionalidade traduzir textos

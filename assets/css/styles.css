@@ -22,11 +22,13 @@ header {
   display: flex;
   justify-content: center;
   gap: .2rem;
-  padding: 2rem;
-  position: relative; }
-  header .players {
+  padding: 1rem;
+  position: relative;
+  height: 100px;
+  align-items: center; }
+  header .cabecalho-players {
     display: none; }
-  header .topo-sociais {
+  header .cabecalho-topo-sociais {
     display: none; }
   header .esconder-bars {
     display: none; }
@@ -35,19 +37,19 @@ header {
     position: absolute;
     right: 0;
     top: 0;
-    margin: 2.4rem 1rem 2rem 0 !important; }
-  header a {
+    margin: 1.8rem 1rem 2rem 0 !important; }
+  header .menu a {
     border-radius: 30px;
     color: var(--cor-texto);
     font-size: 1.3rem;
     text-decoration: none;
     font-weight: 600;
     padding: .7rem; }
-    header a:hover {
+    header .menu a:hover {
       animation: subir 1s ease-in-out forwards;
       color: var(--cor-texto);
+      display: inline-block;
       font-size: 1.8rem; }
-
 @keyframes subir {
   0% {
     transform: translateY(0); }
@@ -80,7 +82,8 @@ header {
         display: flex;
         gap: .5rem; }
         .apresentacao .apresentacao-topo div .apresentacao-musica div:hover i {
-          color: purple; }
+          color: purple;
+          cursor: pointer; }
         .apresentacao .apresentacao-topo div .apresentacao-musica div i {
           color: var(--cor-texto);
           font-size: 1.5rem; }
@@ -426,6 +429,49 @@ footer {
     font-size: 1.5rem; }
 
 /* Celulares */
+@media (max-width: 480px) {
+  .apresentacao .apresentacao-topo {
+    width: 100px; }
+    .apresentacao .apresentacao-topo #text {
+      margin: 1.5rem 0 0 2.1rem !important;
+      width: 390px !important;
+      font-size: 3rem; }
+  .apresentacao .apresentacao-curriculo {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    align-items: center; }
+
+  .especialidades h1 {
+    text-align: center;
+    padding: 0 !important;
+    margin: 0 !important; }
+  .especialidades .especialidades-container_caixa {
+    min-width: 150px !important; }
+
+  .habilidades-container-caixa {
+    min-height: 10px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #00000000 !important;
+    border: none !important; }
+    .habilidades-container-caixa img {
+      width: 100% !important; }
+    .habilidades-container-caixa span {
+      display: none; }
+    .habilidades-container-caixa div {
+      display: none; }
+
+  form input {
+    width: 100% !important; }
+  form textarea {
+    width: 100% !important; }
+  form button {
+    width: 100% !important; }
+
+  footer {
+    padding: 2rem 1rem; } }
 /* Tablets */
 @media (max-width: 768px) {
   header {
@@ -460,30 +506,54 @@ footer {
       transform: translate3d(0, -60px, 0); }
     to {
       transform: translate3d(0, 0, 0); } }
-  .players {
+  .cabecalho-players {
     display: flex !important;
     justify-content: start !important;
     color: #fff !important;
     gap: 2rem; }
-    .players i {
+    .cabecalho-players i {
       font-size: 1.5rem; }
+    .cabecalho-players .cabecalho-apresentacao-musica div {
+      display: flex;
+      gap: .5rem; }
+      .cabecalho-players .cabecalho-apresentacao-musica div:hover i {
+        color: purple;
+        cursor: pointer; }
+      .cabecalho-players .cabecalho-apresentacao-musica div i {
+        color: var(--cor-texto);
+        font-size: 1.5rem; }
+    .cabecalho-players .cabecalho-altera-cor {
+      color: var(--cor-texto);
+      cursor: pointer; }
+      .cabecalho-players .cabecalho-altera-cor i {
+        font-size: 1.7rem; }
+      .cabecalho-players .cabecalho-altera-cor .fa-sun:hover {
+        color: yellow; }
+    .cabecalho-players select {
+      display: none; }
 
-  .topo-sociais {
+  .cabecalho-topo-sociais {
     display: flex !important; }
-    .topo-sociais i {
-      font-size: 2rem; }
+    .cabecalho-topo-sociais i {
+      font-size: 2rem;
+      color: var(--cor-texto);
+      margin-right: 1rem; }
+    .cabecalho-topo-sociais .fa-github:hover {
+      box-shadow: 0 0 10px 0 var(--cor-texto); }
+    .cabecalho-topo-sociais .fa-linkedin:hover {
+      color: #1c3070; }
 
   .apresentacao-topo #text {
     margin: 0 auto !important;
-    margin-left: 5.4rem !important;
-    width: 600px !important; }
+    margin-left: 1rem !important;
+    width: 500px !important; }
   .apresentacao-topo .apresentacao-topo_players {
     display: none; }
   .apresentacao-topo .apresentacao-sociais {
     display: none !important; }
 
   .apresentacao-curriculo {
-    margin-top: 11rem !important; }
+    margin-top: 13rem !important; }
 
   .sobre {
     display: flex;
@@ -494,8 +564,30 @@ footer {
       margin: 0 auto; }
     .sobre .especialidades {
       margin-top: 2rem; }
+      .sobre .especialidades h1 {
+        width: 80% !important;
+        margin-left: 1.5rem; }
       .sobre .especialidades .especialidades-container {
-        padding-right: 3rem; } }
+        padding-right: 3rem; }
+
+  .habilidades-container-caixa {
+    min-height: 10px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #00000000 !important;
+    border: none !important; }
+    .habilidades-container-caixa img {
+      width: 100% !important; }
+    .habilidades-container-caixa div {
+      display: none; }
+
+  .contato-divisao {
+    display: flex !important;
+    flex-direction: column;
+    flex-wrap: wrap; }
+
+  footer {
+    padding: 2rem 1rem; } }
 /* Notebooks */
 @media (max-width: 1024px) {
   .apresentacao {
