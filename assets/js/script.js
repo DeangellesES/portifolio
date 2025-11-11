@@ -24,6 +24,15 @@ toggleBtn.addEventListener('click', () => {
     toggleIcon.classList.toggle('fa-moon');
 });
 
+// troca icone de sol pra lua e vice versa
+const toggleBtnResponsivo = document.getElementById('cabecalho-toggleBtn');
+const toggleIconResponsivo = document.getElementById('cabecalho-toggleIcon');
+
+toggleBtnResponsivo.addEventListener('click', () => {
+    toggleIconResponsivo.classList.toggle('fa-sun');
+    toggleIconResponsivo.classList.toggle('fa-moon');
+});
+
 function menuClick() {
     const menuClick = document.querySelector('header .esconder-bars')
     const nav = document.querySelector('header .menu')
@@ -87,6 +96,9 @@ const translations = {
         item2: "Habilidades",
         item3: "Projetos",
         item4: "Contato",
+        apresentacaoNome: "Olá, Meu Nome é Felipe Deangelles",
+        apresentacaoSou: "Sou Desenvolvedor de Software",
+        apresentacaoSeja: "Seja Bem-Vindo ao Meu Portifólio!",
         vamosConversar: "Vamos conversar",
         aboutMe: "Sobre Mim",
         apresentacaoPessoal: "Apresentação Pessoal",
@@ -123,6 +135,9 @@ const translations = {
         item2: "Skills",
         item3: "Projects",
         item4: "Contact",
+        apresentacaoNome: "Hello, My Name is Felipe Deangelles",
+        apresentacaoSou: "I am a Software Developer",
+        apresentacaoSeja: "Welcome to My Portfolio!",
         vamosConversar: "Let's talk",
         aboutMe: "About Me",
         apresentacaoPessoal: "Personal Presentation",
@@ -159,6 +174,9 @@ const translations = {
         item2: "Habilidades",
         item3: "Proyectos",
         item4: "Contacto",
+        apresentacaoNome: "Hola, mi Nombre es Felipe Deangelles",
+        apresentacaoSou: "Soy Desarrollador de Software",
+        apresentacaoSeja: "¡Bienvenidos a mi Portafolio!",
         vamosConversar: "hablemos",
         aboutMe: "Acerca de mí",
         apresentacaoPessoal: "Presentación Personal",
@@ -189,6 +207,19 @@ const langSwitcher = document.getElementById("lang-switcher");
 
 langSwitcher.addEventListener("change", () => {
     const selectedLang = langSwitcher.value;
+    const elements = document.querySelectorAll("[data-i18n]");
+
+    elements.forEach((element) => {
+        const key = element.getAttribute("data-i18n");
+        element.textContent = translations[selectedLang][key];
+    });
+});
+
+// TRADUZIR TELA RESPONSIVA
+const langSwitcherResponsivo = document.getElementById("cabecalho-lang-switcher");
+
+langSwitcherResponsivo.addEventListener("change", () => {
+    const selectedLang = langSwitcherResponsivo.value;
     const elements = document.querySelectorAll("[data-i18n]");
 
     elements.forEach((element) => {

@@ -198,18 +198,15 @@ header {
             }
         }
 
-        h1 {
-            margin: -5rem auto 0;
-            width: 60%;
-            text-align: center;
-        }
-
         // animação escrevendo em loop
         #text {
             color: var(--cor-texto);
             font-size: 4rem;
             height: 20px;
             text-shadow: 1px 1px 5px var(--cor-texto);
+            margin: -5rem auto 0;
+            width: 60%;
+            text-align: center;
         }
 
         #text::after {
@@ -227,6 +224,10 @@ header {
             from {
                 opacity: 1;
             }
+        }
+
+        .apresentacao-titulo_responsivo {
+            display: none;
         }
 
         .apresentacao-sociais {
@@ -691,15 +692,45 @@ footer {
 // INICIO RESPONSIVIDADE
 /* Celulares */
 @media (max-width: 480px) {
+
+    .cabecalho-topo-sociais {
+            margin-right: 1rem !important;
+        }
+
+    header .esconder-bars {
+        cursor: pointer;
+        display: block;
+        font-size: 1.7rem !important;
+        margin-top: 2.2rem !important;
+    }
+
+    #cabecalho-lang-switcher {
+        display: block;
+    }
+
     .apresentacao {
 
         .apresentacao-topo {
-            width: 100px;
+            // width: 100px;
 
             #text {
+                display: none;
                 margin: 1.5rem 0 0 2.1rem !important;
-                width: 390px !important;
-                font-size: 3rem;
+                width: 350px !important;
+                font-size: 2rem !important;
+            }
+
+            .apresentacao-titulo_responsivo {
+                display: block !important;
+
+                .apresentacao-titulo_responsivo__titulo {
+                    display: block !important;
+                    width: 300px !important;
+                    color: var(--cor-texto);
+                    margin: 2rem 0 0 3rem !important;
+                    text-align: center;
+                    font-size: 2rem !important;
+                }
             }
         }
 
@@ -816,6 +847,7 @@ footer {
         display: flex !important;
         justify-content: start !important;
         color: #fff !important;
+        align-items: center !important;
         gap: 2rem;
 
         i {
@@ -860,7 +892,32 @@ footer {
         select {
             display: none;
         }
+
+        #cabecalho-lang-switcher {
+            display: block;
+            border: 1px solid var(--cor-texto);
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            outline: none;
+            padding: .5rem;
+            width: fit-content;
+
+            &:hover {
+                box-shadow: 0 0 20px 0 var(--cor-texto);
+            }
+
+            option {
+                background-color: #000;
+                color: #fff;
+                font-size: 1rem;
+                padding: 1rem;
+            }
+        }
     }
+
+
 
     .cabecalho-topo-sociais {
         display: flex !important;
@@ -890,10 +947,28 @@ footer {
     .apresentacao-topo {
 
         #text {
-            margin: 0 auto !important;
-            margin-left: 1rem !important;
-            width: 500px !important;
+            display: none;
+            // margin: 0 auto !important;
+            // margin-left: 4rem !important;
+            // width: 450px !important;
+            // font-size: 2.7rem !important;
+            // justify-content: center;
         }
+
+        .apresentacao-titulo_responsivo {
+            display: block !important;
+
+            .apresentacao-titulo_responsivo__titulo {
+                display: block !important;
+                width: 350px !important;
+                color: var(--cor-texto);
+                margin: 2rem 0 0 7rem !important;
+                text-align: center;
+                font-size: 2.3rem;
+            }
+        }
+
+
 
         .apresentacao-topo_players {
             display: none;
@@ -905,7 +980,7 @@ footer {
     }
 
     .apresentacao-curriculo {
-        margin-top: 13rem !important;
+        margin-top: 1rem !important;
     }
 
     // FIM SECAO APRESENTACAO
@@ -938,6 +1013,7 @@ footer {
             }
         }
     }
+
     // FIM SECAO SOBRE
 
     // INICIO HABILIDADES
@@ -957,6 +1033,7 @@ footer {
             display: none;
         }
     }
+
     // FIM HABILIDADES
 
     // INICIO SECAO CONTATO
@@ -965,6 +1042,7 @@ footer {
         flex-direction: column;
         flex-wrap: wrap;
     }
+
     // FIM SECAO CONTATO
 
     footer {
