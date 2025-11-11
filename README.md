@@ -11,8 +11,8 @@
 <h2>🚀 Tecnologias Utilizadas</h2>
 <ul>
   <li><b>HTML</b></li>
-  <li><b>CSS</b> - Responsivo para mobile - Sass</li>
-  <li><b>JavaScript</b></li>
+  <li><b>CSS</b> - Responsivo - Sass</li>
+  <li><b>JavaScript</b> - vanilla</li>
 </ul>
 
 <h2>✨ Funcionalidades</h2>
