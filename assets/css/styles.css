@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 * {
   padding: 0;
@@ -303,6 +304,74 @@ header {
   aspect-ratio: 3/4;
   border-radius: 14px;
   border: 1px solid rgba(177, 177, 177, 0.4); }
+
+#projetos-icone {
+  position: absolute;
+  font-size: 3rem;
+  bottom: 10%;
+  left: 46%;
+  color: #000;
+  cursor: pointer !important;
+  display: none;
+  box-shadow: 0 0 20px 0 black; }
+
+.descricao-projeto {
+  position: absolute;
+  font-size: 2rem;
+  bottom: 21%;
+  color: #000;
+  background-color: #fff;
+  padding: 1rem .5rem;
+  border: 1px solid #000;
+  display: none;
+  transform: translateX(-50%);
+  cursor: pointer; }
+  .descricao-projeto .fa-x {
+    font-size: 1.1rem;
+    color: #000;
+    display: flex;
+    justify-content: end;
+    width: fit-content;
+    position: absolute;
+    right: 5%; }
+  .descricao-projeto h3 {
+    font-size: 1.5rem;
+    font-weight: bold; }
+  .descricao-projeto p {
+    font-size: 1.3rem; }
+  .descricao-projeto div {
+    display: flex;
+    gap: 1rem; }
+    .descricao-projeto div img {
+      margin-top: .5rem;
+      width: 22% !important; }
+  .descricao-projeto a {
+    font-size: 1.3rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: #000; }
+
+.descricao-projeto.show {
+  animation: subirDescricao 2s ease forwards;
+  /* subir devagar CHAMANDO A ANIMAÇÃO */ }
+
+@keyframes subirDescricao {
+  from {
+    transform: translateY(150%); }
+  to {
+    transform: translateY(0); } }
+.descricao-projeto.mostrar {
+  display: block; }
+
+#projetos-icone-um {
+  position: absolute;
+  font-size: 3rem;
+  bottom: 10%;
+  left: 46%;
+  color: #000;
+  cursor: pointer !important;
+  display: none;
+  box-shadow: 0 0 20px 0 black; }
 
 .swiper-slide img {
   text-align: start;

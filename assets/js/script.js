@@ -24,7 +24,7 @@ toggleBtn.addEventListener('click', () => {
     toggleIcon.classList.toggle('fa-moon');
 });
 
-// troca icone de sol pra lua e vice versa
+// troca icone de sol pra lua e vice versa responsivo
 const toggleBtnResponsivo = document.getElementById('cabecalho-toggleBtn');
 const toggleIconResponsivo = document.getElementById('cabecalho-toggleIcon');
 
@@ -119,6 +119,7 @@ const translations = {
         telefone: "Telefone",
         localizacao: "Localização",
         nome: "Nome",
+        assunto: "Assunto",
         mensagem: "Mensagem",
         enviar: "Enviar Mensagem",
         direitos: "© 2025 Felipe Deangelles. Todos os direitos reservados.",
@@ -158,6 +159,7 @@ const translations = {
         telefone: "Telephone",
         localizacao: "Location",
         nome: "Name",
+        assunto: "Subject",
         mensagem: "Message",
         enviar: "Send message",
         direitos: "© 2025 Felipe Deangelles. All rights reserved.",
@@ -197,6 +199,7 @@ const translations = {
         telefone: "Teléfono",
         localizacao: "Ubicación",
         nome: "Nombre",
+        assunto: "Sujeto",
         mensagem: "Mensaje",
         enviar: "Enviar Mensaje",
         direitos: "© 2025 Felipe Deangelles. Todos los derechos reservados.",
@@ -386,3 +389,63 @@ function setaSubir() {
 window.onscroll = () => {
     setaCima.classList.remove('esconder')
 }
+
+// FUNÇÃO APARECER ICON NO PROJETOS
+const area = document.getElementById("projetos-icone-caixa");
+const icone = document.getElementById("projetos-icone");
+const descricao = document.getElementById("descricao");
+
+area.addEventListener("mouseover", () => {
+  icone.style.display = "inline";
+});
+
+area.addEventListener("mouseout", () => {
+  icone.style.display = "none";
+});
+
+// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
+icone.addEventListener("click", () => {
+    descricao.classList.toggle('mostrar');
+    icone.classList.toggle('fa-square-caret-up');
+    icone.classList.toggle('fa-square-caret-down');
+})
+
+// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
+document.getElementById("projetos-icone").onclick = () => {
+  document.getElementById("descricao").classList.add("show");
+};
+
+// FAZER COM QUE A DESCRIÇÃO SAIA AO CLICKAR NO X
+const fechar = document.getElementById("fechar")
+fechar.addEventListener("click", () => {
+    descricao.classList.toggle('mostrar');
+})
+
+
+
+
+
+
+const area1 = document.getElementById("projetos-icone-caixa-um");
+const icone1 = document.getElementById("projetos-icone-um");
+const descricao1 = document.getElementById("descricao-um");
+
+area1.addEventListener("mouseover", () => {
+  icone1.style.display = "inline";
+});
+
+area1.addEventListener("mouseout", () => {
+  icone1.style.display = "none";
+});
+
+// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
+icone1.addEventListener("click", () => {
+    descricao1.classList.toggle('mostrar');
+    icone1.classList.toggle('fa-square-caret-up');
+    icone1.classList.toggle('fa-square-caret-down');
+})
+
+// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
+document.getElementById("projetos-icone-um").onclick = () => {
+  document.getElementById("descricao-um").classList.add("show");
+};

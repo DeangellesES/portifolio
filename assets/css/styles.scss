@@ -500,6 +500,101 @@ header {
     border: 1px solid rgba(177, 177, 177, 0.4);
 }
 
+#projetos-icone {
+    position: absolute;
+    font-size: 3rem;
+    bottom: 10%;
+    left: 46%;
+    color: #000;
+    cursor: pointer !important;
+    display: none;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 2);
+}
+
+.descricao-projeto {
+    position: absolute;
+    font-size: 2rem;
+    bottom: 21%;
+    color: #000;
+    background-color: #fff;
+    padding: 1rem .5rem;
+    border: 1px solid #000;
+    display: none;
+    transform: translateX(-50%);
+    cursor: pointer;
+
+    .fa-x {
+        font-size: 1.1rem;
+        color: #000;
+        display: flex;
+        justify-content: end;
+        width: fit-content;
+        position: absolute;
+        right: 5%;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 1.3rem;
+    }
+
+    div {
+        display: flex;
+        gap: 1rem;
+
+        img {
+            margin-top: .5rem;
+            width: 22% !important;
+            // background-color: var(--cor-fundo);
+        }
+    }
+
+    a {
+        font-size: 1.3rem;
+        text-decoration: none;
+        font-weight: bold;
+        color: #000;
+    }
+}
+
+.descricao-projeto.show {
+    animation: subirDescricao 2s ease forwards;
+    /* subir devagar CHAMANDO A ANIMAÇÃO */
+}
+
+// ANIMAÇÃO PARA FAZER A DIV SUBIR SUAVEMENTE
+@keyframes subirDescricao {
+    from {
+        transform: translateY(150%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+// FAZER A DESCRIÇÃO MOSTRE E DESMOSTRE DA TELA
+.descricao-projeto.mostrar {
+    display: block;
+}
+
+#projetos-icone-um {
+    position: absolute;
+    font-size: 3rem;
+    bottom: 10%;
+    left: 46%;
+    color: #000;
+    cursor: pointer !important;
+    display: none;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 2);
+}
+
+// FIM PROJETOS CHUMBADOS
+
 .swiper-slide img {
     text-align: start;
     display: block;
@@ -694,8 +789,8 @@ footer {
 @media (max-width: 480px) {
 
     .cabecalho-topo-sociais {
-            margin-right: 1rem !important;
-        }
+        margin-right: 1rem !important;
+    }
 
     header .esconder-bars {
         cursor: pointer;
