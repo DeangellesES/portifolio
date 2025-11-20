@@ -390,6 +390,9 @@ window.onscroll = () => {
     setaCima.classList.remove('esconder')
 }
 
+
+
+// INICIO DESCRIÇÕES DOS PROJETOS CHUMBADOS
 // FUNÇÃO APARECER ICON NO PROJETOS
 const area = document.getElementById("projetos-icone-caixa");
 const icone = document.getElementById("projetos-icone");
@@ -423,9 +426,7 @@ fechar.addEventListener("click", () => {
 
 
 
-
-
-
+// DESCRIÇÃO PROJETO 2
 const area1 = document.getElementById("projetos-icone-caixa-um");
 const icone1 = document.getElementById("projetos-icone-um");
 const descricao1 = document.getElementById("descricao-um");
@@ -449,3 +450,358 @@ icone1.addEventListener("click", () => {
 document.getElementById("projetos-icone-um").onclick = () => {
   document.getElementById("descricao-um").classList.add("show");
 };
+
+const fecharUm = document.getElementById("fecharUm")
+fecharUm.addEventListener("click", () => {
+    descricao1.classList.toggle('mostrar');
+})
+
+
+// DESCRIÇÃO PROJETO 3
+const area2 = document.getElementById("projetos-icone-caixa-dois");
+const icone2 = document.getElementById("projetos-icone-dois");
+const descricao2 = document.getElementById("descricao-dois");
+
+area2.addEventListener("mouseover", () => {
+  icone2.style.display = "inline";
+});
+
+area2.addEventListener("mouseout", () => {
+  icone2.style.display = "none";
+});
+
+// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
+icone2.addEventListener("click", () => {
+    descricao2.classList.toggle('mostrar');
+    icone1.classList.toggle('fa-square-caret-up');
+    icone1.classList.toggle('fa-square-caret-down');
+})
+
+// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
+document.getElementById("projetos-icone-dois").onclick = () => {
+  document.getElementById("descricao-dois").classList.add("show");
+};
+
+const fecharDois = document.getElementById("fecharDois")
+fecharDois.addEventListener("click", () => {
+    descricao2.classList.toggle('mostrar');
+})
+
+// DESCRIÇÃO PROJETO 4
+const area3 = document.getElementById("projetos-icone-caixa-tres");
+const icone3 = document.getElementById("projetos-icone-tres");
+const descricao3 = document.getElementById("descricao-tres");
+
+area3.addEventListener("mouseover", () => {
+  icone3.style.display = "inline";
+});
+
+area3.addEventListener("mouseout", () => {
+  icone3.style.display = "none";
+});
+
+// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
+icone3.addEventListener("click", () => {
+    descricao3.classList.toggle('mostrar');
+    icone3.classList.toggle('fa-square-caret-up');
+    icone3.classList.toggle('fa-square-caret-down');
+})
+
+// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
+document.getElementById("projetos-icone-tres").onclick = () => {
+  document.getElementById("descricao-tres").classList.add("show");
+};
+
+const fecharTres = document.getElementById("fecharTres")
+fecharTres.addEventListener("click", () => {
+    descricao3.classList.toggle('mostrar');
+})
+
+
+
+// DESCRIÇÃO PROJETO 5
+const area4 = document.getElementById("projetos-icone-caixa-quatro");
+const icone4 = document.getElementById("projetos-icone-quatro");
+const descricao4 = document.getElementById("descricao-quatro");
+
+area4.addEventListener("mouseover", () => {
+  icone4.style.display = "inline";
+});
+
+area4.addEventListener("mouseout", () => {
+  icone4.style.display = "none";
+});
+
+// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
+icone4.addEventListener("click", () => {
+    descricao4.classList.toggle('mostrar');
+    icone4.classList.toggle('fa-square-caret-up');
+    icone4.classList.toggle('fa-square-caret-down');
+})
+
+// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
+document.getElementById("projetos-icone-quatro").onclick = () => {
+  document.getElementById("descricao-quatro").classList.add("show");
+};
+
+const fecharQuatro = document.getElementById("fecharQuatro")
+fecharQuatro.addEventListener("click", () => {
+    descricao4.classList.toggle('mostrar');
+})
+
+
+// DESCRIÇÃO PROJETO 6
+const area5 = document.getElementById("projetos-icone-caixa-cinco");
+const icone5 = document.getElementById("projetos-icone-cinco");
+const descricao5 = document.getElementById("descricao-cinco");
+
+area5.addEventListener("mouseover", () => {
+  icone5.style.display = "inline";
+});
+
+area5.addEventListener("mouseout", () => {
+  icone5.style.display = "none";
+});
+
+// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
+icone5.addEventListener("click", () => {
+    descricao5.classList.toggle('mostrar');
+    icone5.classList.toggle('fa-square-caret-up');
+    icone5.classList.toggle('fa-square-caret-down');
+})
+
+// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
+document.getElementById("projetos-icone-cinco").onclick = () => {
+  document.getElementById("descricao-cinco").classList.add("show");
+};
+
+const fecharCinco = document.getElementById("fecharCinco")
+fecharCinco.addEventListener("click", () => {
+    descricao5.classList.toggle('mostrar');
+})
+
+
+// DESCRIÇÃO PROJETO 7
+const area6 = document.getElementById("projetos-icone-caixa-seis");
+const icone6 = document.getElementById("projetos-icone-seis");
+const descricao6 = document.getElementById("descricao-seis");
+
+area6.addEventListener("mouseover", () => {
+  icone6.style.display = "inline";
+});
+
+area6.addEventListener("mouseout", () => {
+  icone6.style.display = "none";
+});
+
+// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
+icone6.addEventListener("click", () => {
+    descricao6.classList.toggle('mostrar');
+    icone6.classList.toggle('fa-square-caret-up');
+    icone6.classList.toggle('fa-square-caret-down');
+})
+
+// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
+document.getElementById("projetos-icone-seis").onclick = () => {
+  document.getElementById("descricao-seis").classList.add("show");
+};
+
+const fecharSeis = document.getElementById("fecharSeis")
+fecharSeis.addEventListener("click", () => {
+    descricao6.classList.toggle('mostrar');
+})
+
+
+
+// DESCRIÇÃO PROJETO 8
+const area7 = document.getElementById("projetos-icone-caixa-sete");
+const icone7 = document.getElementById("projetos-icone-sete");
+const descricao7 = document.getElementById("descricao-sete");
+
+area7.addEventListener("mouseover", () => {
+  icone7.style.display = "inline";
+});
+
+area7.addEventListener("mouseout", () => {
+  icone7.style.display = "none";
+});
+
+// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
+icone7.addEventListener("click", () => {
+    descricao7.classList.toggle('mostrar');
+    icone7.classList.toggle('fa-square-caret-up');
+    icone7.classList.toggle('fa-square-caret-down');
+})
+
+// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
+document.getElementById("projetos-icone-sete").onclick = () => {
+  document.getElementById("descricao-sete").classList.add("show");
+};
+
+const fecharSete = document.getElementById("fecharSete")
+fecharSete.addEventListener("click", () => {
+    descricao7.classList.toggle('mostrar');
+})
+
+
+
+// DESCRIÇÃO PROJETO 9
+const area8 = document.getElementById("projetos-icone-caixa-oito");
+const icone8 = document.getElementById("projetos-icone-oito");
+const descricao8 = document.getElementById("descricao-oito");
+
+area8.addEventListener("mouseover", () => {
+  icone8.style.display = "inline";
+});
+
+area8.addEventListener("mouseout", () => {
+  icone8.style.display = "none";
+});
+
+// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
+icone8.addEventListener("click", () => {
+    descricao8.classList.toggle('mostrar');
+    icone8.classList.toggle('fa-square-caret-up');
+    icone8.classList.toggle('fa-square-caret-down');
+})
+
+// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
+document.getElementById("projetos-icone-oito").onclick = () => {
+  document.getElementById("descricao-oito").classList.add("show");
+};
+
+const fecharOito = document.getElementById("fecharOito")
+fecharOito.addEventListener("click", () => {
+    descricao8.classList.toggle('mostrar');
+})
+
+
+
+
+// DESCRIÇÃO PROJETO 10
+const area9 = document.getElementById("projetos-icone-caixa-nove");
+const icone9 = document.getElementById("projetos-icone-nove");
+const descricao9 = document.getElementById("descricao-nove");
+
+area9.addEventListener("mouseover", () => {
+  icone9.style.display = "inline";
+});
+
+area9.addEventListener("mouseout", () => {
+  icone9.style.display = "none";
+});
+
+// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
+icone9.addEventListener("click", () => {
+    descricao9.classList.toggle('mostrar');
+    icone9.classList.toggle('fa-square-caret-up');
+    icone9.classList.toggle('fa-square-caret-down');
+})
+
+// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
+document.getElementById("projetos-icone-nove").onclick = () => {
+  document.getElementById("descricao-nove").classList.add("show");
+};
+
+const fecharNove = document.getElementById("fecharNove")
+fecharNove.addEventListener("click", () => {
+    descricao9.classList.toggle('mostrar');
+})
+
+
+
+
+// DESCRIÇÃO PROJETO 11
+const area10 = document.getElementById("projetos-icone-caixa-dez");
+const icone10 = document.getElementById("projetos-icone-dez");
+const descricao10 = document.getElementById("descricao-dez");
+
+area10.addEventListener("mouseover", () => {
+  icone10.style.display = "inline";
+});
+
+area10.addEventListener("mouseout", () => {
+  icone10.style.display = "none";
+});
+
+// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
+icone10.addEventListener("click", () => {
+    descricao10.classList.toggle('mostrar');
+    icone10.classList.toggle('fa-square-caret-up');
+    icone10.classList.toggle('fa-square-caret-down');
+})
+
+// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
+document.getElementById("projetos-icone-dez").onclick = () => {
+  document.getElementById("descricao-dez").classList.add("show");
+};
+
+const fecharDez = document.getElementById("fecharDez")
+fecharDez.addEventListener("click", () => {
+    descricao10.classList.toggle('mostrar');
+})
+
+
+
+// DESCRIÇÃO PROJETO 12
+const area11 = document.getElementById("projetos-icone-caixa-onze");
+const icone11 = document.getElementById("projetos-icone-onze");
+const descricao11 = document.getElementById("descricao-onze");
+
+area11.addEventListener("mouseover", () => {
+  icone11.style.display = "inline";
+});
+
+area11.addEventListener("mouseout", () => {
+  icone11.style.display = "none";
+});
+
+// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
+icone11.addEventListener("click", () => {
+    descricao11.classList.toggle('mostrar');
+    icone11.classList.toggle('fa-square-caret-up');
+    icone11.classList.toggle('fa-square-caret-down');
+})
+
+// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
+document.getElementById("projetos-icone-onze").onclick = () => {
+  document.getElementById("descricao-onze").classList.add("show");
+};
+
+const fecharOnze = document.getElementById("fecharOnze")
+fecharOnze.addEventListener("click", () => {
+    descricao11.classList.toggle('mostrar');
+})
+
+
+
+
+// DESCRIÇÃO PROJETO 13
+const area12 = document.getElementById("projetos-icone-caixa-doze");
+const icone12 = document.getElementById("projetos-icone-doze");
+const descricao12 = document.getElementById("descricao-doze");
+
+area12.addEventListener("mouseover", () => {
+  icone12.style.display = "inline";
+});
+
+area11.addEventListener("mouseout", () => {
+  icone12.style.display = "none";
+});
+
+// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
+icone12.addEventListener("click", () => {
+    descricao12.classList.toggle('mostrar');
+    icone12.classList.toggle('fa-square-caret-up');
+    icone12.classList.toggle('fa-square-caret-down');
+})
+
+// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
+document.getElementById("projetos-icone-doze").onclick = () => {
+  document.getElementById("descricao-doze").classList.add("show");
+};
+
+const fecharDoze = document.getElementById("fecharDoze")
+fecharDoze.addEventListener("click", () => {
+    descricao12.classList.toggle('mostrar');
+})

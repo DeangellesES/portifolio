@@ -312,8 +312,7 @@ header {
   left: 46%;
   color: #000;
   cursor: pointer !important;
-  display: none;
-  box-shadow: 0 0 20px 0 black; }
+  display: none; }
 
 .descricao-projeto {
   position: absolute;
@@ -338,7 +337,7 @@ header {
     font-size: 1.5rem;
     font-weight: bold; }
   .descricao-projeto p {
-    font-size: 1.3rem; }
+    font-size: 1.2rem; }
   .descricao-projeto div {
     display: flex;
     gap: 1rem; }
@@ -370,8 +369,106 @@ header {
   left: 46%;
   color: #000;
   cursor: pointer !important;
-  display: none;
-  box-shadow: 0 0 20px 0 black; }
+  display: none; }
+
+#projetos-icone-dois {
+  position: absolute;
+  font-size: 3rem;
+  bottom: 10%;
+  left: 46%;
+  color: #000;
+  cursor: pointer !important;
+  display: none; }
+
+#projetos-icone-tres {
+  position: absolute;
+  font-size: 3rem;
+  bottom: 10%;
+  left: 46%;
+  color: #000;
+  cursor: pointer !important;
+  display: none; }
+
+#projetos-icone-quatro {
+  position: absolute;
+  font-size: 3rem;
+  bottom: 10%;
+  left: 46%;
+  color: #000;
+  cursor: pointer !important;
+  display: none; }
+
+#projetos-icone-cinco {
+  position: absolute;
+  font-size: 3rem;
+  bottom: 10%;
+  left: 46%;
+  color: #000;
+  cursor: pointer !important;
+  display: none; }
+
+#projetos-icone-seis {
+  position: absolute;
+  font-size: 3rem;
+  bottom: 10%;
+  left: 46%;
+  color: #000;
+  cursor: pointer !important;
+  display: none; }
+
+#projetos-icone-sete {
+  position: absolute;
+  font-size: 3rem;
+  bottom: 10%;
+  left: 46%;
+  color: #000;
+  cursor: pointer !important;
+  display: none; }
+
+#projetos-icone-oito {
+  position: absolute;
+  font-size: 3rem;
+  bottom: 10%;
+  left: 46%;
+  color: #000;
+  cursor: pointer !important;
+  display: none; }
+
+#projetos-icone-nove {
+  position: absolute;
+  font-size: 3rem;
+  bottom: 10%;
+  left: 46%;
+  color: #000;
+  cursor: pointer !important;
+  display: none; }
+
+#projetos-icone-dez {
+  position: absolute;
+  font-size: 3rem;
+  bottom: 10%;
+  left: 46%;
+  color: #000;
+  cursor: pointer !important;
+  display: none; }
+
+#projetos-icone-onze {
+  position: absolute;
+  font-size: 3rem;
+  bottom: 10%;
+  left: 46%;
+  color: #000;
+  cursor: pointer !important;
+  display: none; }
+
+#projetos-icone-doze {
+  position: absolute;
+  font-size: 3rem;
+  bottom: 10%;
+  left: 46%;
+  color: #000;
+  cursor: pointer !important;
+  display: none; }
 
 .swiper-slide img {
   text-align: start;
