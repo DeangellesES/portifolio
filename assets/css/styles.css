@@ -10,7 +10,7 @@
   --cor-fundo: black;
   --cor-texto: #fff3f3; }
 
-.habilidades h1, .projetos h1, .contato h1 {
+.habilidades h1, .projetos .projetos-icone-titulo h1, .contato h1 {
   font-size: 3rem;
   color: var(--cor-texto);
   text-align: center; }
@@ -297,9 +297,14 @@ header {
   color: #fff;
   overflow: hidden;
   height: 130vh; }
-  .projetos h1 {
+  .projetos .projetos-icone-titulo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     margin-bottom: 1rem;
-    margin-top: -6rem; }
+    margin-top: -2rem; }
+    .projetos .projetos-icone-titulo i {
+      font-size: 3rem; }
   .projetos p {
     width: 60%;
     text-align: center;

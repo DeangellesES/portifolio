@@ -449,7 +449,7 @@ header {
                 padding: 1rem;
                 transition: transform .5s;
                 width: 15% !important;
-          
+
 
                 &:hover {
                     transform: scale(1.1);
@@ -471,11 +471,11 @@ header {
 
 // colocando cor dinamicamente
 .habilidades-container-caixa {
-  transition: .3s ease;
+    transition: .3s ease;
 }
 
-.habilidades-container-caixa:hover  {
-  box-shadow: 0 0 20px 0 var(--cor-hover);
+.habilidades-container-caixa:hover {
+    box-shadow: 0 0 20px 0 var(--cor-hover);
 }
 
 
@@ -492,11 +492,23 @@ header {
     overflow: hidden;
     height: 130vh;
 
-    h1 {
-        @extend %base-h1;
+    .projetos-icone-titulo {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
         margin-bottom: 1rem;
-        margin-top: -6rem;
+        margin-top: -2rem;
+
+        i {
+            font-size: 3rem;
+        }
+
+        h1 {
+            @extend %base-h1;
+        }
     }
+
+
 
     p {
         width: 60%;
@@ -505,6 +517,7 @@ header {
         margin-bottom: 2rem;
         color: var(--cor-texto);
     }
+
 }
 
 .swiper {
@@ -606,6 +619,7 @@ header {
 .descricao-projeto.mostrar {
     display: block;
 }
+
 // projeto 2
 #projetos-icone-um {
     position: absolute;
@@ -616,6 +630,7 @@ header {
     cursor: pointer !important;
     display: none;
 }
+
 // projeto 3
 #projetos-icone-dois {
     position: absolute;
@@ -626,6 +641,7 @@ header {
     cursor: pointer !important;
     display: none;
 }
+
 // projeto 4
 #projetos-icone-tres {
     position: absolute;
