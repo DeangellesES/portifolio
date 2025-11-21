@@ -435,6 +435,8 @@ header {
         .habilidades-container {
             display: flex;
             gap: 1rem;
+            height: 400px;
+            padding-top: 1rem;
 
             .habilidades-container-caixa {
                 display: grid;
@@ -443,10 +445,11 @@ header {
                 background-color: #2c2b2b;
                 color: $cor-texto-geral;
                 cursor: grab;
-                height: 80% !important;
+                height: 40% !important;
                 padding: 1rem;
                 transition: transform .5s;
                 width: 15% !important;
+          
 
                 &:hover {
                     transform: scale(1.1);
@@ -466,6 +469,16 @@ header {
     }
 }
 
+// colocando cor dinamicamente
+.habilidades-container-caixa {
+  transition: .3s ease;
+}
+
+.habilidades-container-caixa:hover  {
+  box-shadow: 0 0 20px 0 var(--cor-hover);
+}
+
+
 // FIM SEÇÃO HABILIDADES
 
 // INICIO SEÇÃO PROJETOS
@@ -477,12 +490,19 @@ header {
     @extend %base-fundo;
     color: #fff;
     overflow: hidden;
-    height: 120vh;
+    height: 130vh;
 
     h1 {
         @extend %base-h1;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
         margin-top: -6rem;
+    }
+
+    p {
+        width: 60%;
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
     }
 }
 
