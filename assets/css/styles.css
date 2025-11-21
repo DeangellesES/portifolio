@@ -304,7 +304,8 @@ header {
     width: 60%;
     text-align: center;
     font-size: 1.5rem;
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    color: var(--cor-texto); }
 
 .swiper {
   width: 80vw;
@@ -333,7 +334,7 @@ header {
   bottom: 21%;
   color: #000;
   background-color: #fff;
-  padding: 1rem .5rem;
+  padding: 1.5rem;
   border: 1px solid #000;
   display: none;
   transform: translateX(-50%);
@@ -350,7 +351,12 @@ header {
     font-size: 1.5rem;
     font-weight: bold; }
   .descricao-projeto p {
-    font-size: 1.2rem; }
+    font-size: 1.2rem !important;
+    color: var(--cor-fundo) !important;
+    width: 100%;
+    margin-top: .5rem;
+    margin-bottom: 0 !important;
+    text-align: start !important; }
   .descricao-projeto div {
     display: flex;
     gap: 1rem; }
@@ -537,7 +543,8 @@ header {
     margin-bottom: 2.5rem; }
   .contato .contato-divisao {
     display: grid;
-    grid-template-columns: 1fr 1fr; }
+    grid-template-columns: 1fr 1fr;
+    align-items: center; }
     .contato .contato-divisao .contato-divisao_geral h2 {
       font-size: 1.8rem; }
     .contato .contato-divisao .contato-divisao_geral .contato-divisao_geral__frase {

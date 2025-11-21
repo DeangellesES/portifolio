@@ -503,6 +503,7 @@ header {
         text-align: center;
         font-size: 1.5rem;
         margin-bottom: 2rem;
+        color: var(--cor-texto);
     }
 }
 
@@ -536,7 +537,7 @@ header {
     bottom: 21%;
     color: #000;
     background-color: #fff;
-    padding: 1rem .5rem;
+    padding: 1.5rem;
     border: 1px solid #000;
     display: none;
     transform: translateX(-50%);
@@ -558,7 +559,12 @@ header {
     }
 
     p {
-        font-size: 1.2rem;
+        font-size: 1.2rem !important;
+        color: var(--cor-fundo) !important;
+        width: 100%;
+        margin-top: .5rem;
+        margin-bottom: 0 !important;
+        text-align: start !important;
     }
 
     div {
@@ -803,6 +809,7 @@ header {
     .contato-divisao {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        align-items: center;
 
         .contato-divisao_geral {
 
