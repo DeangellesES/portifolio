@@ -23,6 +23,7 @@ $efeito-box-shadow: 0 0 10px 0px var(--cor-texto);
     font-size: 3rem;
     color: var(--cor-texto);
     text-align: center;
+    padding-top: 3rem;
 }
 
 // redutor dos fundos
@@ -381,7 +382,7 @@ header {
                 padding: 1.3rem 2rem;
                 text-align: center;
                 transition: all .5s ease;
-                width: 28%;
+                width: 30%;
 
                 &:hover {
                     background: var(--cor-texto);
@@ -501,7 +502,8 @@ header {
 
         i {
             font-size: 3rem;
-            color: var(--cor-texto)
+            color: var(--cor-texto);
+            padding-top: 3rem;
         }
 
         h1 {
@@ -533,91 +535,91 @@ header {
     border: 1px solid rgba(177, 177, 177, 0.4);
 }
 
-#projetos-icone {
-    position: absolute;
-    font-size: 3rem;
-    bottom: 10%;
-    left: 46%;
-    color: #000;
-    cursor: pointer !important;
-    display: none;
-}
+// #projetos-icone {
+//     position: absolute;
+//     font-size: 3rem;
+//     bottom: 10%;
+//     left: 46%;
+//     color: #000;
+//     cursor: pointer !important;
+//     display: none;
+// }
 
-.descricao-projeto {
-    position: absolute;
-    font-size: 2rem;
-    bottom: 21%;
-    color: #000;
-    background-color: #fff;
-    padding: 1.5rem;
-    border: 1px solid #000;
-    display: none;
-    transform: translateX(-50%);
-    cursor: pointer;
+// .descricao-projeto {
+//     position: absolute;
+//     font-size: 2rem;
+//     bottom: 21%;
+//     color: #000;
+//     background-color: #fff;
+//     padding: 1.5rem;
+//     border: 1px solid #000;
+//     display: none;
+//     transform: translateX(-50%);
+//     cursor: pointer;
 
-    .fa-x {
-        font-size: 1.1rem;
-        color: #000;
-        display: flex;
-        justify-content: end;
-        width: fit-content;
-        position: absolute;
-        right: 5%;
-    }
+//     .fa-x {
+//         font-size: 1.1rem;
+//         color: #000;
+//         display: flex;
+//         justify-content: end;
+//         width: fit-content;
+//         position: absolute;
+//         right: 5%;
+//     }
 
-    h3 {
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
+//     h3 {
+//         font-size: 1.5rem;
+//         font-weight: bold;
+//     }
 
-    p {
-        font-size: 1.2rem !important;
-        color: var(--cor-fundo) !important;
-        width: 100%;
-        margin-top: .5rem;
-        margin-bottom: 0 !important;
-        text-align: start !important;
-    }
+//     p {
+//         font-size: 1.2rem !important;
+//         color: var(--cor-fundo) !important;
+//         width: 100%;
+//         margin-top: .5rem;
+//         margin-bottom: 0 !important;
+//         text-align: start !important;
+//     }
 
-    div {
-        display: flex;
-        gap: 1rem;
+//     div {
+//         display: flex;
+//         gap: 1rem;
 
-        img {
-            margin-top: .5rem;
-            width: 22% !important;
-            // background-color: var(--cor-fundo);
-        }
-    }
+//         img {
+//             margin-top: .5rem;
+//             width: 22% !important;
+//             // background-color: var(--cor-fundo);
+//         }
+//     }
 
-    a {
-        font-size: 1.3rem;
-        text-decoration: none;
-        font-weight: bold;
-        color: #000;
-    }
-}
+//     a {
+//         font-size: 1.3rem;
+//         text-decoration: none;
+//         font-weight: bold;
+//         color: #000;
+//     }
+// }
 
-.descricao-projeto.show {
-    animation: subirDescricao 2s ease forwards;
-    /* subir devagar CHAMANDO A ANIMAÇÃO */
-}
+// .descricao-projeto.show {
+//     animation: subirDescricao 2s ease forwards;
+//     /* subir devagar CHAMANDO A ANIMAÇÃO */
+// }
 
-// ANIMAÇÃO PARA FAZER A DIV SUBIR SUAVEMENTE
-@keyframes subirDescricao {
-    from {
-        transform: translateY(150%);
-    }
+// // ANIMAÇÃO PARA FAZER A DIV SUBIR SUAVEMENTE
+// @keyframes subirDescricao {
+//     from {
+//         transform: translateY(150%);
+//     }
 
-    to {
-        transform: translateY(0);
-    }
-}
+//     to {
+//         transform: translateY(0);
+//     }
+// }
 
-// FAZER A DESCRIÇÃO MOSTRE E DESMOSTRE DA TELA
-.descricao-projeto.mostrar {
-    display: block;
-}
+// // FAZER A DESCRIÇÃO MOSTRE E DESMOSTRE DA TELA
+// .descricao-projeto.mostrar {
+//     display: block;
+// }
 
 // projeto 2
 #projetos-icone-um {
@@ -1394,4 +1396,118 @@ footer {
         }
     }
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.icone-projeto {
+    position: absolute;
+    font-size: 3rem;
+    bottom: 10%;
+    left: 46%;
+    color: #000;
+    cursor: pointer !important;
+    display: none;
+}
+
+/* DESCRIÇÃO */
+.descricao-projeto {
+    position: absolute;
+    font-size: 2rem;
+    bottom: 21%;
+    color: #000;
+    background-color: #fff;
+    padding: 1.5rem;
+    border: 1px solid #000;
+    opacity: 0;
+    /* inicialmente invisível */
+    transform: translateY(150%);
+    /* começa lá embaixo */
+    pointer-events: none;
+    /* não clica enquanto escondida */
+    transition: all 0.9s ease;
+}
+
+/* Ícone de fechar */
+.descricao-projeto .fa-x {
+    font-size: 1.1rem;
+    color: #000;
+    display: flex;
+    justify-content: end;
+    width: fit-content;
+    position: absolute;
+    right: 5%;
+}
+
+/* Título */
+.descricao-projeto h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Parágrafos */
+.descricao-projeto p {
+    font-size: 1.2rem !important;
+    color: var(--cor-fundo) !important;
+    width: 100%;
+    margin-top: .5rem;
+    margin-bottom: 0 !important;
+    text-align: start !important;
+}
+
+/* Ícones das tecnologias */
+.descricao-projeto div {
+    display: flex;
+    gap: 1rem;
+}
+
+.descricao-projeto div img {
+    margin-top: .5rem;
+    width: 22% !important;
+}
+
+/* Link "Ver Site" */
+.descricao-projeto a {
+    font-size: 1.3rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Quando a descrição deve aparecer (estado ativo) */
+.descricao-projeto.mostrar {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    /* sobe suavemente */
+    pointer-events: auto;
+}
+
+/* Animação para subir suavemente */
+.descricao-projeto.show {
+    animation: subirDescricao 5s ease forwards;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes subirDescricao {
+    from {
+        transform: translateY(150%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
 }

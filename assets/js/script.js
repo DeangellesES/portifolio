@@ -276,7 +276,8 @@ const especialidades = [
   { icone: '<i class="fa-solid fa-cart-shopping"></i>', titulo: "Lojas Online" },
   { icone: '<i class="fa-solid fa-blog"></i>', titulo: "Blogs" },
   { icone: '<i class="fa-solid fa-mobile-screen-button"></i>', titulo: "Aplicativos Mobile" },
-  { icone: '<i class="fa-solid fa-screwdriver-wrench"></i>', titulo: "Ferramentas Digitais" }
+  { icone: '<i class="fa-solid fa-screwdriver-wrench"></i>', titulo: "Ferramentas Digitais" },
+  { icone: '<i class="fa-solid fa-desktop"></i>', titulo: "Software Desktop" },
 ];
 
 const container = document.getElementById('lista-especialidades');
@@ -368,11 +369,237 @@ const swiper1 = new Swiper('.swiperHabilidades', {
 
 //////////////////////////////// SEÇÃO PROJETOS//////////////////////////////////////////
 // CARROSSEL NO PROJETOS
+
+// const swiper = new Swiper('.swiper', {
+//   effect: "coverflow",
+//   grabCursor: true,
+//   centeredSlides: true,
+//   initialSlide: 10,
+//   speed: 600,
+//   preventClicks: true,
+//   slidesPerView: "auto",
+//   coverflowEffect: {
+//     rotate: 0,
+//     stretch: 0,
+//     depth: 350,
+//     modifier: 1,
+//     slideShadows: true,
+//   },
+//   on: {
+//     click(event) {
+//       swiper.slideTo(this.clickedIndex);
+//     },
+//   },
+//   pagination: {
+//     el: ".swiper-pagination",
+//   },
+// });
+
+
+
+
+
+
+const projetos = [
+  {
+    id: "tres",
+    imagem: "./assets/img/pizzaria.png",
+    titulo: "Site para uma Pizzaria",
+    descricao: "Site mostrando a historia da Pizzaria, seus produtos, serviços, contato, redes sociais e localização. Projeto completo ainda em desenvolvimento.",
+    tecnologias: [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+    ],
+    link: "https://deangelleses.github.io/site_pizzaria_frontend_completo-HTML-CSS-JavaScript/",
+    nome: "Pizzaria"
+  },
+  {
+    id: "quatro",
+    imagem: "./assets/img/site-odontologia.png",
+    titulo: "Site para uma Clínica Odontológica",
+    descricao: "Site para mostrar a historia da clínica, equipe, equipamentos, perguntas frequentes, serviços, preços, contato e localização. Projeto apenas ilustrativo.",
+    tecnologias: [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg"
+    ],
+    link: "https://site-odontologia-react.vercel.app/",
+    nome: "Clínica Odontológica"
+  },
+  {
+    id: "cinco",
+    imagem: "./assets/img/site-advogados.png",
+    titulo: "Site para Advogados",
+    descricao: "Site para mostrar serviços, advogados, contato e localização, projeto simulando uma entrega real.",
+    tecnologias: [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg"
+    ],
+    link: "https://site-advogados-react-js.vercel.app/",
+    nome: "Site para advogados"
+  },
+  {
+    id: "seis",
+    imagem: "./assets/img/clinica-medica.png",
+    titulo: "Site para uma Clínica Médica",
+    descricao: "Site contando a história da clínica, os Médicos, todos os tipos de serviço da clínica, contatos, redes sociais e localização.",
+    tecnologias: [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+    ],
+    link: "https://deangelleses.github.io/site_clinica_medica-HTML-CSS-JavaScript/",
+    nome: "Clínica Médica"
+  },
+  {
+    id: "dois",
+    imagem: "./assets/img/site-academia.png",
+    titulo: "Site para uma Academia",
+    descricao: "Site para divulgar a Academia, mostrar serviços e equipamentos, mostrar planos e preços, horários de funcionamento, contato, redes sociais e localização.",
+    tecnologias: [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg",
+    ],
+    link: "https://site-academia-react-js-vite.vercel.app/",
+    nome: "Site pra Academia"
+  },
+  {
+    id: "dizesseis",
+    imagem: "./assets/img/site-psicologia.png",
+    titulo: "Site para uma Psicóloga",
+    descricao: "Site mostrando informações sobre a Psicóloga, seus serviços, seus contatos, horários de funcionamento e redes sociais.",
+    tecnologias: [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg",
+    ],
+    link: "https://site-psicologia-sigma.vercel.app/",
+    nome: "Site para uma Psicóloga"
+  },
+  {
+    id: "um",
+    imagem: "./assets/img/clinica-veterinaria.png",
+    titulo: "Site para uma Clínica Veterinaria",
+    descricao: "Site para divulgar a clínica, mostrar sua historia, seus serviços, contatos e localização.",
+    tecnologias: [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg",
+    ],
+    link: "https://clinica-veterinaria-seven.vercel.app/",
+    nome: "Site para Clínica Veterinária"
+  },
+  {
+    id: "sete",
+    imagem: "./assets/img/cafeteria.png",
+    titulo: "Site para uma Cafeteria",
+    descricao: "Site para mostar informações sobre a cafeteria, seus produtos com preço, avaliações de clientes, endereço e redes sociais.",
+    tecnologias: [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg",
+    ],
+    link: "https://deangelleses.github.io/landing_page_cafeteria-HTML-CSS/",
+    nome: "Site para cafeteria"
+  },
+  {
+    id: "oito",
+    imagem: "./assets/img/site-psicologa.png",
+    titulo: "Site para uma Psicóloga",
+    descricao: "Site para divulgar serviços, mostrar informações sobre a psicóloga, mostar serviços, informações sobre saúde mental e mostrar redes sociais.",
+    tecnologias: [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-plain-wordmark.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg"
+    ],
+    link: "https://site-psicologa-react-js-tailwind-cs.vercel.app/",
+    nome: "Site para Psicólogo"
+  },
+  {
+    id: "nove",
+    imagem: "./assets/img/hamburgueria.png",
+    titulo: "Site para uma Psicóloga",
+    descricao: "Site para divulgar serviços, mostrar informações sobre a psicóloga, mostar serviços, informações sobre saúde mental e mostrar redes sociais.",
+    tecnologias: [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-plain-wordmark.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg"
+    ],
+    link: "https://site-psicologa-react-js-tailwind-cs.vercel.app/",
+    nome: "Site para Psicólogo"
+  }
+]
+
+
+const wrapper = document.getElementById("projetos-wrapper");
+
+wrapper.innerHTML = projetos.map(p => `
+  <div class="swiper-slide" id="projetos-icone-caixa-${p.id}">
+      <img src="${p.imagem}" alt="">
+      
+      <div class="descricao-projeto" id="descricao-${p.id}">
+          <i class="fa-solid fa-x" id="fechar${p.id.charAt(0).toUpperCase() + p.id.slice(1)}"></i>
+          <h3>${p.titulo}</h3>
+          <p>${p.descricao}</p>
+
+          <p>Tecnologias Utilizadas:</p>
+          <div>
+              ${p.tecnologias.map(src => `<img src="${src}" />`).join("")}
+          </div>
+
+          <a href="${p.link}" target="_blank">
+              Ver Site <i class="fa-solid fa-arrow-right"></i>
+          </a>
+      </div>
+
+      <i class="fa-regular fa-square-caret-up icone-projeto" id="projetos-icone-${p.id}"></i>
+
+      <div class="title">
+          <span>${p.nome}</span>
+      </div>
+  </div>
+`).join("");
+
+
+function aplicarEventosProjeto(id) {
+  const area = document.getElementById(`projetos-icone-caixa-${id}`);
+  const icone = document.getElementById(`projetos-icone-${id}`);
+  const descricao = document.getElementById(`descricao-${id}`);
+  const fechar = document.getElementById(`fechar${id.charAt(0).toUpperCase() + id.slice(1)}`);
+
+  // Mostrar ícone ao passar o mouse
+  area.addEventListener("mouseover", () => {
+    icone.style.display = "inline";
+  });
+
+  area.addEventListener("mouseout", () => {
+    icone.style.display = "none";
+  });
+
+  // Abrir descrição
+  icone.addEventListener("click", () => {
+    descricao.classList.toggle("mostrar");
+    icone.classList.toggle("fa-square-caret-up");
+    icone.classList.toggle("fa-square-caret-down");
+  });
+
+  // Fechar descrição ao clicar no X
+  fechar.addEventListener("click", () => {
+    descricao.classList.toggle("mostrar");
+    icone.classList.remove("fa-square-caret-down");
+    icone.classList.add("fa-square-caret-up");
+  });
+}
+
+projetos.forEach(p => aplicarEventosProjeto(p.id));
+
+// CARROSSEL NO PROJETOS
+const totalSlides = projetos.length;
+const meio = Math.floor(totalSlides / 2);
+
 const swiper = new Swiper('.swiper', {
   effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
-  initialSlide: 5,
+  initialSlide: meio,   // ⬅️ aqui está o pulo do gato
   speed: 600,
   preventClicks: true,
   slidesPerView: "auto",
@@ -392,6 +619,7 @@ const swiper = new Swiper('.swiper', {
     el: ".swiper-pagination",
   },
 });
+
 
 
 // INICIO DESCRIÇÕES DOS PROJETOS CHUMBADOS
@@ -999,3 +1227,6 @@ langSwitcherResponsivo.addEventListener("change", () => {
     element.textContent = translations[selectedLang][key];
   });
 });
+
+
+

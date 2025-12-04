@@ -13,7 +13,8 @@
 .habilidades h1, .projetos .projetos-icone-titulo h1, .contato h1 {
   font-size: 3rem;
   color: var(--cor-texto);
-  text-align: center; }
+  text-align: center;
+  padding-top: 3rem; }
 
 header, .apresentacao, .sobre, .habilidades, .projetos, .contato, footer {
   background-color: var(--cor-fundo); }
@@ -230,7 +231,7 @@ header {
       padding: 1.3rem 2rem;
       text-align: center;
       transition: all .5s ease;
-      width: 28%; }
+      width: 30%; }
       .sobre .especialidades .especialidades-container .especialidades-container_caixa:hover {
         background: var(--cor-texto);
         color: var(--cor-fundo);
@@ -304,7 +305,8 @@ header {
     margin-top: -2rem; }
     .projetos .projetos-icone-titulo i {
       font-size: 3rem;
-      color: var(--cor-texto); }
+      color: var(--cor-texto);
+      padding-top: 3rem; }
   .projetos p {
     width: 60%;
     text-align: center;
@@ -323,68 +325,6 @@ header {
   aspect-ratio: 3/4;
   border-radius: 14px;
   border: 1px solid rgba(177, 177, 177, 0.4); }
-
-#projetos-icone {
-  position: absolute;
-  font-size: 3rem;
-  bottom: 10%;
-  left: 46%;
-  color: #000;
-  cursor: pointer !important;
-  display: none; }
-
-.descricao-projeto {
-  position: absolute;
-  font-size: 2rem;
-  bottom: 21%;
-  color: #000;
-  background-color: #fff;
-  padding: 1.5rem;
-  border: 1px solid #000;
-  display: none;
-  transform: translateX(-50%);
-  cursor: pointer; }
-  .descricao-projeto .fa-x {
-    font-size: 1.1rem;
-    color: #000;
-    display: flex;
-    justify-content: end;
-    width: fit-content;
-    position: absolute;
-    right: 5%; }
-  .descricao-projeto h3 {
-    font-size: 1.5rem;
-    font-weight: bold; }
-  .descricao-projeto p {
-    font-size: 1.2rem !important;
-    color: var(--cor-fundo) !important;
-    width: 100%;
-    margin-top: .5rem;
-    margin-bottom: 0 !important;
-    text-align: start !important; }
-  .descricao-projeto div {
-    display: flex;
-    gap: 1rem; }
-    .descricao-projeto div img {
-      margin-top: .5rem;
-      width: 22% !important; }
-  .descricao-projeto a {
-    font-size: 1.3rem;
-    text-decoration: none;
-    font-weight: bold;
-    color: #000; }
-
-.descricao-projeto.show {
-  animation: subirDescricao 2s ease forwards;
-  /* subir devagar CHAMANDO A ANIMAÇÃO */ }
-
-@keyframes subirDescricao {
-  from {
-    transform: translateY(150%); }
-  to {
-    transform: translateY(0); } }
-.descricao-projeto.mostrar {
-  display: block; }
 
 #projetos-icone-um {
   position: absolute;
@@ -888,5 +828,90 @@ footer {
     padding: 1rem 2.3rem 2.3rem 2.3rem; }
     .contato .contato-divisao_geral__frase {
       width: 90% !important; } }
+.icone-projeto {
+  position: absolute;
+  font-size: 3rem;
+  bottom: 10%;
+  left: 46%;
+  color: #000;
+  cursor: pointer !important;
+  display: none; }
+
+/* DESCRIÇÃO */
+.descricao-projeto {
+  position: absolute;
+  font-size: 2rem;
+  bottom: 21%;
+  color: #000;
+  background-color: #fff;
+  padding: 1.5rem;
+  border: 1px solid #000;
+  opacity: 0;
+  /* inicialmente invisível */
+  transform: translateY(150%);
+  /* começa lá embaixo */
+  pointer-events: none;
+  /* não clica enquanto escondida */
+  transition: all 0.9s ease; }
+
+/* Ícone de fechar */
+.descricao-projeto .fa-x {
+  font-size: 1.1rem;
+  color: #000;
+  display: flex;
+  justify-content: end;
+  width: fit-content;
+  position: absolute;
+  right: 5%; }
+
+/* Título */
+.descricao-projeto h3 {
+  font-size: 1.5rem;
+  font-weight: bold; }
+
+/* Parágrafos */
+.descricao-projeto p {
+  font-size: 1.2rem !important;
+  color: var(--cor-fundo) !important;
+  width: 100%;
+  margin-top: .5rem;
+  margin-bottom: 0 !important;
+  text-align: start !important; }
+
+/* Ícones das tecnologias */
+.descricao-projeto div {
+  display: flex;
+  gap: 1rem; }
+
+.descricao-projeto div img {
+  margin-top: .5rem;
+  width: 22% !important; }
+
+/* Link "Ver Site" */
+.descricao-projeto a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: #000; }
+
+/* Quando a descrição deve aparecer (estado ativo) */
+.descricao-projeto.mostrar {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  /* sobe suavemente */
+  pointer-events: auto; }
+
+/* Animação para subir suavemente */
+.descricao-projeto.show {
+  animation: subirDescricao 5s ease forwards;
+  opacity: 1;
+  transform: translateY(0); }
+
+@keyframes subirDescricao {
+  from {
+    transform: translateY(150%); }
+  to {
+    transform: translateY(0); } }
 
 /*# sourceMappingURL=styles.css.map */
