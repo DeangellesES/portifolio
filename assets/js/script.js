@@ -106,6 +106,7 @@ const translations = {
     minhasHabilidades: "Minhas Habilidades",
     tecnologiasFerramentas: "Tecnologias e ferramentas que domino para criar experiências incríveis",
     projetosTitulo: "Projetos",
+    projetosDescricao: "Ideias que viraram código, telas que ganham vida e experiências que funcionam de verdade. Aqui você encontra o que gosto de fazer: transformar ideias em soluções impactantes.",
     vamosConversar1: "Vamos conversar?",
     entreEmContato: "Entre em Contato",
     estouSempre: "Estou sempre aberto a novas oportunidades e projetos interessantes. Vamos criar algo incrível juntos! Entre em contato e vamos conversar!",
@@ -146,6 +147,7 @@ const translations = {
     minhasHabilidades: "My Skills",
     tecnologiasFerramentas: "Technologies and tools I master to create incredible experiences",
     projetosTitulo: "Projects",
+    projetosDescricao: "Ideas turned into code, screens brought to life, and experiences that truly work. Here you'll find what I love to do: transform ideas into impactful solutions.",
     vamosConversar1: "Let's talk?",
     entreEmContato: "Get in touch",
     estouSempre: "I'm always open to new opportunities and interesting projects. Let's create something amazing together! Get in touch and let's talk!",
@@ -186,6 +188,7 @@ const translations = {
     minhasHabilidades: "Mis habilidades",
     tecnologiasFerramentas: "Tecnologías y herramientas que he dominado para crear experiencias increíbles.",
     projetosTitulo: "Proyectos",
+    projetosDescricao: "Ideas convertidas en código, pantallas que cobran vida y experiencias que realmente funcionan. Aquí encontrarás lo que me apasiona: transformar ideas en soluciones impactantes.",
     vamosConversar1: "¿Hablamos?",
     entreEmContato: "Ponte en contacto",
     estouSempre: "Siempre estoy abierta a nuevas oportunidades y proyectos interesantes. ¡Creemos algo increíble juntos! ¡Contáctanos y hablemos!",
@@ -309,7 +312,8 @@ const habilidades = [
   { cor: '#00e6e6', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg', titulo: "React", nivel: '<div><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></div>' },
   { cor: '#ff6666', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/styledcomponents/styledcomponents-original.svg', titulo: "Styled Components", nivel: '<div><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i></div>' },
   { cor: '#4da6ff', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg', titulo: "TypeScript", nivel: '<div><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></div>' },
-  { cor: '#cc99ff', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg', titulo: "PHP", nivel: '<div><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></div>' },
+  // { cor: '#cc99ff', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg', titulo: "PHP", nivel: '<div><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></div>' },
+  { cor: '#990099', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg', titulo: "C#", nivel: '<div><i class="fa-sharp fa-solid fa-star"></i><i class="fa-regular fa-star"></i></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></div>' },
   { cor: '#39ac39', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg', titulo: "Vue", nivel: '<div><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></div>' },
   { cor: '#00802b', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg', titulo: "Node", nivel: '<div><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></div>' },
   { cor: '#ff4d4d', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original.svg', titulo: "npm", nivel: '<div><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></div>' },
@@ -324,6 +328,7 @@ const habilidades = [
   { cor: '#ff751a', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg', titulo: "Postman", nivel: '<div><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></div>' },
   { cor: '#00e699', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg', titulo: "Android Studio", nivel: '<div><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></div>' },
   { cor: '#d966ff', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg', titulo: "Vite", nivel: '<div><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></div>' },
+  { cor: '#ff8000', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg', titulo: "AWS", nivel: '<div><i class="fa-sharp fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></div>' },
 ];
 
 const containerHabilidades = document.getElementById('lista-habilidades');
@@ -782,7 +787,7 @@ area12.addEventListener("mouseover", () => {
   icone12.style.display = "inline";
 });
 
-area11.addEventListener("mouseout", () => {
+area12.addEventListener("mouseout", () => {
   icone12.style.display = "none";
 });
 
@@ -803,6 +808,100 @@ fecharDoze.addEventListener("click", () => {
   descricao12.classList.toggle('mostrar');
 })
 
+
+
+// DESCRIÇÃO PROJETO 14
+const area13 = document.getElementById("projetos-icone-caixa-treze");
+const icone13 = document.getElementById("projetos-icone-treze");
+const descricao13 = document.getElementById("descricao-treze");
+
+area13.addEventListener("mouseover", () => {
+  icone13.style.display = "inline";
+});
+
+area13.addEventListener("mouseout", () => {
+  icone13.style.display = "none";
+});
+
+// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
+icone13.addEventListener("click", () => {
+  descricao13.classList.toggle('mostrar');
+  icone13.classList.toggle('fa-square-caret-up');
+  icone13.classList.toggle('fa-square-caret-down');
+})
+
+// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
+document.getElementById("projetos-icone-treze").onclick = () => {
+  document.getElementById("descricao-treze").classList.add("show");
+};
+
+const fecharTreze = document.getElementById("fecharTreze")
+fecharTreze.addEventListener("click", () => {
+  descricao13.classList.toggle('mostrar');
+})
+
+
+
+// DESCRIÇÃO PROJETO 15
+const area14 = document.getElementById("projetos-icone-caixa-quatorze");
+const icone14 = document.getElementById("projetos-icone-quatorze");
+const descricao14 = document.getElementById("descricao-quatorze");
+
+area14.addEventListener("mouseover", () => {
+  icone14.style.display = "inline";
+});
+
+area14.addEventListener("mouseout", () => {
+  icone14.style.display = "none";
+});
+
+// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
+icone14.addEventListener("click", () => {
+  descricao14.classList.toggle('mostrar');
+  icone14.classList.toggle('fa-square-caret-up');
+  icone14.classList.toggle('fa-square-caret-down');
+})
+
+// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
+document.getElementById("projetos-icone-quatorze").onclick = () => {
+  document.getElementById("descricao-quatorze").classList.add("show");
+};
+
+const fecharQuatorze = document.getElementById("fecharQuatorze")
+fecharQuatorze.addEventListener("click", () => {
+  descricao14.classList.toggle('mostrar');
+})
+
+
+// DESCRIÇÃO PROJETO 15
+const area15 = document.getElementById("projetos-icone-caixa-quinze");
+const icone15 = document.getElementById("projetos-icone-quinze");
+const descricao15 = document.getElementById("descricao-quinze");
+
+area15.addEventListener("mouseover", () => {
+  icone15.style.display = "inline";
+});
+
+area15.addEventListener("mouseout", () => {
+  icone15.style.display = "none";
+});
+
+// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
+icone15.addEventListener("click", () => {
+  descricao15.classList.toggle('mostrar');
+  icone15.classList.toggle('fa-square-caret-up');
+  icone15.classList.toggle('fa-square-caret-down');
+})
+
+// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
+document.getElementById("projetos-icone-quinze").onclick = () => {
+  document.getElementById("descricao-quinze").classList.add("show");
+};
+
+const fecharQuinze = document.getElementById("fecharQuinze")
+fecharQuinze.addEventListener("click", () => {
+  descricao15.classList.toggle('mostrar');
+})
 
 
 

@@ -28,7 +28,7 @@ $efeito-box-shadow: 0 0 10px 0px var(--cor-texto);
 // redutor dos fundos
 %base-fundo {
     background-color: var(--cor-fundo);
-    box-shadow: $efeito-box-shadow;
+    // box-shadow: $efeito-box-shadow;
 }
 
 // mixin para configurações no formulario
@@ -501,14 +501,13 @@ header {
 
         i {
             font-size: 3rem;
+            color: var(--cor-texto)
         }
 
         h1 {
             @extend %base-h1;
         }
     }
-
-
 
     p {
         width: 60%;
@@ -743,6 +742,39 @@ header {
 
 // projeto 13
 #projetos-icone-doze {
+    position: absolute;
+    font-size: 3rem;
+    bottom: 10%;
+    left: 46%;
+    color: #000;
+    cursor: pointer !important;
+    display: none;
+}
+
+// projeto 14
+#projetos-icone-treze {
+    position: absolute;
+    font-size: 3rem;
+    bottom: 10%;
+    left: 46%;
+    color: #000;
+    cursor: pointer !important;
+    display: none;
+}
+
+// projeto 15
+#projetos-icone-quatorze {
+    position: absolute;
+    font-size: 3rem;
+    bottom: 10%;
+    left: 46%;
+    color: #000;
+    cursor: pointer !important;
+    display: none;
+}
+
+// projeto 16
+#projetos-icone-quinze {
     position: absolute;
     font-size: 3rem;
     bottom: 10%;
