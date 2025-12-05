@@ -380,10 +380,10 @@ header {
 
             .especialidades-container_caixa {
                 border: 1px solid $cor-texto-geral;
-                padding: 1.3rem 2rem;
+                padding: 1rem 2rem;
                 text-align: center;
                 transition: all .5s ease;
-                width: 30%;
+                width: 28%;
                 // box-shadow: 0 0 10px 0 var(--cor-texto);
                 border-radius: 10px;
 
@@ -850,10 +850,11 @@ header {
             width: fit-content;
             margin: 0 auto;
             padding: .7rem 1rem;
+            box-shadow: 0 0 10px 0 green;
 
             i {
-                font-size: .6rem;
-                padding-top: .3rem;
+                font-size: .5rem;
+                padding-top: .2rem;
             }
         }
 
@@ -905,6 +906,26 @@ header {
                 }
             }
         }
+    }
+}
+
+// FUNCIONALIDADE PARA FICAR PISCANDO PONTO NO DISPONIVEL
+.blink-soft {
+    animation: blinkSoft 1.4s ease-in-out infinite;
+}
+
+@keyframes blinkSoft {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    /* não some completamente — fica suave */
+    100% {
+        opacity: 1;
     }
 }
 

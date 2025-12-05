@@ -307,7 +307,7 @@ const observerSobre = new IntersectionObserver((entries) => {
 observerSobre.observe(sobrePessoal);
 
 
-// APARECER UM POR UM SECAO CONTATO
+// APARECER UM POR UM SECAO SOBRE
 const contato = document.querySelector(".contato-divisao_geral");
 const itensContato = document.querySelectorAll(".contato-divisao_geral .item-animar");
 
@@ -787,6 +787,9 @@ document.getElementById("contact_form").addEventListener("submit", function (eve
     })
 
 })
+
+// FUNCIONALIDADE PARA FICAR PISCANDO PONTO NO DISPONIVEL
+document.getElementById("icone").classList.add("blink-soft");
 
 
 
