@@ -232,7 +232,8 @@ header {
       padding: 1.3rem 2rem;
       text-align: center;
       transition: all .5s ease;
-      width: 30%; }
+      width: 30%;
+      border-radius: 10px; }
       .sobre .especialidades .especialidades-container .especialidades-container_caixa:hover {
         background: var(--cor-texto);
         color: var(--cor-fundo);
@@ -242,12 +243,12 @@ header {
         margin-bottom: 1rem; }
 
 .aparecer-esquerda {
-  transform: translateX(-150px);
+  transform: translateX(-40px);
   opacity: 0;
   transition: transform .7s ease, opacity .7s ease; }
 
 .aparecer-direita {
-  transform: translateX(150px);
+  transform: translateX(40px);
   opacity: 0;
   transition: transform .7s ease, opacity .7s ease; }
 
@@ -545,6 +546,53 @@ header {
           background-color: var(--cor-fundo);
           box-shadow: 0 0 20px 0 var(--cor-texto);
           color: var(--cor-texto); }
+  .contato .contato-profissional {
+    margin-top: 5rem; }
+    .contato .contato-profissional h4 {
+      color: green;
+      display: flex;
+      align-items: center;
+      border-radius: 20px;
+      gap: .5rem;
+      border: 1px solid green;
+      width: fit-content;
+      margin: 0 auto;
+      padding: .7rem 1rem; }
+      .contato .contato-profissional h4 i {
+        font-size: .6rem;
+        padding-top: .3rem; }
+    .contato .contato-profissional .contato-profissional_container {
+      display: grid;
+      grid-template-columns: 1fr 40% 1fr;
+      grid-template-rows: auto auto auto;
+      margin-top: 1rem;
+      text-align: center;
+      gap: 1rem;
+      align-items: center; }
+    .contato .contato-profissional .contato-profissional_caixa {
+      display: grid;
+      gap: .5rem;
+      border: 1px solid var(--cor-texto);
+      border-radius: 20px;
+      padding: 1.3rem;
+      height: fit-content !important; }
+      .contato .contato-profissional .contato-profissional_caixa .fa-clock {
+        font-size: 2.7rem; }
+      .contato .contato-profissional .contato-profissional_caixa .fa-briefcase {
+        font-size: 2.7rem; }
+    .contato .contato-profissional .contato-profissional_caixaDois {
+      height: 250px;
+      border: 1px solid var(--cor-texto);
+      border-radius: 20px;
+      padding: 1.3rem;
+      display: grid;
+      gap: .5rem; }
+      .contato .contato-profissional .contato-profissional_caixaDois .fa-laptop-code {
+        font-size: 2.7rem; }
+      .contato .contato-profissional .contato-profissional_caixaDois a {
+        text-decoration: none; }
+        .contato .contato-profissional .contato-profissional_caixaDois a i {
+          margin-right: .5rem; }
 
 footer {
   color: var(--cor-texto);

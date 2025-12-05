@@ -384,6 +384,8 @@ header {
                 text-align: center;
                 transition: all .5s ease;
                 width: 30%;
+                // box-shadow: 0 0 10px 0 var(--cor-texto);
+                border-radius: 10px;
 
                 &:hover {
                     background: var(--cor-texto);
@@ -402,32 +404,33 @@ header {
 
 // ANIMAÇÃO PARA APARECER DE LADO AS DIVS
 .aparecer-esquerda {
-  transform: translateX(-150px);
-  opacity: 0;
-  transition: transform .7s ease, opacity .7s ease;
+    transform: translateX(-40px);
+    opacity: 0;
+    transition: transform .7s ease, opacity .7s ease;
 }
 
 .aparecer-direita {
-  transform: translateX(150px);
-  opacity: 0;
-  transition: transform .7s ease, opacity .7s ease;
+    transform: translateX(40px);
+    opacity: 0;
+    transition: transform .7s ease, opacity .7s ease;
 }
 
 .show {
-  transform: translateX(0);
-  opacity: 1;
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .item-animar {
-  opacity: 0;
-  transform: translateX(-40px);
-  transition: opacity .9s ease, transform .6s ease;
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity .9s ease, transform .6s ease;
 }
 
 .item-animar.show {
-  opacity: 1;
-  transform: translateX(0);
+    opacity: 1;
+    transform: translateX(0);
 }
+
 // FIM ANIMAÇÃO PARA APARECER DE LADO AS DIVS
 
 
@@ -656,6 +659,7 @@ header {
     position: absolute;
     right: 5%;
     cursor: pointer !important;
+
     &:hover {
         cursor: pointer !important;
     }
@@ -828,6 +832,76 @@ header {
                         box-shadow: 0 0 20px 0 var(--cor-texto);
                         color: var(--cor-texto);
                     }
+                }
+            }
+        }
+    }
+
+    .contato-profissional {
+        margin-top: 5rem;
+
+        h4 {
+            color: green;
+            display: flex;
+            align-items: center;
+            border-radius: 20px;
+            gap: .5rem;
+            border: 1px solid green;
+            width: fit-content;
+            margin: 0 auto;
+            padding: .7rem 1rem;
+
+            i {
+                font-size: .6rem;
+                padding-top: .3rem;
+            }
+        }
+
+        .contato-profissional_container {
+            display: grid;
+            grid-template-columns: 1fr 40% 1fr;
+            grid-template-rows: auto auto auto;
+            margin-top: 1rem;
+            text-align: center;
+            gap: 1rem;
+            align-items: center;
+
+        }
+
+        .contato-profissional_caixa {
+            display: grid;
+            gap: .5rem;
+            border: 1px solid var(--cor-texto);
+            border-radius: 20px;
+            padding: 1.3rem;
+            height: fit-content !important;
+
+            .fa-clock {
+                font-size: 2.7rem;
+            }
+
+            .fa-briefcase {
+                font-size: 2.7rem;
+            }
+        }
+
+        .contato-profissional_caixaDois {
+            height: 250px;
+            border: 1px solid var(--cor-texto);
+            border-radius: 20px;
+            padding: 1.3rem;
+            display: grid;
+            gap: .5rem;
+
+            .fa-laptop-code {
+                font-size: 2.7rem;
+            }
+
+            a {
+                text-decoration: none;
+
+                i {
+                    margin-right: .5rem;
                 }
             }
         }
@@ -1269,18 +1343,3 @@ footer {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
