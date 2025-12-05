@@ -198,7 +198,8 @@ header {
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
   color: var(--cor-texto);
-  padding: 6rem; }
+  padding: 6rem;
+  transition: transform .6s ease, opacity .6s ease; }
   .sobre div h1 {
     font-size: 3rem; }
   .sobre div p {
@@ -239,6 +240,29 @@ header {
       .sobre .especialidades .especialidades-container .especialidades-container_caixa i {
         font-size: 2.5rem;
         margin-bottom: 1rem; }
+
+.aparecer-esquerda {
+  transform: translateX(-150px);
+  opacity: 0;
+  transition: transform .7s ease, opacity .7s ease; }
+
+.aparecer-direita {
+  transform: translateX(150px);
+  opacity: 0;
+  transition: transform .7s ease, opacity .7s ease; }
+
+.show {
+  transform: translateX(0);
+  opacity: 1; }
+
+.item-animar {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity .9s ease, transform .6s ease; }
+
+.item-animar.show {
+  opacity: 1;
+  transform: translateX(0); }
 
 .habilidades {
   padding: 3rem;

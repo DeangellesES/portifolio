@@ -331,6 +331,7 @@ header {
     @extend %base-fundo;
     color: var(--cor-texto);
     padding: 6rem;
+    transition: transform .6s ease, opacity .6s ease;
 
     div {
         h1 {
@@ -398,6 +399,37 @@ header {
         }
     }
 }
+
+// ANIMAÇÃO PARA APARECER DE LADO AS DIVS
+.aparecer-esquerda {
+  transform: translateX(-150px);
+  opacity: 0;
+  transition: transform .7s ease, opacity .7s ease;
+}
+
+.aparecer-direita {
+  transform: translateX(150px);
+  opacity: 0;
+  transition: transform .7s ease, opacity .7s ease;
+}
+
+.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.item-animar {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity .9s ease, transform .6s ease;
+}
+
+.item-animar.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+// FIM ANIMAÇÃO PARA APARECER DE LADO AS DIVS
+
 
 // FIM SEÇÃO SOBRE
 

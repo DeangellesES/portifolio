@@ -270,6 +270,67 @@ writeText()
 
 
 ///////////////////////////////////////// SEÇÃO SOBRE //////////////////////////////////////////////
+
+
+// ANIMAÇÃO PARA APARECER DE LADO AS DIVS GERAL
+const elementos = document.querySelectorAll('.aparecer-esquerda, .aparecer-direita');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+elementos.forEach(el => observer.observe(el));
+
+// APARECER UM POR UM SECAO SOBRE
+const sobrePessoal = document.querySelector(".sobre-pessoal");
+const itens = document.querySelectorAll(".sobre-pessoal .item-animar");
+
+const observerSobre = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+
+      itens.forEach((item, index) => {
+        setTimeout(() => {
+          item.classList.add("show");
+        }, index * 200); // 200ms entre cada item
+      });
+
+      observerSobre.unobserve(sobrePessoal); // executa apenas 1 vez
+    }
+  });
+}, { threshold: 0.3 });
+
+observerSobre.observe(sobrePessoal);
+
+
+// APARECER UM POR UM SECAO CONTATO
+const contato = document.querySelector(".contato-divisao_geral");
+const itensContato = document.querySelectorAll(".contato-divisao_geral .item-animar");
+
+const observerContato = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+
+      itensContato.forEach((item, index) => {
+        setTimeout(() => {
+          item.classList.add("show");
+        }, index * 200); // 200ms entre cada item
+      });
+
+      observerSobre.unobserve(contato); // executa apenas 1 vez
+    }
+  });
+}, { threshold: 0.3 });
+
+observerContato.observe(contato);
+
+
+
+
 // FUNÇÃO PARA REDERIZAR ARRAY NA TELA
 const especialidades = [
   { icone: '<i class="fa-solid fa-code"></i>', titulo: "WebSites" },
@@ -365,6 +426,8 @@ const swiper1 = new Swiper('.swiperHabilidades', {
   freeModeMomentum: false,
   // allowTouchMove: false,
 });
+
+
 
 
 //////////////////////////////// SEÇÃO PROJETOS//////////////////////////////////////////

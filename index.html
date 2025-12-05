@@ -116,10 +116,11 @@
         <!-- FIM SECAO APRESENTACAO -->
 
         <section class="sobre" id="sobre">
-            <div class="sobre-pessoal">
-                <h1 data-i18n="aboutMe">Sobre Mim</h1>
-                <p data-i18n="apresentacaoPessoal">Apresentação pessoal</p>
-                <p data-i18n="apresentacaoTexto">Meu nome é Felipe Deangelles, sou natural de Minas Gerais. Sou
+            <div class="sobre-pessoal aparecer-esquerda">
+                <h1 data-i18n="aboutMe" class="item-animar">Sobre Mim</h1>
+                <p data-i18n="apresentacaoPessoal" class="item-animar">Apresentação pessoal</p>
+                <p data-i18n="apresentacaoTexto" class="item-animar">Meu nome é Felipe Deangelles, sou natural de Minas
+                    Gerais. Sou
                     desenvolvedor de Software e estou graduando em Engenharia de Software.
                     Tenho 29 anos e sou um programador Full-Stack apaixonado por tecnologia. Desde muito cedo desenvolvi
                     um amor pela forma como a tecnologia influencia o mundo ao nosso redor, desde de sempre fui
@@ -134,7 +135,7 @@
                 </p>
 
                 <div>
-                    <div class="sobre-profissao">
+                    <div class="sobre-profissao item-animar">
                         <h2 data-i18n="profissaoFromacao">Formação</h2>
                         <i class="fa-solid fa-graduation-cap"></i>
                         <h3 data-i18n="profissaoCurso">Engenharia de Software</h3>
@@ -150,7 +151,7 @@
 
             </div>
 
-            <div class="especialidades">
+            <div class="especialidades aparecer-direita">
                 <h1 data-i18n="minhasEspecialidades">Minhas Especialidades</h1>
                 <div class="especialidades-container" id="lista-especialidades">
                     <!-- array das especialidades renderizado aqui -->
@@ -193,47 +194,53 @@
         <section class="contato" id="contato">
             <h1 data-i18n="vamosConversar1">Vamos Conversar?</h1>
             <div class="contato-divisao">
-                <div class="contato-divisao_geral">
-                    <h2 data-i18n="entreEmContato">Entre em Contato</h2>
-                    <p class="contato-divisao_geral__frase" data-i18n="estouSempre">Estou sempre aberto a novas
+                
+                <div class="contato-divisao_geral aparecer-esquerda">
+                    <h2 data-i18n="entreEmContato" class="item-animar">Entre em Contato</h2>
+                    <p class="contato-divisao_geral__frase item-animar" data-i18n="estouSempre">Estou sempre aberto a novas
                         oportunidades e projetos
                         interessantes. Vamos criar algo incrível juntos! Entre em contato e vamos conversar!</p>
-                    <div class="contato-divisao_geral__caixa">
-                        <i class="fa-solid fa-envelope"></i>
-                        <div>
-                            <h2>Email</h2>
-                            <p>FelipeDeangelles@hotmail.com</p>
+
+                    <div class="item-animar">
+                        <div class="contato-divisao_geral__caixa">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <h2>Email</h2>
+                                <p>FelipeDeangelles@hotmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contato-divisao_geral__caixa">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <a href="">
+                                    <h2 data-i18n="telefone">Telefone</h2>
+                                    <p>+55 (35) 99763-1949</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="contato-divisao_geral__caixa">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <h2 data-i18n="localizacao">Localização</h2>
+                                <p>Ouro Fino - Minas Gerais - Brasil</p>
+                            </div>
+                        </div>
+                        <div class="contato-divisao_geral__caixa">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <a href="https://www.linkedin.com/in/felipe-deangelles-da-silva-lopes/"
+                                target="_blank">Linkedin
+                                <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="contato-divisao_geral__caixa">
+                            <i class="fa-brands fa-github"></i>
+                            <a href="https://github.com/DeangellesES" target="_blank">GitHub <i
+                                    class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    <div class="contato-divisao_geral__caixa">
-                        <i class="fa-solid fa-phone"></i>
-                        <div>
-                            <a href="">
-                                <h2 data-i18n="telefone">Telefone</h2>
-                                <p>+55 (35) 99763-1949</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="contato-divisao_geral__caixa">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <div>
-                            <h2 data-i18n="localizacao">Localização</h2>
-                            <p>Ouro Fino - Minas Gerais - Brasil</p>
-                        </div>
-                    </div>
-                    <div class="contato-divisao_geral__caixa">
-                        <i class="fa-brands fa-linkedin"></i>
-                        <a href="https://www.linkedin.com/in/felipe-deangelles-da-silva-lopes/" target="_blank">Linkedin
-                            <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                    <div class="contato-divisao_geral__caixa">
-                        <i class="fa-brands fa-github"></i>
-                        <a href="https://github.com/DeangellesES" target="_blank">GitHub <i
-                                class="fa-solid fa-arrow-right"></i></a>
-                    </div>
+
                 </div>
 
-                <div class="formulario">
+                <div class="formulario aparecer-direita">
                     <form action="" method="post" id="contact_form">
                         <label for="name" data-i18n="nome">Nome</label>
                         <input type="text" id="name" name="name" required>
