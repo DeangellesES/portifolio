@@ -326,141 +326,6 @@ header {
   border-radius: 14px;
   border: 1px solid rgba(177, 177, 177, 0.4); }
 
-#projetos-icone-um {
-  position: absolute;
-  font-size: 3rem;
-  bottom: 10%;
-  left: 46%;
-  color: #000;
-  cursor: pointer !important;
-  display: none; }
-
-#projetos-icone-dois {
-  position: absolute;
-  font-size: 3rem;
-  bottom: 10%;
-  left: 46%;
-  color: #000;
-  cursor: pointer !important;
-  display: none; }
-
-#projetos-icone-tres {
-  position: absolute;
-  font-size: 3rem;
-  bottom: 10%;
-  left: 46%;
-  color: #000;
-  cursor: pointer !important;
-  display: none; }
-
-#projetos-icone-quatro {
-  position: absolute;
-  font-size: 3rem;
-  bottom: 10%;
-  left: 46%;
-  color: #000;
-  cursor: pointer !important;
-  display: none; }
-
-#projetos-icone-cinco {
-  position: absolute;
-  font-size: 3rem;
-  bottom: 10%;
-  left: 46%;
-  color: #000;
-  cursor: pointer !important;
-  display: none; }
-
-#projetos-icone-seis {
-  position: absolute;
-  font-size: 3rem;
-  bottom: 10%;
-  left: 46%;
-  color: #000;
-  cursor: pointer !important;
-  display: none; }
-
-#projetos-icone-sete {
-  position: absolute;
-  font-size: 3rem;
-  bottom: 10%;
-  left: 46%;
-  color: #000;
-  cursor: pointer !important;
-  display: none; }
-
-#projetos-icone-oito {
-  position: absolute;
-  font-size: 3rem;
-  bottom: 10%;
-  left: 46%;
-  color: #000;
-  cursor: pointer !important;
-  display: none; }
-
-#projetos-icone-nove {
-  position: absolute;
-  font-size: 3rem;
-  bottom: 10%;
-  left: 46%;
-  color: #000;
-  cursor: pointer !important;
-  display: none; }
-
-#projetos-icone-dez {
-  position: absolute;
-  font-size: 3rem;
-  bottom: 10%;
-  left: 46%;
-  color: #000;
-  cursor: pointer !important;
-  display: none; }
-
-#projetos-icone-onze {
-  position: absolute;
-  font-size: 3rem;
-  bottom: 10%;
-  left: 46%;
-  color: #000;
-  cursor: pointer !important;
-  display: none; }
-
-#projetos-icone-doze {
-  position: absolute;
-  font-size: 3rem;
-  bottom: 10%;
-  left: 46%;
-  color: #000;
-  cursor: pointer !important;
-  display: none; }
-
-#projetos-icone-treze {
-  position: absolute;
-  font-size: 3rem;
-  bottom: 10%;
-  left: 46%;
-  color: #000;
-  cursor: pointer !important;
-  display: none; }
-
-#projetos-icone-quatorze {
-  position: absolute;
-  font-size: 3rem;
-  bottom: 10%;
-  left: 46%;
-  color: #000;
-  cursor: pointer !important;
-  display: none; }
-
-#projetos-icone-quinze {
-  position: absolute;
-  font-size: 3rem;
-  bottom: 10%;
-  left: 46%;
-  color: #000;
-  cursor: pointer !important;
-  display: none; }
-
 .swiper-slide img {
   text-align: start;
   display: block;
@@ -508,6 +373,83 @@ header {
   background-color: var(--cor-texto);
   border-radius: 14px; }
 
+.icone-projeto {
+  position: absolute;
+  font-size: 3rem;
+  bottom: 10%;
+  left: 46%;
+  color: #000;
+  cursor: pointer !important;
+  display: none; }
+
+/* DESCRIÇÃO */
+.descricao-projeto {
+  position: absolute;
+  font-size: 2rem;
+  bottom: 21%;
+  color: #000;
+  background-color: #fff;
+  padding: 1.5rem;
+  border: 1px solid #000;
+  opacity: 0;
+  transform: translateY(150%);
+  pointer-events: none;
+  transition: all 0.9s ease; }
+
+.descricao-projeto .fa-x {
+  font-size: 1.1rem;
+  color: #000;
+  display: flex;
+  justify-content: end;
+  width: fit-content;
+  position: absolute;
+  right: 5%;
+  cursor: pointer !important; }
+  .descricao-projeto .fa-x:hover {
+    cursor: pointer !important; }
+
+.descricao-projeto h3 {
+  font-size: 1.5rem;
+  font-weight: bold; }
+
+.descricao-projeto p {
+  font-size: 1.2rem !important;
+  color: var(--cor-fundo) !important;
+  width: 100%;
+  margin-top: .5rem;
+  margin-bottom: 0 !important;
+  text-align: start !important; }
+
+.descricao-projeto div {
+  display: flex;
+  gap: 1rem; }
+
+.descricao-projeto div img {
+  margin-top: .5rem;
+  width: 22% !important; }
+
+.descricao-projeto a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: #000; }
+
+.descricao-projeto.mostrar {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto; }
+
+.descricao-projeto.show {
+  animation: subirDescricao 5s ease forwards;
+  opacity: 1;
+  transform: translateY(0); }
+
+@keyframes subirDescricao {
+  from {
+    transform: translateY(150%); }
+  to {
+    transform: translateY(0); } }
 .contato {
   color: var(--cor-texto);
   padding: 3rem 5.5rem; }
@@ -828,90 +770,5 @@ footer {
     padding: 1rem 2.3rem 2.3rem 2.3rem; }
     .contato .contato-divisao_geral__frase {
       width: 90% !important; } }
-.icone-projeto {
-  position: absolute;
-  font-size: 3rem;
-  bottom: 10%;
-  left: 46%;
-  color: #000;
-  cursor: pointer !important;
-  display: none; }
-
-/* DESCRIÇÃO */
-.descricao-projeto {
-  position: absolute;
-  font-size: 2rem;
-  bottom: 21%;
-  color: #000;
-  background-color: #fff;
-  padding: 1.5rem;
-  border: 1px solid #000;
-  opacity: 0;
-  /* inicialmente invisível */
-  transform: translateY(150%);
-  /* começa lá embaixo */
-  pointer-events: none;
-  /* não clica enquanto escondida */
-  transition: all 0.9s ease; }
-
-/* Ícone de fechar */
-.descricao-projeto .fa-x {
-  font-size: 1.1rem;
-  color: #000;
-  display: flex;
-  justify-content: end;
-  width: fit-content;
-  position: absolute;
-  right: 5%; }
-
-/* Título */
-.descricao-projeto h3 {
-  font-size: 1.5rem;
-  font-weight: bold; }
-
-/* Parágrafos */
-.descricao-projeto p {
-  font-size: 1.2rem !important;
-  color: var(--cor-fundo) !important;
-  width: 100%;
-  margin-top: .5rem;
-  margin-bottom: 0 !important;
-  text-align: start !important; }
-
-/* Ícones das tecnologias */
-.descricao-projeto div {
-  display: flex;
-  gap: 1rem; }
-
-.descricao-projeto div img {
-  margin-top: .5rem;
-  width: 22% !important; }
-
-/* Link "Ver Site" */
-.descricao-projeto a {
-  font-size: 1.3rem;
-  text-decoration: none;
-  font-weight: bold;
-  color: #000; }
-
-/* Quando a descrição deve aparecer (estado ativo) */
-.descricao-projeto.mostrar {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
-  /* sobe suavemente */
-  pointer-events: auto; }
-
-/* Animação para subir suavemente */
-.descricao-projeto.show {
-  animation: subirDescricao 5s ease forwards;
-  opacity: 1;
-  transform: translateY(0); }
-
-@keyframes subirDescricao {
-  from {
-    transform: translateY(150%); }
-  to {
-    transform: translateY(0); } }
 
 /*# sourceMappingURL=styles.css.map */

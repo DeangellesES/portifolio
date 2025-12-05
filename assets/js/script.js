@@ -368,37 +368,8 @@ const swiper1 = new Swiper('.swiperHabilidades', {
 
 
 //////////////////////////////// SEÇÃO PROJETOS//////////////////////////////////////////
-// CARROSSEL NO PROJETOS
 
-// const swiper = new Swiper('.swiper', {
-//   effect: "coverflow",
-//   grabCursor: true,
-//   centeredSlides: true,
-//   initialSlide: 10,
-//   speed: 600,
-//   preventClicks: true,
-//   slidesPerView: "auto",
-//   coverflowEffect: {
-//     rotate: 0,
-//     stretch: 0,
-//     depth: 350,
-//     modifier: 1,
-//     slideShadows: true,
-//   },
-//   on: {
-//     click(event) {
-//       swiper.slideTo(this.clickedIndex);
-//     },
-//   },
-//   pagination: {
-//     el: ".swiper-pagination",
-//   },
-// });
-
-
-
-
-
+// ARRAY DE OBJETOS PARA RENDERIZAR NA TELA
 
 const projetos = [
   {
@@ -516,19 +487,95 @@ const projetos = [
   {
     id: "nove",
     imagem: "./assets/img/hamburgueria.png",
-    titulo: "Site para uma Psicóloga",
-    descricao: "Site para divulgar serviços, mostrar informações sobre a psicóloga, mostar serviços, informações sobre saúde mental e mostrar redes sociais.",
+    titulo: "Site para uma Hamburgueria",
+    descricao: "Site para divulgar a hamburgueria, monstrar cardápio, preços, contato, localização e redes sociais.",
+    tecnologias: [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg",
+    ],
+    link: "https://deangelleses.github.io/site_hamburgueria-HTML-CSS/",
+    nome: "Site para uma Hamburgueria"
+  },
+  {
+    id: "dez",
+    imagem: "./assets/img/site-para-restaurante.png",
+    titulo: "Site para um Restaurante",
+    descricao: "Site para divulgar o restaurante, mostrar seu cardápio, os preços, sues serviços, curisosidades sobre o restaurante, contatos e redes sociais.",
     tecnologias: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-plain-wordmark.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg"
     ],
-    link: "https://site-psicologa-react-js-tailwind-cs.vercel.app/",
-    nome: "Site para Psicólogo"
+    link: "https://site-para-restaurante-react-vite-ty-olive.vercel.app/",
+    nome: "Site para Restaurante"
+  },
+  {
+    id: "onze",
+    imagem: "./assets/img/ecommerce.png",
+    titulo: "Site para um Ecommerce Fictício",
+    descricao: "Ecommerce fictício de produtos digitais, mostra produtos e preços.",
+    tecnologias: [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg",
+    ],
+    link: "https://deangelleses.github.io/ecommerce_produtos_digitais_ficticio-HTML-CSS-JavaScript/",
+    nome: "Site para um ecommerce"
+  },
+  {
+    id: "doze",
+    imagem: "./assets/img/restaurante.png",
+    titulo: "Site para um Restaurante",
+    descricao: "Site divulgar um restaurante, mostrar contatos e redes sociais e depoimentos de clientes.",
+    tecnologias: [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original-wordmark.svg"
+    ],
+    link: "https://deangelleses.github.io/Site_restaurante-HTML-CSS-JavaScript_jQuery/",
+    nome: "Site para restaurante"
+  },
+  {
+    id: "treze",
+    imagem: "./assets/img/cafebistro.png",
+    titulo: "Site para uma Cafeteria Bistrô",
+    descricao: "Site divulgar a Cafeteria, mostar serviços, produtos e redes sociais.",
+    tecnologias: [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+    ],
+    link: "https://deangelleses.github.io/cafe_e_bistro-HTML-CSS-Bootstrap-JavaScript/",
+    nome: "Site para uma cafeteria bistrô"
+  },
+  {
+    id: "quatorze",
+    imagem: "./assets/img/loja-bootstrap.png",
+    titulo: "Site ficticio para uma loja",
+    descricao: "Ecommerce fictício de produtos digitais, mostra produtos e preços.",
+    tecnologias: [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original-wordmark.svg"
+    ],
+    link: "https://deangelleses.github.io/loja_ficticia-Bootstrap/",
+    nome: "Site ficticio para uma loja"
+  },
+  {
+    id: "quinze",
+    imagem: "./assets/img/culturama.png",
+    titulo: "Site de Eventos",
+    descricao: "Site para divulção de eventos, organizado por categoria e com locais e datas.",
+    tecnologias: [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg"
+    ],
+    link: "https://deangelleses.github.io/site_de_eventos-Flex_box-Grid/",
+    nome: "Site de Divulgação de Eventos"
   }
 ]
 
-
+// desenhar na tela
 const wrapper = document.getElementById("projetos-wrapper");
 
 wrapper.innerHTML = projetos.map(p => `
@@ -558,7 +605,7 @@ wrapper.innerHTML = projetos.map(p => `
   </div>
 `).join("");
 
-
+// funcionalidade de mostar descricao do projeto
 function aplicarEventosProjeto(id) {
   const area = document.getElementById(`projetos-icone-caixa-${id}`);
   const icone = document.getElementById(`projetos-icone-${id}`);
@@ -622,514 +669,7 @@ const swiper = new Swiper('.swiper', {
 
 
 
-// INICIO DESCRIÇÕES DOS PROJETOS CHUMBADOS
-// FUNÇÃO APARECER ICON NO PROJETOS
-const area = document.getElementById("projetos-icone-caixa");
-const icone = document.getElementById("projetos-icone");
-const descricao = document.getElementById("descricao");
 
-area.addEventListener("mouseover", () => {
-  icone.style.display = "inline";
-});
-
-area.addEventListener("mouseout", () => {
-  icone.style.display = "none";
-});
-
-// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
-icone.addEventListener("click", () => {
-  descricao.classList.toggle('mostrar');
-  icone.classList.toggle('fa-square-caret-up');
-  icone.classList.toggle('fa-square-caret-down');
-})
-
-// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
-document.getElementById("projetos-icone").onclick = () => {
-  document.getElementById("descricao").classList.add("show");
-};
-
-// FAZER COM QUE A DESCRIÇÃO SAIA AO CLICKAR NO X
-const fechar = document.getElementById("fechar")
-fechar.addEventListener("click", () => {
-  descricao.classList.toggle('mostrar');
-})
-
-
-
-// DESCRIÇÃO PROJETO 2
-const area1 = document.getElementById("projetos-icone-caixa-um");
-const icone1 = document.getElementById("projetos-icone-um");
-const descricao1 = document.getElementById("descricao-um");
-
-area1.addEventListener("mouseover", () => {
-  icone1.style.display = "inline";
-});
-
-area1.addEventListener("mouseout", () => {
-  icone1.style.display = "none";
-});
-
-// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
-icone1.addEventListener("click", () => {
-  descricao1.classList.toggle('mostrar');
-  icone1.classList.toggle('fa-square-caret-up');
-  icone1.classList.toggle('fa-square-caret-down');
-})
-
-// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
-document.getElementById("projetos-icone-um").onclick = () => {
-  document.getElementById("descricao-um").classList.add("show");
-};
-
-const fecharUm = document.getElementById("fecharUm")
-fecharUm.addEventListener("click", () => {
-  descricao1.classList.toggle('mostrar');
-})
-
-
-// DESCRIÇÃO PROJETO 3
-const area2 = document.getElementById("projetos-icone-caixa-dois");
-const icone2 = document.getElementById("projetos-icone-dois");
-const descricao2 = document.getElementById("descricao-dois");
-
-area2.addEventListener("mouseover", () => {
-  icone2.style.display = "inline";
-});
-
-area2.addEventListener("mouseout", () => {
-  icone2.style.display = "none";
-});
-
-// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
-icone2.addEventListener("click", () => {
-  descricao2.classList.toggle('mostrar');
-  icone1.classList.toggle('fa-square-caret-up');
-  icone1.classList.toggle('fa-square-caret-down');
-})
-
-// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
-document.getElementById("projetos-icone-dois").onclick = () => {
-  document.getElementById("descricao-dois").classList.add("show");
-};
-
-const fecharDois = document.getElementById("fecharDois")
-fecharDois.addEventListener("click", () => {
-  descricao2.classList.toggle('mostrar');
-})
-
-// DESCRIÇÃO PROJETO 4
-const area3 = document.getElementById("projetos-icone-caixa-tres");
-const icone3 = document.getElementById("projetos-icone-tres");
-const descricao3 = document.getElementById("descricao-tres");
-
-area3.addEventListener("mouseover", () => {
-  icone3.style.display = "inline";
-});
-
-area3.addEventListener("mouseout", () => {
-  icone3.style.display = "none";
-});
-
-// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
-icone3.addEventListener("click", () => {
-  descricao3.classList.toggle('mostrar');
-  icone3.classList.toggle('fa-square-caret-up');
-  icone3.classList.toggle('fa-square-caret-down');
-})
-
-// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
-document.getElementById("projetos-icone-tres").onclick = () => {
-  document.getElementById("descricao-tres").classList.add("show");
-};
-
-const fecharTres = document.getElementById("fecharTres")
-fecharTres.addEventListener("click", () => {
-  descricao3.classList.toggle('mostrar');
-})
-
-
-
-// DESCRIÇÃO PROJETO 5
-const area4 = document.getElementById("projetos-icone-caixa-quatro");
-const icone4 = document.getElementById("projetos-icone-quatro");
-const descricao4 = document.getElementById("descricao-quatro");
-
-area4.addEventListener("mouseover", () => {
-  icone4.style.display = "inline";
-});
-
-area4.addEventListener("mouseout", () => {
-  icone4.style.display = "none";
-});
-
-// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
-icone4.addEventListener("click", () => {
-  descricao4.classList.toggle('mostrar');
-  icone4.classList.toggle('fa-square-caret-up');
-  icone4.classList.toggle('fa-square-caret-down');
-})
-
-// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
-document.getElementById("projetos-icone-quatro").onclick = () => {
-  document.getElementById("descricao-quatro").classList.add("show");
-};
-
-const fecharQuatro = document.getElementById("fecharQuatro")
-fecharQuatro.addEventListener("click", () => {
-  descricao4.classList.toggle('mostrar');
-})
-
-
-// DESCRIÇÃO PROJETO 6
-const area5 = document.getElementById("projetos-icone-caixa-cinco");
-const icone5 = document.getElementById("projetos-icone-cinco");
-const descricao5 = document.getElementById("descricao-cinco");
-
-area5.addEventListener("mouseover", () => {
-  icone5.style.display = "inline";
-});
-
-area5.addEventListener("mouseout", () => {
-  icone5.style.display = "none";
-});
-
-// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
-icone5.addEventListener("click", () => {
-  descricao5.classList.toggle('mostrar');
-  icone5.classList.toggle('fa-square-caret-up');
-  icone5.classList.toggle('fa-square-caret-down');
-})
-
-// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
-document.getElementById("projetos-icone-cinco").onclick = () => {
-  document.getElementById("descricao-cinco").classList.add("show");
-};
-
-const fecharCinco = document.getElementById("fecharCinco")
-fecharCinco.addEventListener("click", () => {
-  descricao5.classList.toggle('mostrar');
-})
-
-
-// DESCRIÇÃO PROJETO 7
-const area6 = document.getElementById("projetos-icone-caixa-seis");
-const icone6 = document.getElementById("projetos-icone-seis");
-const descricao6 = document.getElementById("descricao-seis");
-
-area6.addEventListener("mouseover", () => {
-  icone6.style.display = "inline";
-});
-
-area6.addEventListener("mouseout", () => {
-  icone6.style.display = "none";
-});
-
-// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
-icone6.addEventListener("click", () => {
-  descricao6.classList.toggle('mostrar');
-  icone6.classList.toggle('fa-square-caret-up');
-  icone6.classList.toggle('fa-square-caret-down');
-})
-
-// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
-document.getElementById("projetos-icone-seis").onclick = () => {
-  document.getElementById("descricao-seis").classList.add("show");
-};
-
-const fecharSeis = document.getElementById("fecharSeis")
-fecharSeis.addEventListener("click", () => {
-  descricao6.classList.toggle('mostrar');
-})
-
-
-
-// DESCRIÇÃO PROJETO 8
-const area7 = document.getElementById("projetos-icone-caixa-sete");
-const icone7 = document.getElementById("projetos-icone-sete");
-const descricao7 = document.getElementById("descricao-sete");
-
-area7.addEventListener("mouseover", () => {
-  icone7.style.display = "inline";
-});
-
-area7.addEventListener("mouseout", () => {
-  icone7.style.display = "none";
-});
-
-// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
-icone7.addEventListener("click", () => {
-  descricao7.classList.toggle('mostrar');
-  icone7.classList.toggle('fa-square-caret-up');
-  icone7.classList.toggle('fa-square-caret-down');
-})
-
-// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
-document.getElementById("projetos-icone-sete").onclick = () => {
-  document.getElementById("descricao-sete").classList.add("show");
-};
-
-const fecharSete = document.getElementById("fecharSete")
-fecharSete.addEventListener("click", () => {
-  descricao7.classList.toggle('mostrar');
-})
-
-
-
-// DESCRIÇÃO PROJETO 9
-const area8 = document.getElementById("projetos-icone-caixa-oito");
-const icone8 = document.getElementById("projetos-icone-oito");
-const descricao8 = document.getElementById("descricao-oito");
-
-area8.addEventListener("mouseover", () => {
-  icone8.style.display = "inline";
-});
-
-area8.addEventListener("mouseout", () => {
-  icone8.style.display = "none";
-});
-
-// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
-icone8.addEventListener("click", () => {
-  descricao8.classList.toggle('mostrar');
-  icone8.classList.toggle('fa-square-caret-up');
-  icone8.classList.toggle('fa-square-caret-down');
-})
-
-// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
-document.getElementById("projetos-icone-oito").onclick = () => {
-  document.getElementById("descricao-oito").classList.add("show");
-};
-
-const fecharOito = document.getElementById("fecharOito")
-fecharOito.addEventListener("click", () => {
-  descricao8.classList.toggle('mostrar');
-})
-
-
-
-
-// DESCRIÇÃO PROJETO 10
-const area9 = document.getElementById("projetos-icone-caixa-nove");
-const icone9 = document.getElementById("projetos-icone-nove");
-const descricao9 = document.getElementById("descricao-nove");
-
-area9.addEventListener("mouseover", () => {
-  icone9.style.display = "inline";
-});
-
-area9.addEventListener("mouseout", () => {
-  icone9.style.display = "none";
-});
-
-// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
-icone9.addEventListener("click", () => {
-  descricao9.classList.toggle('mostrar');
-  icone9.classList.toggle('fa-square-caret-up');
-  icone9.classList.toggle('fa-square-caret-down');
-})
-
-// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
-document.getElementById("projetos-icone-nove").onclick = () => {
-  document.getElementById("descricao-nove").classList.add("show");
-};
-
-const fecharNove = document.getElementById("fecharNove")
-fecharNove.addEventListener("click", () => {
-  descricao9.classList.toggle('mostrar');
-})
-
-
-
-
-// DESCRIÇÃO PROJETO 11
-const area10 = document.getElementById("projetos-icone-caixa-dez");
-const icone10 = document.getElementById("projetos-icone-dez");
-const descricao10 = document.getElementById("descricao-dez");
-
-area10.addEventListener("mouseover", () => {
-  icone10.style.display = "inline";
-});
-
-area10.addEventListener("mouseout", () => {
-  icone10.style.display = "none";
-});
-
-// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
-icone10.addEventListener("click", () => {
-  descricao10.classList.toggle('mostrar');
-  icone10.classList.toggle('fa-square-caret-up');
-  icone10.classList.toggle('fa-square-caret-down');
-})
-
-// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
-document.getElementById("projetos-icone-dez").onclick = () => {
-  document.getElementById("descricao-dez").classList.add("show");
-};
-
-const fecharDez = document.getElementById("fecharDez")
-fecharDez.addEventListener("click", () => {
-  descricao10.classList.toggle('mostrar');
-})
-
-
-
-// DESCRIÇÃO PROJETO 12
-const area11 = document.getElementById("projetos-icone-caixa-onze");
-const icone11 = document.getElementById("projetos-icone-onze");
-const descricao11 = document.getElementById("descricao-onze");
-
-area11.addEventListener("mouseover", () => {
-  icone11.style.display = "inline";
-});
-
-area11.addEventListener("mouseout", () => {
-  icone11.style.display = "none";
-});
-
-// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
-icone11.addEventListener("click", () => {
-  descricao11.classList.toggle('mostrar');
-  icone11.classList.toggle('fa-square-caret-up');
-  icone11.classList.toggle('fa-square-caret-down');
-})
-
-// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
-document.getElementById("projetos-icone-onze").onclick = () => {
-  document.getElementById("descricao-onze").classList.add("show");
-};
-
-const fecharOnze = document.getElementById("fecharOnze")
-fecharOnze.addEventListener("click", () => {
-  descricao11.classList.toggle('mostrar');
-})
-
-
-
-
-// DESCRIÇÃO PROJETO 13
-const area12 = document.getElementById("projetos-icone-caixa-doze");
-const icone12 = document.getElementById("projetos-icone-doze");
-const descricao12 = document.getElementById("descricao-doze");
-
-area12.addEventListener("mouseover", () => {
-  icone12.style.display = "inline";
-});
-
-area12.addEventListener("mouseout", () => {
-  icone12.style.display = "none";
-});
-
-// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
-icone12.addEventListener("click", () => {
-  descricao12.classList.toggle('mostrar');
-  icone12.classList.toggle('fa-square-caret-up');
-  icone12.classList.toggle('fa-square-caret-down');
-})
-
-// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
-document.getElementById("projetos-icone-doze").onclick = () => {
-  document.getElementById("descricao-doze").classList.add("show");
-};
-
-const fecharDoze = document.getElementById("fecharDoze")
-fecharDoze.addEventListener("click", () => {
-  descricao12.classList.toggle('mostrar');
-})
-
-
-
-// DESCRIÇÃO PROJETO 14
-const area13 = document.getElementById("projetos-icone-caixa-treze");
-const icone13 = document.getElementById("projetos-icone-treze");
-const descricao13 = document.getElementById("descricao-treze");
-
-area13.addEventListener("mouseover", () => {
-  icone13.style.display = "inline";
-});
-
-area13.addEventListener("mouseout", () => {
-  icone13.style.display = "none";
-});
-
-// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
-icone13.addEventListener("click", () => {
-  descricao13.classList.toggle('mostrar');
-  icone13.classList.toggle('fa-square-caret-up');
-  icone13.classList.toggle('fa-square-caret-down');
-})
-
-// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
-document.getElementById("projetos-icone-treze").onclick = () => {
-  document.getElementById("descricao-treze").classList.add("show");
-};
-
-const fecharTreze = document.getElementById("fecharTreze")
-fecharTreze.addEventListener("click", () => {
-  descricao13.classList.toggle('mostrar');
-})
-
-
-
-// DESCRIÇÃO PROJETO 15
-const area14 = document.getElementById("projetos-icone-caixa-quatorze");
-const icone14 = document.getElementById("projetos-icone-quatorze");
-const descricao14 = document.getElementById("descricao-quatorze");
-
-area14.addEventListener("mouseover", () => {
-  icone14.style.display = "inline";
-});
-
-area14.addEventListener("mouseout", () => {
-  icone14.style.display = "none";
-});
-
-// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
-icone14.addEventListener("click", () => {
-  descricao14.classList.toggle('mostrar');
-  icone14.classList.toggle('fa-square-caret-up');
-  icone14.classList.toggle('fa-square-caret-down');
-})
-
-// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
-document.getElementById("projetos-icone-quatorze").onclick = () => {
-  document.getElementById("descricao-quatorze").classList.add("show");
-};
-
-const fecharQuatorze = document.getElementById("fecharQuatorze")
-fecharQuatorze.addEventListener("click", () => {
-  descricao14.classList.toggle('mostrar');
-})
-
-
-// DESCRIÇÃO PROJETO 15
-const area15 = document.getElementById("projetos-icone-caixa-quinze");
-const icone15 = document.getElementById("projetos-icone-quinze");
-const descricao15 = document.getElementById("descricao-quinze");
-
-area15.addEventListener("mouseover", () => {
-  icone15.style.display = "inline";
-});
-
-area15.addEventListener("mouseout", () => {
-  icone15.style.display = "none";
-});
-
-// FUNÇÃO MOSTRAR DESCRIÇÃO AO CLICAR
-icone15.addEventListener("click", () => {
-  descricao15.classList.toggle('mostrar');
-  icone15.classList.toggle('fa-square-caret-up');
-  icone15.classList.toggle('fa-square-caret-down');
-})
-
-// FAZER COM QUE A DIV DE DESCRCAO SUBA SUAVEMENTE
-document.getElementById("projetos-icone-quinze").onclick = () => {
-  document.getElementById("descricao-quinze").classList.add("show");
-};
-
-const fecharQuinze = document.getElementById("fecharQuinze")
-fecharQuinze.addEventListener("click", () => {
-  descricao15.classList.toggle('mostrar');
-})
 
 
 
