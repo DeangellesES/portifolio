@@ -6,7 +6,7 @@
 
 <p>Este projeto é o meu portifólio pessoal no qual tem todas as informações pertinentes a mim, Onde demonstros minhas habilidades, alguns projetos, formações, experiências e os meus contatos. E uma breve apresentação minha para o mercado.</p>
 
-<h3>💻<a href="https://deangelleses.github.io/portifolio/"> Acessar Site do Projeto Aqui</a></h3>
+<h3>💻<a href="https://deangelleses.github.io/portifolio/" target="blank"> Acessar Site do Projeto Aqui</a></h3>
 
 <h2>🚀 Tecnologias Utilizadas</h2>
 <ul>
