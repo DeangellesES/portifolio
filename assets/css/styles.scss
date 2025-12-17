@@ -967,23 +967,22 @@ footer {
     .apresentacao {
 
         .apresentacao-topo {
-            // width: 100px;
+           
 
             #text {
                 display: none;
-                margin: 1.5rem 0 0 2.1rem !important;
-                width: 350px !important;
+                // margin: 1.5rem 0 0 2.1rem !important;
+                // width: 350px !important;
                 font-size: 2rem !important;
+               
             }
 
             .apresentacao-titulo_responsivo {
                 display: block !important;
-
-                .apresentacao-titulo_responsivo__titulo {
-                    display: block !important;
-                    width: 300px !important;
-                    color: var(--cor-texto);
-                    margin: 2rem 0 0 3rem !important;
+                
+                .apresentacao-titulo_responsivo__titulo {  
+                    padding: 0 3rem !important;                                  
+                    color: var(--cor-texto);                    
                     text-align: center;
                     font-size: 2rem !important;
                 }
@@ -1045,6 +1044,18 @@ footer {
 
         button {
             width: 100% !important;
+        }
+    }
+
+    .contato-profissional {
+
+        .contato-profissional_container {
+            display: flex !important;
+            flex-direction: column !important;
+
+            .contato-profissional_caixaDois {
+                height: 300px;
+            }
         }
     }
 
@@ -1213,18 +1224,18 @@ footer {
 
         .apresentacao-titulo_responsivo {
             display: block !important;
+            // width: 100%;
+            // margin-left: 12rem !important;
+
 
             .apresentacao-titulo_responsivo__titulo {
-                display: block !important;
                 width: 350px !important;
                 color: var(--cor-texto);
-                margin: 2rem 0 0 7rem !important;
+                margin: 2rem auto 0 auto;
                 text-align: center;
                 font-size: 2.3rem;
             }
         }
-
-
 
         .apresentacao-topo_players {
             display: none;
@@ -1290,6 +1301,12 @@ footer {
         }
     }
 
+    // SECAO PROJETOS
+    .projetos {
+        height: 170vh;
+        margin-top: -3rem;
+    }
+
     // FIM HABILIDADES
 
     // INICIO SECAO CONTATO
@@ -1297,6 +1314,32 @@ footer {
         display: flex !important;
         flex-direction: column;
         flex-wrap: wrap;
+
+        .formulario {
+            width: 100% !important;
+            padding: 0 10% !important;
+
+            form {
+
+                input,
+                textarea,
+                button {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+
+    .contato-profissional {
+
+        .contato-profissional_container {
+            display: flex !important;
+            flex-direction: column !important;
+
+            .contato-profissional_caixaDois {
+                height: 300px;
+            }
+        }
     }
 
     // FIM SECAO CONTATO

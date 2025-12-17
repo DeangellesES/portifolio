@@ -629,16 +629,12 @@ footer {
 
   .apresentacao .apresentacao-topo #text {
     display: none;
-    margin: 1.5rem 0 0 2.1rem !important;
-    width: 350px !important;
     font-size: 2rem !important; }
   .apresentacao .apresentacao-topo .apresentacao-titulo_responsivo {
     display: block !important; }
     .apresentacao .apresentacao-topo .apresentacao-titulo_responsivo .apresentacao-titulo_responsivo__titulo {
-      display: block !important;
-      width: 300px !important;
+      padding: 0 3rem !important;
       color: var(--cor-texto);
-      margin: 2rem 0 0 3rem !important;
       text-align: center;
       font-size: 2rem !important; }
   .apresentacao .apresentacao-curriculo {
@@ -674,6 +670,12 @@ footer {
     width: 100% !important; }
   form button {
     width: 100% !important; }
+
+  .contato-profissional .contato-profissional_container {
+    display: flex !important;
+    flex-direction: column !important; }
+    .contato-profissional .contato-profissional_container .contato-profissional_caixaDois {
+      height: 300px; }
 
   footer {
     padding: 2rem 1rem; } }
@@ -771,10 +773,9 @@ footer {
   .apresentacao-topo .apresentacao-titulo_responsivo {
     display: block !important; }
     .apresentacao-topo .apresentacao-titulo_responsivo .apresentacao-titulo_responsivo__titulo {
-      display: block !important;
       width: 350px !important;
       color: var(--cor-texto);
-      margin: 2rem 0 0 7rem !important;
+      margin: 2rem auto 0 auto;
       text-align: center;
       font-size: 2.3rem; }
   .apresentacao-topo .apresentacao-topo_players {
@@ -811,10 +812,27 @@ footer {
     .habilidades-container-caixa div {
       display: none; }
 
+  .projetos {
+    height: 170vh;
+    margin-top: -3rem; }
+
   .contato-divisao {
     display: flex !important;
     flex-direction: column;
     flex-wrap: wrap; }
+    .contato-divisao .formulario {
+      width: 100% !important;
+      padding: 0 10% !important; }
+      .contato-divisao .formulario form input,
+      .contato-divisao .formulario form textarea,
+      .contato-divisao .formulario form button {
+        width: 100% !important; }
+
+  .contato-profissional .contato-profissional_container {
+    display: flex !important;
+    flex-direction: column !important; }
+    .contato-profissional .contato-profissional_container .contato-profissional_caixaDois {
+      height: 300px; }
 
   footer {
     padding: 2rem 1rem; } }
