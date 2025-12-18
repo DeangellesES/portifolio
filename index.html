@@ -19,17 +19,20 @@
     <!-- INICIO CABECALHO -->
     <header id="cabecalho">
 
+        <!-- INICIO PLAYERS E REDES SOCIAIS PARA RESPONSIVIDADE -->
         <div class="cabecalho-players">
+            <!-- PLAYER MUSICA RESPONSIVIDADE -->
             <div class="cabecalho-apresentacao-musica">
                 <div id="cabecalho-playButton"><i class="fa-solid fa-play"></i> <i class="fa-solid fa-music"></i></div>
                 <audio id="cabecalho-musica" src="musica.mp4"></audio>
             </div>
 
+            <!-- PLAYER TROCAR COR RESPONSIVIDADE -->
             <div class="cabecalho-altera-cor" id="cabecalho-toggleBtn">
                 <i class="fa-solid fa-sun" id="cabecalho-toggleIcon" onclick="trocarTema()"></i>
-
             </div>
 
+            <!-- PLAYER TROCAR IDIOMA RESPONSIVIDADE -->
             <select id="cabecalho-lang-switcher">
                 <option value="pt">Português</option>
                 <option value="en">Inglês</option>
@@ -37,14 +40,20 @@
             </select>
         </div>
 
+        <!-- ICONES REDES SOCIAIS RESPONSIVIDADE -->
         <div class="cabecalho-topo-sociais">
+            <!-- GITHUB -->
             <a href="https://github.com/DeangellesES" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <!-- LINKEDIN -->
             <a href="https://www.linkedin.com/in/felipe-deangelles-da-silva-lopes/" target="_blank"><i
                     class="fa-brands fa-linkedin"></i></a>
         </div>
+        <!-- FIM PLAYERS E REDES SOCIAIS PARA RESPONSIVIDADE -->
 
+        <!-- ICONE BARS PARA ABRIRM MENU NA RESPONSIVIDADE -->
         <i class="fa-solid fa-bars esconder-bars"></i>
 
+        <!-- MENU CABECALHO PRINCIPAL -->
         <div class="menu">
             <a href="#cabecalho" data-i18n="item">Início</a>
             <a href="#sobre" data-i18n="item1">Sobre Mim</a>
@@ -56,36 +65,43 @@
     <!-- FIM CABECALHO -->
 
     <main>
-        <!-- inicio seta -->
+        <!-- INICIO SETA -->
         <a href="#topo" class="seta-subir"><i class="fa-regular fa-circle-up"></i></a>
-        <!-- fim seta -->
+        <!-- FIM SETA -->
 
         <!-- INICIO SECAO APRESENTACAO -->
         <section class="apresentacao">
             <div class="apresentacao-topo">
-                <div class="apresentacao-topo_players">
+                <!-- INICIO PLAYERS LATERIAS DE ALTERAÇÃO -->
+                <aside class="apresentacao-topo_players">
+
+                    <!-- PLAYER TOCAR MUSICA -->
                     <div class="apresentacao-musica">
                         <div id="playButton"><i class="fa-solid fa-play"></i> <i class="fa-solid fa-music"></i></div>
-
                         <!-- Elemento de áudio -->
                         <audio id="musica" src="musica.mp4"></audio>
                     </div>
 
+                    <!-- PLAYER TROCAR COR  -->
                     <div class="altera-cor" id="toggleBtn">
                         <i class="fa-solid fa-sun" id="toggleIcon" onclick="trocarTema()"></i>
                         <!-- <i class="fa-solid fa-moon" id="toggleIcon"></i> -->
                     </div>
 
+                    <!-- PLAYER TROCAR IDIOMA -->
                     <select id="lang-switcher">
                         <option value="pt">Português</option>
                         <option value="en">Inglês</option>
                         <option value="es">Espanhol</option>
                     </select>
 
-                </div>
+                </aside>
+                <!-- FIM PLAYERS LATERIAS DE ALTERAÇÃO -->
 
+                <!-- TEXTO PRINCIPAL DESCRICAO SECAO APRESENTAÇÃO EXIBIDO COM JAVASCRIPT-->
                 <h1 id="text" data-i18n="intro1"></h1>
 
+                <!-- TEXTO PRINCIPAL DESCRICAO REDUZIDO E ESTATICO SECAO APRESENTAÇÃO EXIBIDO SEM JAVASCRIPT-->
                 <div class="apresentacao-titulo_responsivo">
                     <h1 class="apresentacao-titulo_responsivo__titulo" data-i18n="apresentacaoNome">Olá, Meu Nome é
                         Felipe Deangelles</h1>
@@ -95,15 +111,17 @@
                         Meu Portifólio!</h1>
                 </div>
 
-                <div class="apresentacao-sociais">
+                <!-- REDES SOCIAIS DE LADO SECAO APRESENTACAO -->
+                <aside class="apresentacao-sociais">
                     <div class="apresentacao-sociais_listra"></div>
                     <a href="https://github.com/DeangellesES" target="_blank"><i class="fa-brands fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/felipe-deangelles-da-silva-lopes/" target="_blank"><i
                             class="fa-brands fa-linkedin"></i></a>
                     <div class="apresentacao-sociais_listra__dois"></div>
-                </div>
+                </aside>
             </div>
 
+            <!-- SECAO CURRICULO APRESENTACAO -->
             <div class="apresentacao-curriculo">
                 <a class="apresentacao-curriculo_linkUm" href="curriculoportifolio.pdf" target="_blank"><i
                         class="fa-solid fa-download"></i> Download CV</a>

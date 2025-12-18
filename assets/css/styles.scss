@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-// GERAL
+//////////////////////////////////////////////// GERAL //////////////////////////////////////////////////////
 * {
     padding: 0;
     margin: 0;
@@ -39,17 +39,18 @@ $efeito-box-shadow: 0 0 10px 0px var(--cor-texto);
     width: $width;
 }
 
-// INÍCIO CABEÇALHO
+////////////////////////////////////////////// INÍCIO CABEÇALHO //////////////////////////////////////////////////
+
 header {
+    @extend %base-fundo;
     display: flex;
     justify-content: center;
-    @extend %base-fundo;
-    gap: .2rem;
-    padding: 1rem;
-    position: relative;
-    height: 100px;
     align-items: center;
-
+    gap: .2rem;
+    padding: 1.5rem 1rem;
+    position: relative;
+    height: auto;
+    
     .cabecalho-players {
         display: none;
     }
@@ -58,52 +59,40 @@ header {
         display: none;
     }
 
-    .esconder-bars {
-        display: none;
-    }
-
     .fa-bars {
+        display: none;
         color: var(--cor-texto);
         position: absolute;
         right: 0;
-        top: 0;
-        margin: 1.8rem 1rem 2rem 0 !important;
+        top: -6%;
+        margin: 1.8rem .6rem 2rem 0 !important;
     }
 
     .menu {
 
         a {
-            border-radius: 30px;
             color: var(--cor-texto);
             font-size: 1.3rem;
             text-decoration: none;
             font-weight: 600;
             padding: .7rem;
+            display: inline-block;
+            will-change: transform;
+            transition:
+                transform .65s ease,
+                font-size .25s ease,
+                color .25s ease;
 
             &:hover {
-                animation: subir 1s ease-in-out forwards;
-                color: var(--cor-texto);
-                display: inline-block;
-                font-size: 1.8rem;
-            }
-        }
-
-        // ANIMAÇÃO DE SUBIR TEXTO NA NAVEGAÇÃO TOPO
-        @keyframes subir {
-            0% {
-                transform: translateY(0);
-            }
-
-            100% {
-                transform: translateY(-15px);
+                transform: translateY(-15px) scale(1.30);
             }
         }
     }
-
-
 }
 
-// FIM CABEÇALHO
+///////////////////////////////////////////////// FIM CABEÇALHO //////////////////////////////////////////////////
+
+///////////////////////////////////////////////// INICIO MAIN ////////////////////////////////////////////////////////////////
 
 // INICIO SETA PARA SUBIR
 .seta-subir {
@@ -121,13 +110,13 @@ header {
 .seta-subir.esconder {
     display: none;
 }
-
 // FIM SETA PARA SUBIR
 
 // INICIO CONTEUDO PRINCIPAL
+/////////////////////////////////////////////// INICIO APRESENTAÇÃO ////////////////////////////////////////////////
 .apresentacao {
-    display: grid;
     @extend %base-fundo;
+    display: grid;
     height: 100vh;
 
     .apresentacao-topo {
@@ -135,11 +124,12 @@ header {
         grid-template-columns: 5% 90% 5%;
         align-items: center;
 
-        div {
+        .apresentacao-topo_players {
             margin: 0 0 0 .9rem;
 
             .apresentacao-musica {
-
+                margin-left: 2rem;
+                
                 div {
                     display: flex;
                     gap: .5rem;
@@ -170,13 +160,12 @@ header {
 
                     &:hover {
                         color: yellow;
-
+                        
                     }
                 }
             }
 
             select {
-                border: 1px solid var(--cor-texto);
                 border-radius: 20px;
                 cursor: pointer;
                 font-size: 1rem;
@@ -203,7 +192,7 @@ header {
         #text {
             color: var(--cor-texto);
             font-size: 4rem;
-            height: 20px;
+            // height: 20px;
             text-shadow: 1px 1px 5px var(--cor-texto);
             margin: -5rem auto 0;
             width: 60%;
@@ -213,12 +202,12 @@ header {
         #text::after {
             content: "";
             width: 3px;
-            height: 50px;
+            // height: 50px;
             display: inline-block;
             background-color: var(--cor-texto);
             animation: flasher 0.6s infinite linear;
             opacity: 0;
-            margin-left: 10px;
+            // margin-left: 10px;
         }
 
         @keyframes flasher {
@@ -233,7 +222,6 @@ header {
 
         .apresentacao-sociais {
             display: flex;
-            justify-content: center;
             flex-direction: column;
             gap: 1.5rem;
             margin-top: 1.5rem;
@@ -277,8 +265,8 @@ header {
 
     .apresentacao-curriculo {
         display: flex;
+        justify-content: center;
         gap: 1rem;
-        margin: 0 auto;
 
         a {
             border-radius: 10px;
@@ -322,6 +310,8 @@ header {
         }
     }
 }
+
+/////////////////////////////////////////////////// FIM SECAO APRESENTACAO ////////////////////////////////////////////////////////////////
 
 // INICIO SEÇÃO SOBRE
 .sobre {
@@ -896,7 +886,7 @@ header {
         }
 
         .contato-profissional_caixaDois {
-            height: 250px;
+            height: auto;
             border: 1px solid var(--cor-texto);
             border-radius: 20px;
             padding: 1.3rem;
@@ -988,6 +978,7 @@ footer {
 
             .apresentacao-titulo_responsivo {
                 display: block !important;
+
 
                 .apresentacao-titulo_responsivo__titulo {
                     padding: 0 3rem !important;
@@ -1272,7 +1263,7 @@ footer {
             .apresentacao-titulo_responsivo__titulo {
                 width: 350px !important;
                 color: var(--cor-texto);
-                margin: 2rem auto 0 auto;
+                margin: 2rem auto 0 4rem;
                 text-align: center;
                 font-size: 2.3rem;
             }
@@ -1344,8 +1335,9 @@ footer {
 
     // SECAO PROJETOS
     .projetos {
-        height: 200vh !important;
-        margin-top: -3rem;
+        height: auto !important;
+        // margin-top: -3rem;
+        padding: 7rem 0;
     }
 
     // FIM HABILIDADES
@@ -1445,6 +1437,10 @@ footer {
         .contato-divisao_geral__frase {
             width: 90% !important;
         }
+    }
+
+    .contato-profissional_caixaDois {
+        height: auto !important;
     }
 
 }
