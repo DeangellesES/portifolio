@@ -275,18 +275,20 @@ header {
     width: 100%;
     margin-top: 2rem;
     overflow: hidden;
-    height: 38vh;
-    padding-top: 1.5rem; }
+    height: auto;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem; }
     .habilidades .swiperHabilidades .swiper-wrapper {
-      transition-timing-function: linear !important; }
+      transition-timing-function: linear !important;
+      will-change: transform; }
       .habilidades .swiperHabilidades .swiper-wrapper .swiper-slide {
         width: auto;
         flex-shrink: 0;
-        height: 150px; }
+        height: auto; }
     .habilidades .swiperHabilidades .habilidades-container {
       display: flex;
       gap: 1rem;
-      height: 400px;
+      height: auto;
       padding-top: 1rem; }
       .habilidades .swiperHabilidades .habilidades-container .habilidades-container-caixa {
         display: grid;
@@ -295,10 +297,10 @@ header {
         background-color: #2c2b2b;
         color: #b9b4b4;
         cursor: grab;
-        height: 40% !important;
-        padding: 1rem;
+        height: 150px;
+        min-height: unset;
         transition: transform .5s;
-        width: 15% !important; }
+        width: 150px; }
         .habilidades .swiperHabilidades .habilidades-container .habilidades-container-caixa:hover {
           transform: scale(1.1); }
         .habilidades .swiperHabilidades .habilidades-container .habilidades-container-caixa img {
@@ -382,6 +384,10 @@ header {
 .swiper-slide-active .title {
   bottom: -10px;
   box-shadow: 0 20px 30px 2px var(--cor-texto); }
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #000; }
 
 .swiper-pagination {
   --swiper-pagination-bottom: -50px; }
@@ -651,6 +657,26 @@ footer {
   .especialidades .especialidades-container_caixa {
     min-width: 150px !important; }
 
+  .habilidades-container .habilidades-container-caixa {
+    box-shadow: none; }
+
+  .projetos .projetos-carrossel {
+    height: 350px; }
+    .projetos .projetos-carrossel .projetos-carrossel_pagination {
+      display: none; }
+    .projetos .projetos-carrossel .swiper-button-prev,
+    .projetos .projetos-carrossel .swiper-button-next {
+      width: 42px;
+      height: 42px;
+      padding: .5rem;
+      background: #000;
+      border-radius: 50%;
+      color: #fff;
+      transition: all .3s ease; }
+
+  .icone-projeto {
+    margin-bottom: .5rem; }
+
   .habilidades-container-caixa {
     min-height: 10px !important;
     margin: 0 !important;
@@ -659,8 +685,6 @@ footer {
     border: none !important; }
     .habilidades-container-caixa img {
       width: 100% !important; }
-    .habilidades-container-caixa span {
-      display: none; }
     .habilidades-container-caixa div {
       display: none; }
 
@@ -813,7 +837,7 @@ footer {
       display: none; }
 
   .projetos {
-    height: 170vh;
+    height: 200vh !important;
     margin-top: -3rem; }
 
   .contato-divisao {
@@ -821,8 +845,7 @@ footer {
     flex-direction: column;
     flex-wrap: wrap; }
     .contato-divisao .formulario {
-      width: 100% !important;
-      padding: 0 10% !important; }
+      width: 100% !important; }
       .contato-divisao .formulario form input,
       .contato-divisao .formulario form textarea,
       .contato-divisao .formulario form button {

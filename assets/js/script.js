@@ -451,17 +451,41 @@ function renderizarHabilidades() {
 renderizarHabilidades();
 
 // FUNCIONALIDADE SWIPER HABILIDADES
+// const swiper1 = new Swiper('.swiperHabilidades', {
+//   slidesPerView: 'auto',
+//   spaceBetween: 7,
+//   freeMode: true,
+//   grabCursor: true,
+//   loop: false,
+//   speed: 5000,
+//   autoplay: {
+//     delay: 0,
+//     disableOnInteraction: false,
+//   },
+//   //   freeMode: true,
+//   freeModeMomentum: false,
+//   // allowTouchMove: false,
+// });
+
 const swiper1 = new Swiper('.swiperHabilidades', {
   slidesPerView: 'auto',
-  loop: false,
-  speed: 5000,
+  spaceBetween: 16,
+
+  loop: true,
+  loopedSlides: 20,
+  loopAdditionalSlides: 20,
+
+  speed: 3000,
   autoplay: {
     delay: 0,
     disableOnInteraction: false,
   },
-  //   freeMode: true,
+
+  freeMode: true,
   freeModeMomentum: false,
-  // allowTouchMove: false,
+
+  grabCursor: true,
+  allowTouchMove: true,
 });
 
 
@@ -761,6 +785,10 @@ const swiper = new Swiper('.swiper', {
     click(event) {
       swiper.slideTo(this.clickedIndex);
     },
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
   pagination: {
     el: ".swiper-pagination",
