@@ -16,7 +16,22 @@ window.onscroll = () => {
   setaCima.classList.remove('esconder')
 }
 
-/////////////////////////////////////////////// CABEÇALHO ////////////////////////////////////////////////////////
+// ANIMAÇÃO PARA APARECER DE LADO AS DIVS GERAL
+const elementos = document.querySelectorAll('.aparecer-esquerda, .aparecer-direita');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+elementos.forEach(el => observer.observe(el));
+
+/////////////////////////////////////////////// INICIO CABEÇALHO ////////////////////////////////////////////////////////
+
+
 function menuClick() {
   const menuClick = document.querySelector('header .esconder-bars')
   const nav = document.querySelector('header .menu')
@@ -31,7 +46,11 @@ function menuClick() {
 menuClick()
 
 
-//////////////////////////////////////////// SEÇÃO APRESENTAÇÃO ////////////////////////////////////////////
+/////////////////////////////////////////////// FIM CABEÇALHO ////////////////////////////////////////////////////////
+// x //
+/////////////////////////////////////////////// INICIO SEÇÃO APRESENTAÇÃO ///////////////////////////////////////////////////
+
+
 // colocar musica para tocar
 const botao = document.getElementById("playButton");
 const musica = document.getElementById("musica");
@@ -302,21 +321,10 @@ langSwitcher.addEventListener("change", () => {
 writeText()
 
 
-///////////////////////////////////////// SEÇÃO SOBRE //////////////////////////////////////////////
+///////////////////////////////////////////// FIM SEÇÃO APRESENTAÇÃO ///////////////////////////////////////////////////
+// X //
+///////////////////////////////////////////// INICIO SEÇÃO SOBRE //////////////////////////////////////////////////////
 
-
-// ANIMAÇÃO PARA APARECER DE LADO AS DIVS GERAL
-const elementos = document.querySelectorAll('.aparecer-esquerda, .aparecer-direita');
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    }
-  });
-});
-
-elementos.forEach(el => observer.observe(el));
 
 // APARECER UM POR UM SECAO SOBRE
 const sobrePessoal = document.querySelector(".sobre-pessoal");
@@ -338,30 +346,6 @@ const observerSobre = new IntersectionObserver((entries) => {
 }, { threshold: 0.3 });
 
 observerSobre.observe(sobrePessoal);
-
-
-// APARECER UM POR UM SECAO SOBRE
-const contato = document.querySelector(".contato-divisao_geral");
-const itensContato = document.querySelectorAll(".contato-divisao_geral .item-animar");
-
-const observerContato = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-
-      itensContato.forEach((item, index) => {
-        setTimeout(() => {
-          item.classList.add("show");
-        }, index * 200); // 200ms entre cada item
-      });
-
-      observerSobre.unobserve(contato); // executa apenas 1 vez
-    }
-  });
-}, { threshold: 0.3 });
-
-observerContato.observe(contato);
-
-
 
 
 // FUNÇÃO PARA REDERIZAR ARRAY NA TELA
@@ -392,7 +376,11 @@ function renderizarEspecialidades() {
 renderizarEspecialidades();
 
 
-////////////////////////////////////////////// SEÇÃO HABILIDADES ///////////////////////////////////////////
+///////////////////////////////////////////// FIM SEÇÃO SOBRE //////////////////////////////////////////////////////
+
+// X //
+
+////////////////////////////////////////////// INICIO SEÇÃO HABILIDADES ///////////////////////////////////////////
 
 
 // REDENRIZAR O ARRAY DAS HABILIDADES NA TELA
@@ -450,23 +438,6 @@ function renderizarHabilidades() {
 
 renderizarHabilidades();
 
-// FUNCIONALIDADE SWIPER HABILIDADES
-// const swiper1 = new Swiper('.swiperHabilidades', {
-//   slidesPerView: 'auto',
-//   spaceBetween: 7,
-//   freeMode: true,
-//   grabCursor: true,
-//   loop: false,
-//   speed: 5000,
-//   autoplay: {
-//     delay: 0,
-//     disableOnInteraction: false,
-//   },
-//   //   freeMode: true,
-//   freeModeMomentum: false,
-//   // allowTouchMove: false,
-// });
-
 const swiper1 = new Swiper('.swiperHabilidades', {
   slidesPerView: 'auto',
   spaceBetween: 16,
@@ -489,12 +460,13 @@ const swiper1 = new Swiper('.swiperHabilidades', {
 });
 
 
+////////////////////////////////////////////// FIM  SEÇÃO HABILIDADES ///////////////////////////////////////////
 
+// X //
 
-//////////////////////////////// SEÇÃO PROJETOS//////////////////////////////////////////
+///////////////////////////////////////////////// INICIO SEÇÃO PROJETOS/////////////////////////////////////////////////
 
 // ARRAY DE OBJETOS PARA RENDERIZAR NA TELA
-
 const projetos = [
   {
     id: "tres",
@@ -795,13 +767,13 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
+///////////////////////////////////////////////// FIM SEÇÃO PROJETOS/////////////////////////////////////////////////
+
+// X //
+
+////////////////////////////////////////////////// INICIO SEÇÃO CONTATO ////////////////////////////////////////////////////
 
 
-
-
-
-
-/////////////////////////////////////////// SEÇÃO CONTATO //////////////////////////////////////////
 // FUNCIONALIDADE DE ENVIAR FORMULARIO PARA O EMAIL
 emailjs.init({
   publicKey: "FxE8Olj2XwpB1cro3",
@@ -853,10 +825,34 @@ document.getElementById("contact_form").addEventListener("submit", function (eve
 
 })
 
+// APARECER UM POR UM SECAO CONTATO
+const contato = document.querySelector(".contato-divisao_geral");
+const itensContato = document.querySelectorAll(".contato-divisao_geral .item-animar");
+
+const observerContato = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+
+      itensContato.forEach((item, index) => {
+        setTimeout(() => {
+          item.classList.add("show");
+        }, index * 200); // 200ms entre cada item
+      });
+
+      observerSobre.unobserve(contato); // executa apenas 1 vez
+    }
+  });
+}, { threshold: 0.3 });
+
+observerContato.observe(contato);
+
 // FUNCIONALIDADE PARA FICAR PISCANDO PONTO NO DISPONIVEL
 document.getElementById("icone").classList.add("blink-soft");
 
 
+////////////////////////////////////////////////// FIM SEÇÃO CONTATO ////////////////////////////////////////////////////
+
+// X //
 
 //////////////////////////////////////////////// RESPONSIVIDADE ////////////////////////////////////////////////////////
 // colocar musica para tocar responsivo

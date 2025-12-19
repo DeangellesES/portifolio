@@ -10,7 +10,7 @@
   --cor-fundo: black;
   --cor-texto: #fff3f3; }
 
-.habilidades h1, .projetos .projetos-icone-titulo h1, .contato h1 {
+.habilidades h1, .projetos .projetos-icone-titulo h1, .contato h1, footer {
   font-size: 3rem;
   color: var(--cor-texto);
   text-align: center;
@@ -18,6 +18,29 @@
 
 header, .apresentacao, .sobre, .habilidades, .projetos, .contato, footer {
   background-color: var(--cor-fundo); }
+
+.aparecer-esquerda {
+  transform: translateX(-40px);
+  opacity: 0;
+  transition: transform .7s ease, opacity .7s ease; }
+
+.aparecer-direita {
+  transform: translateX(40px);
+  opacity: 0;
+  transition: transform .7s ease, opacity .7s ease; }
+
+.show {
+  transform: translateX(0);
+  opacity: 1; }
+
+.item-animar {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity .9s ease, transform .6s ease; }
+
+.item-animar.show {
+  opacity: 1;
+  transform: translateX(0); }
 
 header {
   display: flex;
@@ -112,17 +135,20 @@ header {
     .apresentacao .apresentacao-topo #text {
       color: var(--cor-texto);
       font-size: 4rem;
+      height: 20px;
       text-shadow: 1px 1px 5px var(--cor-texto);
-      margin: -5rem auto 0;
+      margin: -7rem auto 0;
       width: 60%;
       text-align: center; }
     .apresentacao .apresentacao-topo #text::after {
       content: "";
       width: 3px;
+      height: 50px;
       display: inline-block;
       background-color: var(--cor-texto);
       animation: flasher 0.6s infinite linear;
-      opacity: 0; }
+      opacity: 0;
+      margin-left: 10px; }
 @keyframes flasher {
   from {
     opacity: 1; } }
@@ -191,26 +217,26 @@ header {
   color: var(--cor-texto);
   padding: 6rem;
   transition: transform .6s ease, opacity .6s ease; }
-  .sobre div h1 {
+  .sobre .sobre-pessoal h1 {
     font-size: 3rem; }
-  .sobre div p {
+  .sobre .sobre-pessoal p {
     padding-top: 1rem;
     font-size: 1.2rem; }
-  .sobre div .sobre-profissao {
+  .sobre .sobre-pessoal .sobre-profissao {
     border: 1px solid var(--cor-texto);
     border-radius: 20px;
     padding: 1.5rem;
     text-align: center;
     margin-top: 2rem;
     width: fit-content; }
-    .sobre div .sobre-profissao:hover i {
+    .sobre .sobre-pessoal .sobre-profissao:hover i {
       box-shadow: 0 0 15px 0 var(--cor-texto); }
-    .sobre div .sobre-profissao i {
+    .sobre .sobre-pessoal .sobre-profissao i {
       border-radius: 5px;
       font-size: 1.5rem;
       padding: .5rem;
       margin: 1rem 0; }
-    .sobre div .sobre-profissao h3 {
+    .sobre .sobre-pessoal .sobre-profissao h3 {
       font-size: 1.5rem; }
   .sobre .especialidades .especialidades-container {
     display: flex;
@@ -223,7 +249,7 @@ header {
       padding: 1rem 2rem;
       text-align: center;
       transition: all .5s ease;
-      width: 28%;
+      width: 35%;
       border-radius: 10px; }
       .sobre .especialidades .especialidades-container .especialidades-container_caixa:hover {
         background: var(--cor-texto);
@@ -233,29 +259,6 @@ header {
         font-size: 2.5rem;
         margin-bottom: 1rem; }
 
-.aparecer-esquerda {
-  transform: translateX(-40px);
-  opacity: 0;
-  transition: transform .7s ease, opacity .7s ease; }
-
-.aparecer-direita {
-  transform: translateX(40px);
-  opacity: 0;
-  transition: transform .7s ease, opacity .7s ease; }
-
-.show {
-  transform: translateX(0);
-  opacity: 1; }
-
-.item-animar {
-  opacity: 0;
-  transform: translateX(-40px);
-  transition: opacity .9s ease, transform .6s ease; }
-
-.item-animar.show {
-  opacity: 1;
-  transform: translateX(0); }
-
 .habilidades {
   padding: 3rem;
   text-align: center; }
@@ -263,7 +266,6 @@ header {
     color: var(--cor-texto);
     font-size: 1.3rem; }
   .habilidades .swiperHabilidades {
-    width: 100%;
     margin-top: 2rem;
     overflow: hidden;
     height: auto;
@@ -291,9 +293,12 @@ header {
         height: 150px;
         min-height: unset;
         transition: transform .5s;
-        width: 150px; }
+        width: 150px;
+        padding: 1rem;
+        transition: .3s ease; }
         .habilidades .swiperHabilidades .habilidades-container .habilidades-container-caixa:hover {
-          transform: scale(1.1); }
+          transform: scale(1.1);
+          box-shadow: 0 0 20px 0 var(--cor-hover); }
         .habilidades .swiperHabilidades .habilidades-container .habilidades-container-caixa img {
           width: 50%;
           margin: 0 auto; }
@@ -301,17 +306,11 @@ header {
           font-weight: 600;
           margin: .5rem 0; }
 
-.habilidades-container-caixa {
-  transition: .3s ease; }
-
-.habilidades-container-caixa:hover {
-  box-shadow: 0 0 20px 0 var(--cor-hover); }
-
 .projetos {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   color: #fff;
   overflow: hidden;
   height: 130vh; }
@@ -319,8 +318,7 @@ header {
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 1rem;
-    margin-top: -2rem; }
+    margin-bottom: 1rem; }
     .projetos .projetos-icone-titulo i {
       font-size: 3rem;
       color: var(--cor-texto);
@@ -331,27 +329,47 @@ header {
     font-size: 1.5rem;
     margin-bottom: 2rem;
     color: var(--cor-texto); }
-
-.swiper {
-  width: 80vw;
-  height: 430px;
-  overflow: visible; }
-
-.swiper-slide {
-  position: relative;
-  width: 320px;
-  aspect-ratio: 3/4;
-  border-radius: 14px;
-  border: 1px solid rgba(177, 177, 177, 0.4); }
-
-.swiper-slide img {
-  text-align: start;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: fill;
-  border-radius: inherit;
-  user-select: none; }
+  .projetos .swiper {
+    width: 80vw;
+    height: 430px;
+    overflow: visible; }
+    .projetos .swiper .swiper-slide {
+      position: relative;
+      width: 320px;
+      aspect-ratio: 3/4;
+      border-radius: 14px;
+      border: 1px solid rgba(177, 177, 177, 0.4); }
+      .projetos .swiper .swiper-slide img {
+        text-align: start;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        border-radius: inherit;
+        user-select: none; }
+      .projetos .swiper .swiper-slide .icone-projeto {
+        position: absolute;
+        font-size: 3rem;
+        bottom: 10%;
+        left: 45%;
+        color: #000;
+        cursor: pointer !important;
+        display: none; }
+    .projetos .swiper .swiper-button-prev,
+    .projetos .swiper .swiper-button-next {
+      color: #000; }
+    .projetos .swiper .swiper-pagination {
+      --swiper-pagination-bottom: -50px; }
+    .projetos .swiper .swiper-pagination-bullet {
+      width: 14px;
+      height: 14px;
+      background-color: var(--cor-texto);
+      border-radius: 50%;
+      transition: all 0.3s ease-in-out; }
+    .projetos .swiper .swiper-pagination-bullet-active {
+      width: 32px;
+      background-color: var(--cor-texto);
+      border-radius: 14px; }
 
 .title {
   position: absolute;
@@ -367,42 +385,13 @@ header {
   backdrop-filter: blur(10px);
   -ms-backdrop-filter: blur(10px);
   transition: all 0.5s linear; }
-
-.title span {
-  font-size: 1.2rem;
-  font-weight: 600; }
+  .title span {
+    font-size: 1.2rem;
+    font-weight: 600; }
 
 .swiper-slide-active .title {
   bottom: -10px;
   box-shadow: 0 20px 30px 2px var(--cor-texto); }
-
-.swiper-button-prev,
-.swiper-button-next {
-  color: #000; }
-
-.swiper-pagination {
-  --swiper-pagination-bottom: -50px; }
-
-.swiper-pagination-bullet {
-  width: 14px;
-  height: 14px;
-  background-color: var(--cor-texto);
-  border-radius: 50%;
-  transition: all 0.3s ease-in-out; }
-
-.swiper-pagination-bullet-active {
-  width: 32px;
-  background-color: var(--cor-texto);
-  border-radius: 14px; }
-
-.icone-projeto {
-  position: absolute;
-  font-size: 3rem;
-  bottom: 10%;
-  left: 46%;
-  color: #000;
-  cursor: pointer !important;
-  display: none; }
 
 /* DESCRIÇÃO */
 .descricao-projeto {
@@ -417,44 +406,36 @@ header {
   transform: translateY(150%);
   pointer-events: none;
   transition: all 0.9s ease; }
-
-.descricao-projeto .fa-x {
-  font-size: 1.1rem;
-  color: #000;
-  display: flex;
-  justify-content: end;
-  width: fit-content;
-  position: absolute;
-  right: 5%;
-  cursor: pointer !important; }
-  .descricao-projeto .fa-x:hover {
-    cursor: pointer !important; }
-
-.descricao-projeto h3 {
-  font-size: 1.5rem;
-  font-weight: bold; }
-
-.descricao-projeto p {
-  font-size: 1.2rem !important;
-  color: var(--cor-fundo) !important;
-  width: 100%;
-  margin-top: .5rem;
-  margin-bottom: 0 !important;
-  text-align: start !important; }
-
-.descricao-projeto div {
-  display: flex;
-  gap: 1rem; }
-
-.descricao-projeto div img {
-  margin-top: .5rem;
-  width: 22% !important; }
-
-.descricao-projeto a {
-  font-size: 1.3rem;
-  text-decoration: none;
-  font-weight: bold;
-  color: #000; }
+  .descricao-projeto .fa-x {
+    font-size: 1.1rem;
+    color: #000;
+    display: flex;
+    justify-content: end;
+    width: fit-content;
+    position: absolute;
+    right: 5%;
+    cursor: pointer; }
+  .descricao-projeto h3 {
+    font-size: 1.5rem;
+    font-weight: bold; }
+  .descricao-projeto p {
+    font-size: 1.2rem;
+    color: var(--cor-fundo);
+    width: 100%;
+    margin-top: .5rem;
+    margin-bottom: 0;
+    text-align: start; }
+  .descricao-projeto div {
+    display: flex;
+    gap: 1rem; }
+    .descricao-projeto div img {
+      margin-top: .5rem;
+      width: 22% !important; }
+  .descricao-projeto a {
+    font-size: 1.3rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: #000; }
 
 .descricao-projeto.mostrar {
   display: block;
@@ -567,30 +548,30 @@ header {
       text-align: center;
       gap: 1rem;
       align-items: center; }
-    .contato .contato-profissional .contato-profissional_caixa {
-      display: grid;
-      gap: .5rem;
-      border: 1px solid var(--cor-texto);
-      border-radius: 20px;
-      padding: 1.3rem;
-      height: fit-content !important; }
-      .contato .contato-profissional .contato-profissional_caixa .fa-clock {
-        font-size: 2.7rem; }
-      .contato .contato-profissional .contato-profissional_caixa .fa-briefcase {
-        font-size: 2.7rem; }
-    .contato .contato-profissional .contato-profissional_caixaDois {
-      height: auto;
-      border: 1px solid var(--cor-texto);
-      border-radius: 20px;
-      padding: 1.3rem;
-      display: grid;
-      gap: .5rem; }
-      .contato .contato-profissional .contato-profissional_caixaDois .fa-laptop-code {
-        font-size: 2.7rem; }
-      .contato .contato-profissional .contato-profissional_caixaDois a {
-        text-decoration: none; }
-        .contato .contato-profissional .contato-profissional_caixaDois a i {
-          margin-right: .5rem; }
+      .contato .contato-profissional .contato-profissional_container .contato-profissional_caixa {
+        display: grid;
+        gap: .5rem;
+        border: 1px solid var(--cor-texto);
+        border-radius: 20px;
+        padding: 1.3rem;
+        height: fit-content !important; }
+        .contato .contato-profissional .contato-profissional_container .contato-profissional_caixa .fa-clock {
+          font-size: 2.7rem; }
+        .contato .contato-profissional .contato-profissional_container .contato-profissional_caixa .fa-briefcase {
+          font-size: 2.7rem; }
+      .contato .contato-profissional .contato-profissional_container .contato-profissional_caixaDois {
+        height: auto;
+        border: 1px solid var(--cor-texto);
+        border-radius: 20px;
+        padding: 1.3rem;
+        display: grid;
+        gap: .5rem; }
+        .contato .contato-profissional .contato-profissional_container .contato-profissional_caixaDois .fa-laptop-code {
+          font-size: 2.7rem; }
+        .contato .contato-profissional .contato-profissional_container .contato-profissional_caixaDois a {
+          text-decoration: none; }
+          .contato .contato-profissional .contato-profissional_container .contato-profissional_caixaDois a i {
+            margin-right: .5rem; }
 
 .blink-soft {
   animation: blinkSoft 1.4s ease-in-out infinite; }
@@ -604,9 +585,7 @@ header {
   100% {
     opacity: 1; } }
 footer {
-  color: var(--cor-texto);
-  padding: 2rem 0;
-  text-align: center; }
+  padding: 2rem 0; }
   footer p {
     font-size: 1.5rem; }
 

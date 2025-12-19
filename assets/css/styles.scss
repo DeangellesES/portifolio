@@ -39,6 +39,37 @@ $efeito-box-shadow: 0 0 10px 0px var(--cor-texto);
     width: $width;
 }
 
+// ANIMAÇÃO PARA APARECER DE LADO AS DIVS
+.aparecer-esquerda {
+    transform: translateX(-40px);
+    opacity: 0;
+    transition: transform .7s ease, opacity .7s ease;
+}
+
+.aparecer-direita {
+    transform: translateX(40px);
+    opacity: 0;
+    transition: transform .7s ease, opacity .7s ease;
+}
+
+.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.item-animar {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity .9s ease, transform .6s ease;
+}
+
+.item-animar.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+// FIM ANIMAÇÃO PARA APARECER DE LADO AS DIVS
+
 ////////////////////////////////////////////// INÍCIO CABEÇALHO //////////////////////////////////////////////////
 
 header {
@@ -50,7 +81,7 @@ header {
     padding: 1.5rem 1rem;
     position: relative;
     height: auto;
-    
+
     .cabecalho-players {
         display: none;
     }
@@ -91,7 +122,7 @@ header {
 }
 
 ///////////////////////////////////////////////// FIM CABEÇALHO //////////////////////////////////////////////////
-
+// X //
 ///////////////////////////////////////////////// INICIO MAIN ////////////////////////////////////////////////////////////////
 
 // INICIO SETA PARA SUBIR
@@ -110,10 +141,12 @@ header {
 .seta-subir.esconder {
     display: none;
 }
+
 // FIM SETA PARA SUBIR
 
 // INICIO CONTEUDO PRINCIPAL
 /////////////////////////////////////////////// INICIO APRESENTAÇÃO ////////////////////////////////////////////////
+
 .apresentacao {
     @extend %base-fundo;
     display: grid;
@@ -129,7 +162,7 @@ header {
 
             .apresentacao-musica {
                 margin-left: 2rem;
-                
+
                 div {
                     display: flex;
                     gap: .5rem;
@@ -160,7 +193,7 @@ header {
 
                     &:hover {
                         color: yellow;
-                        
+
                     }
                 }
             }
@@ -192,9 +225,9 @@ header {
         #text {
             color: var(--cor-texto);
             font-size: 4rem;
-            // height: 20px;
+            height: 20px;
             text-shadow: 1px 1px 5px var(--cor-texto);
-            margin: -5rem auto 0;
+            margin: -7rem auto 0;
             width: 60%;
             text-align: center;
         }
@@ -202,12 +235,12 @@ header {
         #text::after {
             content: "";
             width: 3px;
-            // height: 50px;
+            height: 50px;
             display: inline-block;
             background-color: var(--cor-texto);
             animation: flasher 0.6s infinite linear;
             opacity: 0;
-            // margin-left: 10px;
+            margin-left: 10px;
         }
 
         @keyframes flasher {
@@ -313,17 +346,22 @@ header {
 
 /////////////////////////////////////////////////// FIM SECAO APRESENTACAO ////////////////////////////////////////////////////////////////
 
-// INICIO SEÇÃO SOBRE
+// X //
+
+/////////////////////////////////////////////////// INICIO SEÇÃO SOBRE ////////////////////////////////////////////////////////
+
 .sobre {
+    @extend %base-fundo;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
-    @extend %base-fundo;
     color: var(--cor-texto);
     padding: 6rem;
     transition: transform .6s ease, opacity .6s ease;
 
-    div {
+    // DIVISAO APRESENTACAO PESSOAL
+    .sobre-pessoal {
+
         h1 {
             font-size: 3rem;
         }
@@ -359,6 +397,7 @@ header {
 
     }
 
+    // DIVISAO ESPECIALIDADES
     .especialidades {
 
         .especialidades-container {
@@ -373,7 +412,7 @@ header {
                 padding: 1rem 2rem;
                 text-align: center;
                 transition: all .5s ease;
-                width: 28%;
+                width: 35%;
                 // box-shadow: 0 0 10px 0 var(--cor-texto);
                 border-radius: 10px;
 
@@ -392,41 +431,12 @@ header {
     }
 }
 
-// ANIMAÇÃO PARA APARECER DE LADO AS DIVS
-.aparecer-esquerda {
-    transform: translateX(-40px);
-    opacity: 0;
-    transition: transform .7s ease, opacity .7s ease;
-}
+/////////////////////////////////////////////////////// FIM SEÇÃO SOBRE /////////////////////////////////////////////
 
-.aparecer-direita {
-    transform: translateX(40px);
-    opacity: 0;
-    transition: transform .7s ease, opacity .7s ease;
-}
+// X //
 
-.show {
-    transform: translateX(0);
-    opacity: 1;
-}
+/////////////////////////////////////////////////// INICIO SEÇÃO HABILIDADES ///////////////////////////////////////////
 
-.item-animar {
-    opacity: 0;
-    transform: translateX(-40px);
-    transition: opacity .9s ease, transform .6s ease;
-}
-
-.item-animar.show {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-// FIM ANIMAÇÃO PARA APARECER DE LADO AS DIVS
-
-
-// FIM SEÇÃO SOBRE
-
-// INICIO SEÇÃO HABILIDADES
 .habilidades {
     @extend %base-fundo;
     padding: 3rem;
@@ -442,7 +452,7 @@ header {
     }
 
     .swiperHabilidades {
-        width: 100%;
+        // width: 100%;
         margin-top: 2rem;
         overflow: hidden;
         height: auto;
@@ -473,16 +483,16 @@ header {
                 background-color: #2c2b2b;
                 color: $cor-texto-geral;
                 cursor: grab;
-                // height: 40% !important;
                 height: 150px;
                 min-height: unset;
-                // padding: 1rem;
                 transition: transform .5s;
                 width: 150px;
-
+                padding: 1rem;
+                transition: .3s ease;
 
                 &:hover {
                     transform: scale(1.1);
+                    box-shadow: 0 0 20px 0 var(--cor-hover);
                 }
 
                 img {
@@ -499,25 +509,16 @@ header {
     }
 }
 
-// colocando cor dinamicamente
-.habilidades-container-caixa {
-    transition: .3s ease;
-}
+/////////////////////////////////////////////////// FIM SEÇÃO HABILIDADES ///////////////////////////////////////////
 
-.habilidades-container-caixa:hover {
-    box-shadow: 0 0 20px 0 var(--cor-hover);
-}
+/////////////////////////////////////////////////// INICIO SEÇÃO PROJETOS ///////////////////////////////////////////////
 
-
-// FIM SEÇÃO HABILIDADES
-
-// INICIO SEÇÃO PROJETOS
 .projetos {
+    @extend %base-fundo;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    @extend %base-fundo;
     color: #fff;
     overflow: hidden;
     height: 130vh;
@@ -527,7 +528,7 @@ header {
         align-items: center;
         gap: 1rem;
         margin-bottom: 1rem;
-        margin-top: -2rem;
+        // margin-top: -2rem;
 
         i {
             font-size: 3rem;
@@ -548,30 +549,63 @@ header {
         color: var(--cor-texto);
     }
 
-}
+    .swiper {
+        width: 80vw;
+        height: 430px;
+        overflow: visible;
 
-.swiper {
-    width: 80vw;
-    height: 430px;
-    overflow: visible;
-}
+        .swiper-slide {
+            position: relative;
+            width: 320px;
+            aspect-ratio: 3/4;
+            border-radius: 14px;
+            border: 1px solid rgba(177, 177, 177, 0.4);
 
-.swiper-slide {
-    position: relative;
-    width: 320px;
-    aspect-ratio: 3/4;
-    border-radius: 14px;
-    border: 1px solid rgba(177, 177, 177, 0.4);
-}
+            img {
+                text-align: start;
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: fill;
+                border-radius: inherit;
+                user-select: none;
+            }
 
-.swiper-slide img {
-    text-align: start;
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-    border-radius: inherit;
-    user-select: none;
+            .icone-projeto {
+                position: absolute;
+                font-size: 3rem;
+                bottom: 10%;
+                left: 45%;
+                color: #000;
+                cursor: pointer !important;
+                display: none;
+            }
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            color: #000;
+        }
+
+        .swiper-pagination {
+            --swiper-pagination-bottom: -50px;
+        }
+
+        .swiper-pagination-bullet {
+            width: 14px;
+            height: 14px;
+            background-color: var(--cor-texto);
+            border-radius: 50%;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .swiper-pagination-bullet-active {
+            width: 32px;
+            background-color: var(--cor-texto);
+            border-radius: 14px;
+        }
+    }
+
 }
 
 .title {
@@ -588,11 +622,11 @@ header {
     backdrop-filter: blur(10px);
     -ms-backdrop-filter: blur(10px);
     transition: all 0.5s linear;
-}
 
-.title span {
-    font-size: 1.2rem;
-    font-weight: 600;
+    span {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
 }
 
 .swiper-slide-active .title {
@@ -601,38 +635,19 @@ header {
     box-shadow: 0 20px 30px 2px var(--cor-texto);
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-    color: #000;
-}
+// .swiper-pagination-bullet {
+//     width: 14px;
+//     height: 14px;
+//     background-color: var(--cor-texto);
+//     border-radius: 50%;
+//     transition: all 0.3s ease-in-out;
+// }
 
-.swiper-pagination {
-    --swiper-pagination-bottom: -50px;
-}
-
-.swiper-pagination-bullet {
-    width: 14px;
-    height: 14px;
-    background-color: var(--cor-texto);
-    border-radius: 50%;
-    transition: all 0.3s ease-in-out;
-}
-
-.swiper-pagination-bullet-active {
-    width: 32px;
-    background-color: var(--cor-texto);
-    border-radius: 14px;
-}
-
-.icone-projeto {
-    position: absolute;
-    font-size: 3rem;
-    bottom: 10%;
-    left: 46%;
-    color: #000;
-    cursor: pointer !important;
-    display: none;
-}
+// .swiper-pagination-bullet-active {
+//     width: 32px;
+//     background-color: var(--cor-texto);
+//     border-radius: 14px;
+// }
 
 /* DESCRIÇÃO */
 .descricao-projeto {
@@ -647,52 +662,48 @@ header {
     transform: translateY(150%);
     pointer-events: none;
     transition: all 0.9s ease;
-}
 
-.descricao-projeto .fa-x {
-    font-size: 1.1rem;
-    color: #000;
-    display: flex;
-    justify-content: end;
-    width: fit-content;
-    position: absolute;
-    right: 5%;
-    cursor: pointer !important;
-
-    &:hover {
-        cursor: pointer !important;
+    .fa-x {
+        font-size: 1.1rem;
+        color: #000;
+        display: flex;
+        justify-content: end;
+        width: fit-content;
+        position: absolute;
+        right: 5%;
+        cursor: pointer;
     }
-}
 
-.descricao-projeto h3 {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
+    h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
 
-.descricao-projeto p {
-    font-size: 1.2rem !important;
-    color: var(--cor-fundo) !important;
-    width: 100%;
-    margin-top: .5rem;
-    margin-bottom: 0 !important;
-    text-align: start !important;
-}
+    p {
+        font-size: 1.2rem;
+        color: var(--cor-fundo);
+        width: 100%;
+        margin-top: .5rem;
+        margin-bottom: 0;
+        text-align: start;
+    }
 
-.descricao-projeto div {
-    display: flex;
-    gap: 1rem;
-}
+    div {
+        display: flex;
+        gap: 1rem;
 
-.descricao-projeto div img {
-    margin-top: .5rem;
-    width: 22% !important;
-}
+        img {
+            margin-top: .5rem;
+            width: 22% !important;
+        }
+    }
 
-.descricao-projeto a {
-    font-size: 1.3rem;
-    text-decoration: none;
-    font-weight: bold;
-    color: #000;
+    a {
+        font-size: 1.3rem;
+        text-decoration: none;
+        font-weight: bold;
+        color: #000;
+    }
 }
 
 .descricao-projeto.mostrar {
@@ -718,9 +729,10 @@ header {
     }
 }
 
-// FIM SEÇÃO PORJETOS
+///////////////////////////////////////////////////// FIM SEÇÃO PORJETOS //////////////////////////////////////////////////
+// X //
+//////////////////////////////////////////////////// INCIO SEÇÃO CONTATO /////////////////////////////////////////////////
 
-// INCIO SEÇÃO CONTATO
 .contato {
     @extend %base-fundo;
     color: var(--cor-texto);
@@ -731,6 +743,7 @@ header {
         margin-bottom: 2.5rem;
     }
 
+    // CONTATOS EM GERAL
     .contato-divisao {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -781,6 +794,7 @@ header {
             }
         }
 
+        // FORMULARIO CONTATOS
         .formulario {
             // display: grid;
             // align-items: center;
@@ -836,6 +850,7 @@ header {
         }
     }
 
+    // CONTATOS PROFISSIONAIS
     .contato-profissional {
         margin-top: 5rem;
 
@@ -866,42 +881,41 @@ header {
             gap: 1rem;
             align-items: center;
 
-        }
+            .contato-profissional_caixa {
+                display: grid;
+                gap: .5rem;
+                border: 1px solid var(--cor-texto);
+                border-radius: 20px;
+                padding: 1.3rem;
+                height: fit-content !important;
 
-        .contato-profissional_caixa {
-            display: grid;
-            gap: .5rem;
-            border: 1px solid var(--cor-texto);
-            border-radius: 20px;
-            padding: 1.3rem;
-            height: fit-content !important;
+                .fa-clock {
+                    font-size: 2.7rem;
+                }
 
-            .fa-clock {
-                font-size: 2.7rem;
+                .fa-briefcase {
+                    font-size: 2.7rem;
+                }
             }
 
-            .fa-briefcase {
-                font-size: 2.7rem;
-            }
-        }
+            .contato-profissional_caixaDois {
+                height: auto;
+                border: 1px solid var(--cor-texto);
+                border-radius: 20px;
+                padding: 1.3rem;
+                display: grid;
+                gap: .5rem;
 
-        .contato-profissional_caixaDois {
-            height: auto;
-            border: 1px solid var(--cor-texto);
-            border-radius: 20px;
-            padding: 1.3rem;
-            display: grid;
-            gap: .5rem;
+                .fa-laptop-code {
+                    font-size: 2.7rem;
+                }
 
-            .fa-laptop-code {
-                font-size: 2.7rem;
-            }
+                a {
+                    text-decoration: none;
 
-            a {
-                text-decoration: none;
-
-                i {
-                    margin-right: .5rem;
+                    i {
+                        margin-right: .5rem;
+                    }
                 }
             }
         }
@@ -928,23 +942,29 @@ header {
     }
 }
 
-// FIM SEÇÃO CONTATO
+/////////////////////////////////////////////////////// FIM SEÇÃO CONTATO /////////////////////////////////////////////////////
 
-// FIM CONTEUDO PRINCIPAL
+///////////////////////////////////////////////////// FIM CONTEUDO PRINCIPAL ///////////////////////////////////////////////////
+// X //
+/////////////////////////////////////////////////////// INICIO RODAPE ///////////////////////////////////////////////////
 
-// INICIO RODAPE
 footer {
     @extend %base-fundo;
-    color: var(--cor-texto);
+    @extend %base-h1;
+    // color: var(--cor-texto);
     padding: 2rem 0;
-    text-align: center;
+    // text-align: center;
 
     p {
         font-size: 1.5rem;
     }
 }
 
-// INICIO RESPONSIVIDADE
+/////////////////////////////////////////////////////// FIM RODAPE ///////////////////////////////////////////////////
+// x //
+
+//////////////////////////////////////////////// INICIO RESPONSIVIDADE ///////////////////////////////////////////////
+
 /* Celulares */
 @media (max-width: 480px) {
 
@@ -1444,3 +1464,5 @@ footer {
     }
 
 }
+
+//////////////////////////////////////////////// FIM RESPONSIVIDADE ///////////////////////////////////////////////
